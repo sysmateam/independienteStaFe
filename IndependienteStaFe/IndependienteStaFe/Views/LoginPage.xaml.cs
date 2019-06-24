@@ -37,11 +37,28 @@ namespace IndependienteStaFe.Views
             Application.Current.MainPage = navPage;
 
              navPage.PushAsync(new MainPage());
-            
-
-
-
+   
            
         }
+        public void ClickedSignin(object sender, EventArgs e)
+        {
+            var navPage = new NavigationPage(new LoginPage());
+            Application.Current.MainPage = navPage;
+
+            navPage.PushAsync(new RegisterPage());
+
+
+        }
+
+        public void ClickedRecuperarClave(object sender, EventArgs e)
+        {
+            var navPage = new NavigationPage(new LoginPage());
+            Application.Current.MainPage = navPage;
+
+            navPage.PushAsync(new RecuperarClavePage());
+
+
+        }
+
     }
 }

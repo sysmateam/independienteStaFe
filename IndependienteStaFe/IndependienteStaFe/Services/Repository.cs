@@ -31,5 +31,25 @@ namespace IndependienteStaFe.Services
             }
         }
 
+        public string getLogin(string usu, string pass)
+        {
+            try
+            {
+                String login;
+                var URLWebAPI = "https://crmpuntos.oliviadirect.co/services/user/login.php?id=" + usu + "&Password =" + pass;
+                using (var Client = new System.Net.Http.HttpClient())
+                {
+                    var JSON = Client.GetStringAsync(URLWebAPI);
+                    login = JSON.Result;
+                }
+
+                return login;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        
     }
 }

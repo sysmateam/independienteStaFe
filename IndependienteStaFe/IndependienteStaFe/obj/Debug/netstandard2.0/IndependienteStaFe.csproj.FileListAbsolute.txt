@@ -21,3 +21,5 @@ C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\In
 C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe\bin\Debug\netstandard2.0\Xamarin.Android.Arch.Lifecycle.ViewModel.dll
 C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe\obj\Debug\netstandard2.0\Views\ListnewsPage.xaml.g.cs
 C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe\obj\Debug\netstandard2.0\IndependienteStaFe.csproj.CopyComplete
+C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe\obj\Debug\netstandard2.0\Views\RegisterPage.xaml.g.cs
+C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe\obj\Debug\netstandard2.0\Views\RecuperarClavePage.xaml.g.cs
