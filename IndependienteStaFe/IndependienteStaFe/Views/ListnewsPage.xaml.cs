@@ -1,4 +1,5 @@
 ﻿using Android.Arch.Lifecycle;
+using IndependienteStaFe.Services;
 using IndependienteStaFe.ViewModels;
 using Newtonsoft.Json;
 using System;
@@ -25,17 +26,14 @@ namespace IndependienteStaFe.Views
            
          
             InitializeComponent();
+
+            Repository repo= new Repository();
+
+            var news =repo.getNews();
+
+            Lista.ItemsSource = news.data;
         }
 
-        protected override async void OnAppearing()
-        {
-            var vm = BindingContext as ViewModels.NewsViewModel;
-            var content = await vm._Client.GetStringAsync(vm.urlnews);
-            var Post = JsonConvert.DeserializeObject<NewsHead>(content);
-            
-            vm._post = new ObservableCollection<NewsDetail>(Post.NewsDetail);
-            Lista.ItemsSource = vm._post;
-            base.OnAppearing();
-        }
+       
     }
 }
