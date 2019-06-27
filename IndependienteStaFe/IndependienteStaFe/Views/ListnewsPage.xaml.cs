@@ -34,6 +34,19 @@ namespace IndependienteStaFe.Views
             Lista.ItemsSource = news.data;
         }
 
-       
+        
+
+        public async void Logout_Clicked(object sender, EventArgs e)
+        {
+            LoginPage myHomePage = new LoginPage();
+
+
+            NavigationPage.SetHasNavigationBar(myHomePage, false);
+
+            await Navigation.PushModalAsync(myHomePage);
+
+
+        }
+
     }
 }

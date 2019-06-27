@@ -1,4 +1,5 @@
-﻿using IndependienteStaFe.ViewModels;
+﻿using Acr.UserDialogs;
+using IndependienteStaFe.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,14 +32,24 @@ namespace IndependienteStaFe.Views
             };
         }
 
-        public void Button_Clicked(object sender, EventArgs e)
+        public async void Button_Clicked(object sender, EventArgs e)
         {
-            var navPage = new NavigationPage(new LoginPage());
-            Application.Current.MainPage = navPage;
+            IUserDialogs Dialogs = UserDialogs.Instance;
 
-             navPage.PushAsync(new MainPage());
-   
-           
+            Dialogs.ShowLoading("Ingresando...");
+            await Task.Delay(2000);
+            Dialogs.HideLoading();
+
+            MainPage myHomePage = new MainPage();
+
+
+            NavigationPage.SetHasNavigationBar(myHomePage, false);
+
+            await Navigation.PushModalAsync(myHomePage);
+
+
+
+
         }
         public void ClickedSignin(object sender, EventArgs e)
         {

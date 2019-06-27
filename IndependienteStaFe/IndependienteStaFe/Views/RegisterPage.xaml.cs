@@ -28,5 +28,23 @@ namespace IndependienteStaFe.Views
 
 
         }
+
+        public void OnClickedNext1(object sender, EventArgs e)
+        {
+            CurrentPage = page2;
+
+        }
+
+        public void OnClickedNext2(object sender, EventArgs e)
+        {
+            CurrentPage = page3;
+
+        }
+
+        public void OnClickedBack(object sender, EventArgs e)
+        {
+            CurrentPage = page1;
+
+        }
     }
 }

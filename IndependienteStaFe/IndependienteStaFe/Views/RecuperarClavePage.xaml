@@ -10,16 +10,17 @@
             <StackLayout Style="{StaticResource StackLayoutStyle}" VerticalOptions="CenterAndExpand">
                 <Grid Style="{StaticResource GridStyle}">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="256"/>
                         <RowDefinition Height="50"/>
                         <RowDefinition Height="50"/>
                         <RowDefinition Height="50"/>
                         <RowDefinition Height="50"/>
-                        <RowDefinition Height="128"/>
+                        <RowDefinition Height="50"/>
                     </Grid.RowDefinitions>
-                  
-                    <Entry x:Name="rclavetext"  Grid.Row="1" Style="{StaticResource EntryStyle}" Placeholder="Email de Recuperación" />
-                    <Button x:Name="rclave" Grid.Row="2" Style="{StaticResource ButtonStyle}" Clicked="OnRecuperarClave" Text="Recuperar" />
+
+                    <Entry x:Name="rcIDtext"  Grid.Row="1" Style="{StaticResource EntryStyle}" Placeholder="Id del Usuario" />
+                    <Entry x:Name="rcEMailtext"  Grid.Row="2" Style="{StaticResource EntryStyle}" Placeholder="Email de Ususario" />
+                    
+                    <Button x:Name="rclave" Grid.Row="3" Style="{StaticResource ButtonStyle}" Clicked="OnRecuperarClave" Text="Recuperar" />
                 </Grid>
 
             </StackLayout>

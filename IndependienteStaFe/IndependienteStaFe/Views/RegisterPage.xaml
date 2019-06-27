@@ -3,42 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:controls="clr-namespace:IndependienteStaFe.Controls"
              mc:Ignorable="d"
              x:Class="IndependienteStaFe.Views.RegisterPage">
-    <ContentPage x:Name="page1" >
+    <ContentPage x:Name="page1">
         <StackLayout>
             <StackLayout VerticalOptions="CenterAndExpand">
                 <Grid Style="{StaticResource GridStyle}">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="256"/>
                         <RowDefinition Height="50"/>
                         <RowDefinition Height="50"/>
                         <RowDefinition Height="50"/>
                         <RowDefinition Height="50"/>
-                        <RowDefinition Height="50"/>
-                    </Grid.RowDefinitions>
-                    <Image x:Name="logo" Source="" Grid.Row="0" WidthRequest="256" HeightRequest="256" HorizontalOptions="CenterAndExpand" />
-                    <Entry x:Name="username" Grid.Row="1" Style="{StaticResource EntryStyle}" Placeholder="Nombre de Usuario"/>
-                    <Entry x:Name="correo" Grid.Row="2" Style="{StaticResource EntryStyle}" Placeholder="Correo Electrónico"/>
-                    <Entry x:Name="password" Grid.Row="3" Style="{StaticResource EntryStyle}" Placeholder="Contraseña" IsPassword="True"/>
-                    <Entry x:Name="passwordconf" Grid.Row="4" Style="{StaticResource EntryStyle}" Placeholder="Confirmar contraseña" IsPassword="True"/>
-                    <Button x:Name="siguiente" Grid.Row="5" Style="{StaticResource ButtonActStyle}" Text="Siguiente" />
-                </Grid>
-            </StackLayout>
-            <!--<StackLayout x:Name="sLFooter" Orientation="Horizontal" VerticalOptions="End" HeightRequest="48" Padding="20">
-        <local:RoundedButton x:Name="atras" WidthRequest="48" HeightRequest="48" HorizontalOptions="Start" Style="{StaticResource RoundedButtonStyle}" Text="&#xf0e2;" Clicked="OnClickedAtras" TextColor="#FFFFFF" />
-      </StackLayout>-->
-        </StackLayout>
-    </ContentPage>
-    <ContentPage x:Name="page2">
-        <StackLayout>
-            <StackLayout VerticalOptions="CenterAndExpand">
-                <Grid Style="{StaticResource GridStyle}">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="256"/>
-                        <RowDefinition Height="50"/>
-                        <RowDefinition Height="50"/>
-                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="100"/>
                         <RowDefinition Height="50"/>
                         <RowDefinition Height="50"/>
                         <RowDefinition Height="50"/>
@@ -46,40 +23,69 @@
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                 
                     <Entry x:Name="nombre" Grid.Row="1" Grid.Column="0" Style="{StaticResource EntryStyle}" Placeholder="Nombre"/>
                     <Entry x:Name="apellido" Grid.Row="1" Grid.Column="1" Style="{StaticResource EntryStyle}" Placeholder="Apellido"/>
-                    <DatePicker x:Name="fechaNacimiento" Grid.Row="2" Grid.ColumnSpan="2"></DatePicker>
-                    <Picker x:Name="lstViewGeneros" Grid.Row="3" Grid.ColumnSpan="2" >
+                    <DatePicker x:Name="fechaNacimiento" Grid.Row="2"  Grid.ColumnSpan="2"></DatePicker>
+                    <Picker x:Name="lstViewGeneros" Title="Género" Grid.Row="3"  Grid.ColumnSpan="2" >
+                        <Picker.Items>
+                            <x:String>Masculino</x:String>
+                            <x:String>Femenino</x:String>
+
+                        </Picker.Items>
                     </Picker>
-                    <Entry x:Name="telefono" Grid.Row="4" Grid.ColumnSpan="2" Placeholder="Teléfono" Style="{StaticResource EntryStyle}"/>
-                    <Button x:Name="regresar" Grid.Row="5" Grid.Column="0" Style="{StaticResource ButtonActStyle}" Text="Regresar" BackgroundColor="#2C96DE" />
-                    <Button x:Name="siguiente2" Grid.Row="5" Grid.Column="1" Style="{StaticResource ButtonActStyle}" Text="Siguiente" />
+                    <Entry x:Name="ciudad" Grid.Row="5" Grid.ColumnSpan="2" Placeholder="Ciudad" Style="{StaticResource EntryStyle}"/>
+
+
+                    <Button x:Name="siguiente" Grid.Row="6" Grid.Column="1" Style="{StaticResource ButtonActStyle}" Text="Siguiente" Clicked="OnClickedNext1" />
                 </Grid>
             </StackLayout>
-            <StackLayout x:Name="sLFooter2" Orientation="Horizontal" VerticalOptions="End" HeightRequest="48" Padding="20">
-                <!--<local:RoundedButton x:Name="atras2" WidthRequest="48" HeightRequest="48" HorizontalOptions="Start" Style="{StaticResource RoundedButtonStyle}" Text="&#xf0e2;" Clicked="OnClickedAtras2" TextColor="#FFFFFF" />-->
-            </StackLayout>
+           
         </StackLayout>
     </ContentPage>
-    <ContentPage x:Name="page4" BackgroundImage="signin.jpg">
+    <ContentPage x:Name="page2" >
         <StackLayout>
             <StackLayout VerticalOptions="CenterAndExpand">
                 <Grid Style="{StaticResource GridStyle}">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="256"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
                         <RowDefinition Height="50"/>
                         <RowDefinition Height="50"/>
                     </Grid.RowDefinitions>
-                 
-                    <Label x:Name="titulo" Grid.Row="1" Style="{StaticResource LabelStyle}" FontSize="18" Text="¿No eres un bot? Tomate una foto" HorizontalOptions="CenterAndExpand"></Label>
-                    <!--<local:MyLabel x:Name="camara" Grid.Row="2" Text="&#xf030;" FontSize="48" HorizontalOptions="CenterAndExpand" TextColor="#CCCCCC" />-->
-                    <Button x:Name="finalizar" Grid.Row="3" Style="{StaticResource ButtonActStyle}" Text="Finalizar" Clicked="OnClickedFinalizar" />
+                    <Entry x:Name="telefono" Grid.Row="1" Grid.ColumnSpan="2" Placeholder="Teléfono" Style="{StaticResource EntryStyle}"/>
+                    <Entry x:Name="userid" Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource EntryStyle}" Placeholder="ID de Usuario"/>
+                    <Entry x:Name="correo" Grid.Row="3" Grid.ColumnSpan="2" Style="{StaticResource EntryStyle}" Placeholder="Correo Electrónico"/>
+                    <Entry x:Name="password" Grid.Row="4" Grid.ColumnSpan="2" Style="{StaticResource EntryStyle}" Placeholder="Contraseña" IsPassword="True"/>
+                    <Entry x:Name="passwordconf" Grid.Row="4" Grid.ColumnSpan="2" Style="{StaticResource EntryStyle}" Placeholder="Confirmar contraseña" IsPassword="True"/>
+                    <Button x:Name="regresar" Grid.Row="5" Grid.Column="0" Style="{StaticResource ButtonActStyle}" Text="Regresar" BackgroundColor="#2C96DE" Clicked="OnClickedBack" />
+                    <Button x:Name="siguiente2" Grid.Row="5" Grid.Column="1" Style="{StaticResource ButtonActStyle}" Text="Siguiente" Clicked="OnClickedNext2" />
                 </Grid>
             </StackLayout>
-            <StackLayout x:Name="sLFooter4" Orientation="Horizontal" VerticalOptions="End" HeightRequest="48" Padding="20">
-                <!--<local:RoundedButton x:Name="atras4" WidthRequest="48" HeightRequest="48" HorizontalOptions="Start" Style="{StaticResource RoundedButtonStyle}" Text="&#xf0e2;" Clicked="OnClickedAtras4" TextColor="#FFFFFF" />-->
+          
+        </StackLayout>
+    </ContentPage>
+
+    <ContentPage x:Name="page3" BackgroundImage="signin.jpg">
+        <StackLayout>
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <Grid Style="{StaticResource GridStyle}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    <controls:CheckBox Grid.Row="0" Text="¿Acepta las Politicas de Datos ?" IsChecked="{Binding YourProperty}" Type="Check" Color="Yellow" />
+                    <controls:CheckBox Grid.Row="1" Text="¿Acepta Términos y Condiciones ?" IsChecked="{Binding YourProperty}" Type="Check" Color="Yellow" />
+                    
+                    <Button x:Name="finalizar" Grid.Row="3" Style="{StaticResource ButtonActStyle}" Text="Registrar" Clicked="OnClickedFinalizar" />
+                </Grid>
             </StackLayout>
+           
         </StackLayout>
     </ContentPage>
 </CarouselPage>

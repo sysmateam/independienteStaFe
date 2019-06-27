@@ -5,7 +5,16 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="IndependienteStaFe.Views.ListnewsPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="LogOut"  
+                     Icon="logout.png"  
+                     Priority="0"  
+                     Order="Primary"  
+                     Clicked="Logout_Clicked"/>
+
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
+        
         <StackLayout>
             <ListView x:Name="Lista">
                 <ListView.ItemTemplate>
