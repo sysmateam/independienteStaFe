@@ -5,11 +5,11 @@ using Xamarin.Forms;
 
 namespace IndependienteStaFe.ViewModels
 {
-    public class AboutViewModel : BaseViewModel
+    public class AboutViewModel 
     {
         public AboutViewModel()
         {
-            Title = "About";
+            
 
             OpenWebCommand = new Command(() => Device.OpenUri(new Uri("https://xamarin.com/platform")));
         }

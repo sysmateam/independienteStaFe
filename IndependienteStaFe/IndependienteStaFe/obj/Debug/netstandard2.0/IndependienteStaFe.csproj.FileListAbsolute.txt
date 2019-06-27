@@ -1,12 +1,9 @@
 C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe\obj\Debug\netstandard2.0\IndependienteStaFe.csprojAssemblyReference.cache
 C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe\obj\Debug\netstandard2.0\Views\AboutPage.xaml.g.cs
-C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe\obj\Debug\netstandard2.0\Views\ItemDetailPage.xaml.g.cs
-C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe\obj\Debug\netstandard2.0\Views\ItemsPage.xaml.g.cs
 C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
 C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
 C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe\obj\Debug\netstandard2.0\Views\MenuPage.xaml.g.cs
-C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe\obj\Debug\netstandard2.0\Views\NewItemPage.xaml.g.cs
 C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe\obj\Debug\netstandard2.0\IndependienteStaFe.csproj.CoreCompileInputs.cache
 C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe\obj\Debug\netstandard2.0\IndependienteStaFe.AssemblyInfoInputs.cache
 C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe\obj\Debug\netstandard2.0\IndependienteStaFe.AssemblyInfo.cs
@@ -23,3 +20,5 @@ C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\In
 C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe\obj\Debug\netstandard2.0\Views\RegisterPage.xaml.g.cs
 C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe\obj\Debug\netstandard2.0\Views\RecuperarClavePage.xaml.g.cs
 C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe\obj\Debug\netstandard2.0\Views\UserInfoPage.xaml.g.cs
+C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe\obj\Debug\netstandard2.0\Views\UserPointsPage.xaml.g.cs

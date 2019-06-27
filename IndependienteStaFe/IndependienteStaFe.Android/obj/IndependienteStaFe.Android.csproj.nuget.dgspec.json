@@ -42,6 +42,14 @@
       "frameworks": {
         "monoandroid90": {
           "dependencies": {
+            "Acr.UserDialogs": {
+              "target": "Package",
+              "version": "[7.0.4, )"
+            },
+            "Plugin.CurrentActivity": {
+              "target": "Package",
+              "version": "[2.1.0.4, )"
+            },
             "Xamarin.Android.Support.Core.Utils": {
               "target": "Package",
               "version": "[28.0.0.1, )"
@@ -121,6 +129,10 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "Acr.UserDialogs": {
+              "target": "Package",
+              "version": "[7.0.4, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",

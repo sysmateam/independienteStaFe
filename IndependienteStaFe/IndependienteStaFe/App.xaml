@@ -131,6 +131,12 @@
                 <Setter Property="TextColor" Value="#FFFFFF"/>
                 <Setter Property="Opacity" Value="1"/>
             </Style>
+            <Style TargetType="Label" x:Key="LabelStyleTermConds">
+                <Setter Property="FontSize" Value="Micro" />
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="TextColor" Value="BlueViolet"/>
+                <Setter Property="Opacity" Value="1"/>
+            </Style>
             <Style TargetType="RelativeLayout" x:Key="HeaderStyle">
                 <Setter Property="VerticalOptions" Value="Start"/>
                 <Setter Property="HeightRequest" Value="64"/>

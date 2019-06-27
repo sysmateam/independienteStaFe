@@ -13,7 +13,7 @@ namespace IndependienteStaFe
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
+            DependencyService.Register<Repository>();
             MainPage = new LoginPage();
         }
 

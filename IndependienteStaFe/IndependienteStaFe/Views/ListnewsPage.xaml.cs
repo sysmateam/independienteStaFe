@@ -5,6 +5,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -16,7 +17,7 @@ using static IndependienteStaFe.Models.News;
 
 namespace IndependienteStaFe.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+    [DesignTimeVisible(false)]
     public partial class ListnewsPage : ContentPage
     {
        
@@ -36,16 +37,17 @@ namespace IndependienteStaFe.Views
 
         
 
-        public async void Logout_Clicked(object sender, EventArgs e)
+        public  void Logout_Clicked(object sender, EventArgs e)
         {
-            LoginPage myHomePage = new LoginPage();
+            Application.Current.MainPage = new LoginPage();
 
+        }
 
-            NavigationPage.SetHasNavigationBar(myHomePage, false);
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
 
-            await Navigation.PushModalAsync(myHomePage);
-
-
+            
         }
 
     }

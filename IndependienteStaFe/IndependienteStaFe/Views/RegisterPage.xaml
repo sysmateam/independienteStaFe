@@ -68,18 +68,42 @@
           
         </StackLayout>
     </ContentPage>
-
     <ContentPage x:Name="page3" BackgroundImage="signin.jpg">
         <StackLayout>
             <StackLayout VerticalOptions="CenterAndExpand">
                 <Grid Style="{StaticResource GridStyle}">
                     <Grid.RowDefinitions>
+                        <RowDefinition Height="250"/>
+                        <RowDefinition Height="150"/>
                         <RowDefinition Height="50"/>
                         <RowDefinition Height="50"/>
-                        <RowDefinition Height="50"/>
-                        <RowDefinition Height="50"/>
+                        
                     </Grid.RowDefinitions>
-                    <controls:CheckBox Grid.Row="0" Text="¿Acepta las Politicas de Datos ?" IsChecked="{Binding YourProperty}" Type="Check" Color="Yellow" />
+                    <Label x:Name="lblpoldatos" Grid.Row="0" Grid.ColumnSpan="2"  Style="{StaticResource LabelStyleTermConds}" ></Label>
+                    <controls:CheckBox Grid.Row="1" Grid.ColumnSpan="2"  Text="¿Acepta las Politicas de Datos ?" IsChecked="{Binding YourProperty}" Type="Check" Color="Yellow" />
+                   
+                    <Button x:Name="regresar1" Grid.Row="3" Grid.Column="0" Style="{StaticResource ButtonActStyle}" Text="Regresar" BackgroundColor="#2C96DE" Clicked="OnClickedBack1" />
+                    <Button x:Name="siguiente3" Grid.Row="3" Grid.Column="1" Style="{StaticResource ButtonActStyle}" Text="Siguiente" Clicked="OnClickedNext3" />
+                </Grid>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage>
+
+    <ContentPage x:Name="page4" BackgroundImage="signin.jpg">
+        <StackLayout>
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <Grid Style="{StaticResource GridStyle}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="250"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        
+                    </Grid.RowDefinitions>
+                    
+                    <Label x:Name="lbltermconds" Grid.Row="0" Style="{StaticResource LabelStyleTermConds}" ></Label> 
                     <controls:CheckBox Grid.Row="1" Text="¿Acepta Términos y Condiciones ?" IsChecked="{Binding YourProperty}" Type="Check" Color="Yellow" />
                     
                     <Button x:Name="finalizar" Grid.Row="3" Style="{StaticResource ButtonActStyle}" Text="Registrar" Clicked="OnClickedFinalizar" />

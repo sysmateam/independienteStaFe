@@ -17,13 +17,13 @@
                         <RowDefinition Height="50"/>
                         <RowDefinition Height="128"/>
                     </Grid.RowDefinitions>
-                    <Frame BackgroundColor="#BF043055" HasShadow="False">
+                    <Frame BackgroundColor="#610B0B" HasShadow="True">
                         <StackLayout Orientation="Vertical" Spacing="10">
                             <Entry x:Name="Email" Text="{Binding Email}" Placeholder="Usuario"   
                            PlaceholderColor="White" HeightRequest="40"   
                            Keyboard="Email"  
                            TextColor="White"/>
-                            <Entry x:Name="Password" Text="{Binding Password}" Placeholder="Contraseña"   
+                            <Entry x:Name="Password" Text="{Binding Password}"  Placeholder="Contraseña"   
                            PlaceholderColor="White" HeightRequest="40"   
                            IsPassword="True"  
                            TextColor="White"/>

@@ -111,9 +111,12 @@ class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		/* We need to ensure that "IndependienteStaFe.Android.dll" comes first in this list. */
 		"IndependienteStaFe.Android.dll",
+		"Acr.UserDialogs.dll",
+		"AndHUD.dll",
 		"FormsViewGroup.dll",
 		"IndependienteStaFe.dll",
 		"Newtonsoft.Json.dll",
+		"Plugin.CurrentActivity.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Core.Runtime.dll",
 		"Xamarin.Android.Arch.Lifecycle.Common.dll",
