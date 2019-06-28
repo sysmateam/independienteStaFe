@@ -48,8 +48,8 @@ namespace IndependienteStaFe.Views
 
             NavigationPage.SetHasNavigationBar(myHomePage, false);
 
-           
 
+           
             await Navigation.PushModalAsync(myHomePage);
 
 

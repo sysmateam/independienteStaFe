@@ -8,7 +8,7 @@
     <ContentPage.Content>
         <ScrollView Style="{StaticResource ScrollViewStyle}">
             <StackLayout Style="{StaticResource StackLayoutStyle}" VerticalOptions="CenterAndExpand">
-                <ListView x:Name="Lista">
+                <ListView x:Name="Lista1">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>

@@ -19,7 +19,7 @@ namespace IndependienteStaFe.Views
             Repository repo = new Repository();
             var videos = repo.getVideos();
 
-            Lista.ItemsSource = videos.data;
+            Lista1.ItemsSource = videos.data;
         }
     }
 }

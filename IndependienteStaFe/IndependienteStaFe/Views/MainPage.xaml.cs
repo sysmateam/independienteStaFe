@@ -14,45 +14,57 @@ namespace IndependienteStaFe.Views
     [DesignTimeVisible(false)]
         public partial class MainPage : MasterDetailPage
         {
-            Dictionary<int, NavigationPage> MenuPages = new Dictionary<int, NavigationPage>();
+       
             public MainPage()
             {
                 InitializeComponent();
-                
+               navigationDrawerList.ItemsSource = GetMasterPageLists();
 
-                MasterBehavior = MasterBehavior.Popover;
-
-                MenuPages.Add((int)MenuItemType.Browse, (NavigationPage)Detail);
+           
             }
 
-            public async Task NavigateFromMenu(int id)
+        private void OnMenuSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var item = (MasterPageList)e.SelectedItem;
+
+            if (item.Title == "Usuario")
             {
-            
-            if (!MenuPages.ContainsKey(id))
-                {
-                    switch (id)
-                    {
-                        case (int)MenuItemType.Browse:
-                            MenuPages.Add(id, new NavigationPage(new MainPage()));
-                            break;
-                        case (int)MenuItemType.About:
-                            MenuPages.Add(id, new NavigationPage(new UserInfoPage()));
-                            break;
-                    }
-                }
-
-                var newPage = MenuPages[id];
-
-                if (newPage != null && Detail != newPage)
-                {
-                    Detail = newPage;
-
-                    if (Device.RuntimePlatform == Device.Android)
-                        await Task.Delay(100);
-
-                    IsPresented = false;
-                }
+                Detail.Navigation.PushAsync(new UserInfoPage());
+                IsPresented = false;
             }
+            if (item.Title == "Puntos")
+            {
+                Detail.Navigation.PushAsync(new UserInfoPage());
+                IsPresented = false;
+            }
+            if (item.Title == "Usuario")
+            {
+                Detail.Navigation.PushAsync(new ListvideosPage());
+                IsPresented = false;
+            }
+            //   else
+            // {
+            //   Application.Current.Properties["MenuName"] = item.Title;
+            // Detail = new NavigationPage(new HomeTabbedPage());
+            //IsPresented = false;
+            //}
         }
-    
+        List<MasterPageList> GetMasterPageLists()
+        {
+            return new List<MasterPageList>
+            {
+                new MasterPageList() { Title = "Usuario", Icon = "home.png" },
+                new MasterPageList() { Title = "Puntos", Icon = "admin.png" },
+                new MasterPageList() { Title = "Videos", Icon = "setting.png" }
+            };
+        }
+    }
+
+    //This class used for binding ListView. We can move it to other separate files as well   
+    public class MasterPageList
+    {
+        public string Title { get; set; }
+        public string Icon { get; set; }
+    }
+
 }

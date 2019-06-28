@@ -35,9 +35,9 @@ namespace IndependienteStaFe.Views
             Lista.ItemsSource = news.data;
         }
 
-        
 
-        public  void Logout_Clicked(object sender, EventArgs e)
+
+        public void Logout_Clicked(object sender, EventArgs e)
         {
             Application.Current.MainPage = new LoginPage();
 

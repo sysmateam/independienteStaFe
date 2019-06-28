@@ -6,26 +6,49 @@
             mc:Ignorable="d"
             xmlns:views="clr-namespace:IndependienteStaFe.Views"
             x:Class="IndependienteStaFe.Views.MainPage">
-
     <MasterDetailPage.Master>
-        <views:mPage Title="Menu" />
+        
+        <ContentPage Title="☰" BackgroundColor="#00B4FF">
+            <StackLayout BackgroundColor="#FFBBA09C">
+                <StackLayout Margin="25,10,25,0" Padding="0,15,0,15">
+                    <Image  Margin="10" BackgroundColor="Accent" Aspect="AspectFill" Source="Enrich.png"></Image>
+                </StackLayout>
+                <ListView x:Name="navigationDrawerList"  
+                  RowHeight="60"  
+                  SeparatorVisibility="None"  
+                  ItemSelected="OnMenuSelected"  
+                  BackgroundColor="#A3C1AD">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout VerticalOptions="FillAndExpand"  
+                                 Orientation="Horizontal"  
+                                 Padding="20,10,0,10"  
+                                 Spacing="20">
+
+                                    <Image Source="{Binding Icon}"  
+                                     WidthRequest="30"  
+                                     HeightRequest="30"  
+                                     VerticalOptions="Center" />
+                                    <Label Text="{Binding Title}"  
+                                     FontSize="Medium"  
+                                     VerticalOptions="Center"  
+                                     TextColor="Black"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ContentPage>
     </MasterDetailPage.Master>
 
     <MasterDetailPage.Detail>
         <NavigationPage>
-            <NavigationPage.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="iOS" Value="tab_feed.png"/>
-                </OnPlatform>
-            </NavigationPage.Icon>
             <x:Arguments>
-                <views:ListnewsPage  Title="Noticias"/>
-            </x:Arguments>
-            <x:Arguments>
-                <views:ListvideosPage Title="Videos" />
+                <views:ListnewsPage/>
             </x:Arguments>
         </NavigationPage>
-        
     </MasterDetailPage.Detail>
 
 </MasterDetailPage>
