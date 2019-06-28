@@ -4,15 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="IndependienteStaFe.Views.ListnewsPage">
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="LogOut"  
-                     Icon="logout.png"  
-                     Priority="0"  
-                     Order="Primary"  
-                     Clicked="Logout_Clicked"/>
-
-    </ContentPage.ToolbarItems>
+             x:Class="IndependienteStaFe.Views.ListvideosPage">
     <ContentPage.Content>
         <ScrollView Style="{StaticResource ScrollViewStyle}">
             <StackLayout Style="{StaticResource StackLayoutStyle}" VerticalOptions="CenterAndExpand">

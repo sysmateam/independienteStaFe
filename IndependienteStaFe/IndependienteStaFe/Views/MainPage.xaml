@@ -19,9 +19,13 @@
                 </OnPlatform>
             </NavigationPage.Icon>
             <x:Arguments>
-                <views:ListnewsPage />
+                <views:ListnewsPage  Title="Noticias"/>
+            </x:Arguments>
+            <x:Arguments>
+                <views:ListvideosPage Title="Videos" />
             </x:Arguments>
         </NavigationPage>
+        
     </MasterDetailPage.Detail>
 
 </MasterDetailPage>

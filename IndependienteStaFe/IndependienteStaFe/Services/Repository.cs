@@ -10,7 +10,25 @@ namespace IndependienteStaFe.Services
 {
     public class Repository
     {
+        public Videos getVideos()
+        {
+            try
+            {
+                Videos videos;
+                var URLWebAPI = "https://crmpuntos.oliviadirect.co/services/content/list-video.php";
+                using (var Client = new System.Net.Http.HttpClient())
+                {
+                    var JSON = Client.GetStringAsync(URLWebAPI);
+                    videos = Newtonsoft.Json.JsonConvert.DeserializeObject<Videos>(JSON.Result);
+                }
 
+                return videos;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         public News getNews()
         {
             try
