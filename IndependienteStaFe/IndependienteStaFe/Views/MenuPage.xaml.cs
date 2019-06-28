@@ -12,11 +12,15 @@ namespace IndependienteStaFe.Views
     [DesignTimeVisible(false)]
     public partial class MenuPage : ContentPage
     {
+        
         MainPage RootPage { get => Application.Current.MainPage as MainPage; }
+
         List<HomeMenuItem> menuItems;
         public MenuPage()
         {
             InitializeComponent();
+
+            
 
             menuItems = new List<HomeMenuItem>
             {
@@ -33,6 +37,7 @@ namespace IndependienteStaFe.Views
                     return;
 
                 var id = (int)((HomeMenuItem)e.SelectedItem).Id;
+
                 await RootPage.NavigateFromMenu(id);
             };
         }

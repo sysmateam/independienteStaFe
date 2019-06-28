@@ -14,11 +14,12 @@ namespace IndependienteStaFe.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoginPage : ContentPage
     {
+       
         public LoginPage()
         {
             var vm = new LoginViewModel();
             this.BindingContext = vm;
-            vm.DisplayInvalidLoginPrompt += () => DisplayAlert("Error", "Invalid Login, try again", "OK");
+           // vm.DisplayInvalidLoginPrompt += () => DisplayAlert("Error", "Invalid Login, try again", "OK");
             InitializeComponent();
 
             Email.Completed += (object sender, EventArgs e) =>
@@ -40,10 +41,14 @@ namespace IndependienteStaFe.Views
             await Task.Delay(2000);
             Dialogs.HideLoading();
 
-            MainPage myHomePage = new MainPage();
 
+         
+            MainPage myHomePage = new MainPage();
+            
 
             NavigationPage.SetHasNavigationBar(myHomePage, false);
+
+           
 
             await Navigation.PushModalAsync(myHomePage);
 

@@ -14,7 +14,11 @@ namespace IndependienteStaFe
             InitializeComponent();
 
             DependencyService.Register<Repository>();
-            MainPage = new LoginPage();
+            // MainPage = new MainPage();
+             MainPage = new LoginPage();
+
+            
+
         }
 
         protected override void OnStart()

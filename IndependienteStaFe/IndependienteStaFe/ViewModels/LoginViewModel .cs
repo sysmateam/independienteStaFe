@@ -41,7 +41,7 @@ namespace IndependienteStaFe.ViewModels
         {
             if (email != "superadmin" || password != "olivia123*")
             {
-                DisplayInvalidLoginPrompt();
+               // DisplayInvalidLoginPrompt();
             }
         }
     }

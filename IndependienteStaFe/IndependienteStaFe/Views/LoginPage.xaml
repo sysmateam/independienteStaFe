@@ -27,7 +27,7 @@
                            PlaceholderColor="White" HeightRequest="40"   
                            IsPassword="True"  
                            TextColor="White"/>
-                            <Button x:Name="rclave" Style="{StaticResource LinkStyle}" Text="Recuperar Clave" Command="{Binding GetUsuariosCommand}"  Clicked="ClickedRecuperarClave"/>
+                            <Button x:Name="rclave" Style="{StaticResource LinkStyleFrame}" Text="Recuperar Clave" Command="{Binding GetUsuariosCommand}"  Clicked="ClickedRecuperarClave"/>
                         </StackLayout>
                     </Frame>
                     <Button Command="{Binding SubmitCommand}" Grid.Row="3" Clicked="Button_Clicked" Text="Login"  Style="{StaticResource ButtonStyle}"

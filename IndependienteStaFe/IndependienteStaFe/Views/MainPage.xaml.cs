@@ -18,6 +18,7 @@ namespace IndependienteStaFe.Views
             public MainPage()
             {
                 InitializeComponent();
+                
 
                 MasterBehavior = MasterBehavior.Popover;
 
@@ -26,15 +27,16 @@ namespace IndependienteStaFe.Views
 
             public async Task NavigateFromMenu(int id)
             {
-                if (!MenuPages.ContainsKey(id))
+            
+            if (!MenuPages.ContainsKey(id))
                 {
                     switch (id)
                     {
                         case (int)MenuItemType.Browse:
-                            MenuPages.Add(id, new NavigationPage(new ListnewsPage()));
+                            MenuPages.Add(id, new NavigationPage(new MainPage()));
                             break;
                         case (int)MenuItemType.About:
-                            MenuPages.Add(id, new NavigationPage(new AboutPage()));
+                            MenuPages.Add(id, new NavigationPage(new UserInfoPage()));
                             break;
                     }
                 }

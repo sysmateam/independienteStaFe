@@ -2,14 +2,49 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:controls="clr-namespace:IndependienteStaFe.Controls"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="IndependienteStaFe.Views.UserInfoPage">
+             x:Class="IndependienteStaFe.Views.UserInfoPage"
+             Title="Info. Usuario">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Grid Style="{StaticResource GridStyle}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Entry x:Name="nombre" Grid.Row="1" Grid.Column="0" Style="{StaticResource EntryStyle}" Placeholder="Nombre"/>
+                <Entry x:Name="apellido" Grid.Row="1" Grid.Column="1" Style="{StaticResource EntryStyle}" Placeholder="Apellido"/>
+                <DatePicker x:Name="fechaNacimiento" Grid.Row="2"  Grid.ColumnSpan="2"></DatePicker>
+                <Picker x:Name="lstViewGeneros" Title="Género" Grid.Row="3"  Grid.ColumnSpan="2" >
+                    <Picker.Items>
+                        <x:String>Masculino</x:String>
+                        <x:String>Femenino</x:String>
+
+                    </Picker.Items>
+                </Picker>
+                <Entry x:Name="ciudad" Grid.Row="5" Grid.ColumnSpan="2" Placeholder="Ciudad" Style="{StaticResource EntryStyle}"/>
+
+                <Entry x:Name="telefono" Grid.Row="6" Grid.ColumnSpan="2" Placeholder="Teléfono" Style="{StaticResource EntryStyle}"/>
+                <controls:CheckBox Grid.Row="7" Grid.ColumnSpan="2"  Text="¿Acepta las Politicas de Datos ?" IsChecked="{Binding YourProperty}" Type="Check" Color="Yellow" />
+
+                <controls:CheckBox Grid.Row="9" Grid.ColumnSpan="2" Text="¿Acepta Términos y Condiciones ?" IsChecked="{Binding YourProperty}" Type="Check" Color="Yellow" />
+
+                <Button x:Name="editar" Grid.Row="11" Grid.ColumnSpan="2" Style="{StaticResource ButtonActStyle}" Text="Editar" BackgroundColor="#2C96DE" />
+               
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

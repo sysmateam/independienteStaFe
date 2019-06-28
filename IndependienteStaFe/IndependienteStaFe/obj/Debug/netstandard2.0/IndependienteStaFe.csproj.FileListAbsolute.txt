@@ -22,3 +22,7 @@ C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\In
 C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe\obj\Debug\netstandard2.0\Views\UserInfoPage.xaml.g.cs
 C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe\obj\Debug\netstandard2.0\Views\UserPointsPage.xaml.g.cs
+C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe\obj\Debug\netstandard2.0\Views\ItemDetailPage.xaml.g.cs
+C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe\obj\Debug\netstandard2.0\Views\ItemsPage.xaml.g.cs
+C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe\obj\Debug\netstandard2.0\Views\NewItemPage.xaml.g.cs
+C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe\obj\Debug\netstandard2.0\Views\mPage.xaml.g.cs
