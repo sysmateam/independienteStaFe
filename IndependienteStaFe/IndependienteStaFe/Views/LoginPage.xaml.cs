@@ -1,4 +1,6 @@
 ﻿using Acr.UserDialogs;
+using IndependienteStaFe.Models;
+using IndependienteStaFe.Services;
 using IndependienteStaFe.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -14,20 +16,23 @@ namespace IndependienteStaFe.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoginPage : ContentPage
     {
-       
+        Repository repo = new Repository();
         public LoginPage()
         {
             var vm = new LoginViewModel();
             this.BindingContext = vm;
-           // vm.DisplayInvalidLoginPrompt += () => DisplayAlert("Error", "Invalid Login, try again", "OK");
+
+            
+
+
             InitializeComponent();
 
-            Email.Completed += (object sender, EventArgs e) =>
+            usuario.Completed += (object sender, EventArgs e) =>
             {
-                Password.Focus();
+                password.Focus();
             };
 
-            Password.Completed += (object sender, EventArgs e) =>
+            password.Completed += (object sender, EventArgs e) =>
             {
                 vm.SubmitCommand.Execute(null);
             };
@@ -37,20 +42,28 @@ namespace IndependienteStaFe.Views
         {
             IUserDialogs Dialogs = UserDialogs.Instance;
 
-            Dialogs.ShowLoading("Ingresando...");
-            await Task.Delay(2000);
-            Dialogs.HideLoading();
-
-
-         
-            MainPage myHomePage = new MainPage();
             
 
-            NavigationPage.SetHasNavigationBar(myHomePage, false);
+            if(usuario.Text!="" && password.Text != "")
+            {
+               Login login = repo.getLogin(usuario.Text, password.Text).Result;
 
+                if(login.Status=="Ok")
+                {
+                    App.Current.Properties["token"] = login.Jwt;
 
+                    Dialogs.ShowLoading("Ingresando...");
+                    await Task.Delay(2000);
+                    Dialogs.HideLoading();
+
+                    MainPage myHomePage = new MainPage();
+                    NavigationPage.SetHasNavigationBar(myHomePage, false);
+                    await Navigation.PushModalAsync(myHomePage);
+                }
+
+            }
+         
            
-            await Navigation.PushModalAsync(myHomePage);
 
 
 

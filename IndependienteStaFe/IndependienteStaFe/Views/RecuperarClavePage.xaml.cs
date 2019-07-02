@@ -23,10 +23,13 @@ namespace IndependienteStaFe.Views
         {
             
 
-            Dialogs.ShowLoading("Procesando...");
+            Dialogs.ShowLoading( "Hemos enviado la nueva contraseña al correo registrado"); ;
             await Task.Delay(2000);
             Dialogs.HideLoading();
 
+
+
+            
 
             MainPage myHomePage = new MainPage();
 
@@ -39,6 +42,8 @@ namespace IndependienteStaFe.Views
 
 
         }
+
+       
 
         public async void OnCancelar(object sender, EventArgs e)
         {

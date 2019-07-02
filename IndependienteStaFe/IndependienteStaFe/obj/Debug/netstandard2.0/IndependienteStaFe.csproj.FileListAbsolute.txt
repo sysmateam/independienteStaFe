@@ -23,3 +23,9 @@ C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\In
 C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe\obj\Debug\netstandard2.0\IndependienteStaFe.csproj.CopyComplete
 C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe\obj\Debug\netstandard2.0\Views\HomeTabbedPage.xaml.g.cs
+C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe\obj\Debug\netstandard2.0\Views\ListciudadesPage.xaml.g.cs
+C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe\obj\Debug\netstandard2.0\Views\ListPerfilesPage.xaml.g.cs
+C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe\obj\Debug\netstandard2.0\Views\MembemshipPage.xaml.g.cs
+C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe\obj\Debug\netstandard2.0\Views\UpdateMembershipPage.xaml.g.cs
+C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe\obj\Debug\netstandard2.0\Views\ListproductsPage.xaml.g.cs
+C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe\obj\Debug\netstandard2.0\Views\ProductPage.xaml.g.cs

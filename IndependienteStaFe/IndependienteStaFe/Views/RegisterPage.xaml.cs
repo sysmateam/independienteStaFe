@@ -1,4 +1,6 @@
-﻿using IndependienteStaFe.Services;
+﻿using IndependienteStaFe.Helpers;
+using IndependienteStaFe.Models;
+using IndependienteStaFe.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,19 +29,58 @@ namespace IndependienteStaFe.Views
             lblpoldatos.Text = poldatos.data[0].Name.ToString() + '\n' + poldatos.data[0].Content.ToString();
         }
 
-        
 
-       public async void OnClickedFinalizar(object sender, EventArgs e)
+        public async void OnClickedFinalizar(object sender, EventArgs args)
         {
-            MainPage myHomePage = new MainPage();
+            if (nombre.Text != null && password.Text != null && correo.Text != null && password.Text != null && telefono.Text != null)
+            {
+                MD5HashX2 pwtohash = new MD5HashX2();
+               
+                User usuario = new User();
+                usuario.name = nombre.Text;
+                usuario.Lastname = apellido.Text;
+                usuario.Id = userid.Text;
+                usuario.Emal = correo.Text;
+                usuario.Password = pwtohash.MD5Hash(password.Text);
+                usuario.City = ciudad.Text;
+                usuario.Address = address.Text;
+                usuario.Cellnumber = telefono.Text;
+                usuario.Gender = lstViewGeneros.SelectedIndex.ToString();
+                usuario.Birdhdate = fechaNacimiento.Date;
+                usuario.Datapolicy = true;
+                usuario.Termsandconditions = true;
+                
+
+                Repository repository = new Repository();
+
+                try
+                {
+
+                    repository.PostUser(usuario);
+                    MainPage myHomePage = new MainPage();
 
 
-            NavigationPage.SetHasNavigationBar(myHomePage, false);
+                    NavigationPage.SetHasNavigationBar(myHomePage, false);
 
-            await Navigation.PushModalAsync(myHomePage);
+                    await Navigation.PushModalAsync(myHomePage);
+                }
 
+                catch (Exception ex)
+                {
+                    await DisplayAlert("Registrarse Error", ex.Message, "Gracias");
+
+                }
+
+            }
+
+
+            else
+            {
+                await DisplayAlert("Registrarse", "Verifique la Información", "Gracias");
+            }
 
         }
+
 
         public void OnClickedNext1(object sender, EventArgs e)
         {

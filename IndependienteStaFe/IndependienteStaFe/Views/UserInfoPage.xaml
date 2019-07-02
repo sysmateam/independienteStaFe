@@ -42,7 +42,7 @@
 
                 <controls:CheckBox Grid.Row="9" Grid.ColumnSpan="2" Text="¿Acepta Términos y Condiciones ?" IsChecked="{Binding YourProperty}" Type="Check" Color="Yellow" />
 
-                <Button x:Name="editar" Grid.Row="11" Grid.ColumnSpan="2" Style="{StaticResource ButtonActStyle}" Text="Editar" BackgroundColor="#2C96DE" />
+                <Button x:Name="editar" Grid.Row="11" Grid.ColumnSpan="2" Style="{StaticResource ButtonActStyle}" Text="Editar" BackgroundColor="#2C96DE" Clicked="OnUpdateUser" />
                
             </Grid>
         </StackLayout>

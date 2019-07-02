@@ -19,6 +19,7 @@
                         <RowDefinition Height="50"/>
                         <RowDefinition Height="50"/>
                         <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
@@ -34,9 +35,10 @@
                         </Picker.Items>
                     </Picker>
                     <Entry x:Name="ciudad" Grid.Row="5" Grid.ColumnSpan="2" Placeholder="Ciudad" Style="{StaticResource EntryStyle}"/>
+                    <Entry x:Name="address" Grid.Row="6" Grid.ColumnSpan="2" Placeholder="Dirección" Style="{StaticResource EntryStyle}"/>
 
 
-                    <Button x:Name="siguiente" Grid.Row="6" Grid.Column="1" Style="{StaticResource ButtonActStyle}" Text="Siguiente" Clicked="OnClickedNext1" />
+                    <Button x:Name="siguiente" Grid.Row="7" Grid.Column="1" Style="{StaticResource ButtonActStyle}" Text="Siguiente" Clicked="OnClickedNext1" />
                 </Grid>
             </StackLayout>
            
@@ -80,7 +82,7 @@
                         
                     </Grid.RowDefinitions>
                     <Label x:Name="lblpoldatos" Grid.Row="0" Grid.ColumnSpan="2"  Style="{StaticResource LabelStyleTermConds}" ></Label>
-                    <controls:CheckBox Grid.Row="1" Grid.ColumnSpan="2"  Text="¿Acepta las Politicas de Datos ?" IsChecked="{Binding YourProperty}" Type="Check" Color="Yellow" />
+                    <controls:CheckBox Grid.Row="1" x:Name="poldatos"  Grid.ColumnSpan="2"  Text="¿Acepta las Politicas de Datos ?" IsChecked="{Binding YourProperty}" Type="Check" Color="Yellow" />
                    
                     <Button x:Name="regresar1" Grid.Row="3" Grid.Column="0" Style="{StaticResource ButtonActStyle}" Text="Regresar" BackgroundColor="#2C96DE" Clicked="OnClickedBack1" />
                     <Button x:Name="siguiente3" Grid.Row="3" Grid.Column="1" Style="{StaticResource ButtonActStyle}" Text="Siguiente" Clicked="OnClickedNext3" />
@@ -104,7 +106,7 @@
                     </Grid.RowDefinitions>
                     
                     <Label x:Name="lbltermconds" Grid.Row="0" Style="{StaticResource LabelStyleTermConds}" ></Label> 
-                    <controls:CheckBox Grid.Row="1" Text="¿Acepta Términos y Condiciones ?" IsChecked="{Binding YourProperty}" Type="Check" Color="Yellow" />
+                    <controls:CheckBox Grid.Row="1" x:Name="termconds" Text="¿Acepta Términos y Condiciones ?" IsChecked="{Binding YourProperty}" Type="Check" Color="Yellow" />
                     
                     <Button x:Name="finalizar" Grid.Row="3" Style="{StaticResource ButtonActStyle}" Text="Registrar" Clicked="OnClickedFinalizar" />
                 </Grid>

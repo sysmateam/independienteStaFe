@@ -7,8 +7,8 @@
             xmlns:views="clr-namespace:IndependienteStaFe.Views"
             x:Class="IndependienteStaFe.Views.MainPage">
     <MasterDetailPage.Master>
-        
-        <ContentPage Title="☰" BackgroundColor="#00B4FF">
+
+        <ContentPage Title="☰" BackgroundColor="#0498E2">
             <StackLayout BackgroundColor="#FFBBA09C">
                 <StackLayout Margin="25,10,25,0" Padding="0,15,0,15">
                     <Image  Margin="10" BackgroundColor="Accent" Aspect="AspectFill" Source="Enrich.png"></Image>

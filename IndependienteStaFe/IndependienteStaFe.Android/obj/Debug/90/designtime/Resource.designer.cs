@@ -5817,6 +5817,9 @@ namespace IndependienteStaFe.Droid
 			// aapt resource value: 0x7F09005C
 			public const int design_snackbar_background = 2131296348;
 			
+			// aapt resource value: 0x7F010002
+			public const int euro = 2130771970;
+			
 			// aapt resource value: 0x7F090055
 			public const int ic_audiotrack_dark = 2131296341;
 			
@@ -5829,8 +5832,8 @@ namespace IndependienteStaFe.Droid
 			// aapt resource value: 0x7F090058
 			public const int ic_dialog_close_light = 2131296344;
 			
-			// aapt resource value: 0x7F010006
-			public const int ic_errorstatus = 2130771974;
+			// aapt resource value: 0x7F010007
+			public const int ic_errorstatus = 2130771975;
 			
 			// aapt resource value: 0x7F090059
 			public const int ic_group_collapse_00 = 2131296345;
@@ -6342,8 +6345,8 @@ namespace IndependienteStaFe.Droid
 			// aapt resource value: 0x7F09005F
 			public const int ic_mtrl_chip_close_circle = 2131296351;
 			
-			// aapt resource value: 0x7F010007
-			public const int ic_successstatus = 2130771975;
+			// aapt resource value: 0x7F010008
+			public const int ic_successstatus = 2130771976;
 			
 			// aapt resource value: 0x7F090100
 			public const int ic_vol_type_speaker_dark = 2131296512;
@@ -6363,8 +6366,8 @@ namespace IndependienteStaFe.Droid
 			// aapt resource value: 0x7F090105
 			public const int ic_vol_type_tv_light = 2131296517;
 			
-			// aapt resource value: 0x7F010002
-			public const int logout = 2130771970;
+			// aapt resource value: 0x7F010003
+			public const int logout = 2130771971;
 			
 			// aapt resource value: 0x7F090106
 			public const int mr_button_connected_dark = 2131296518;
@@ -6471,11 +6474,11 @@ namespace IndependienteStaFe.Droid
 			// aapt resource value: 0x7F09000C
 			public const int notify_panel_notification_icon_bg = 2131296268;
 			
-			// aapt resource value: 0x7F010004
-			public const int roundedbg = 2130771972;
-			
 			// aapt resource value: 0x7F010005
-			public const int roundedbgdark = 2130771973;
+			public const int roundedbg = 2130771973;
+			
+			// aapt resource value: 0x7F010006
+			public const int roundedbgdark = 2130771974;
 			
 			// aapt resource value: 0x7F09006F
 			public const int tooltip_frame_dark = 2131296367;
@@ -6483,8 +6486,8 @@ namespace IndependienteStaFe.Droid
 			// aapt resource value: 0x7F090070
 			public const int tooltip_frame_light = 2131296368;
 			
-			// aapt resource value: 0x7F010003
-			public const int xamarin_logo = 2130771971;
+			// aapt resource value: 0x7F010004
+			public const int xamarin_logo = 2130771972;
 			
 			static Drawable()
 			{

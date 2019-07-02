@@ -42,6 +42,26 @@ namespace IndependienteStaFe.Views
                 Detail.Navigation.PushAsync(new ListvideosPage());
                 IsPresented = false;
             }
+            if (item.Title == "Ciudades")
+            {
+                Detail.Navigation.PushAsync(new ListciudadesPage());
+                IsPresented = false;
+            }
+            if (item.Title == "Perfiles")
+            {
+                Detail.Navigation.PushAsync(new ListPerfilesPage());
+                IsPresented = false;
+            }
+            if (item.Title == "Membresía")
+            {
+                Detail.Navigation.PushAsync(new MembemshipPage());
+                IsPresented = false;
+            }
+            if (item.Title == "Productos")
+            {
+                Detail.Navigation.PushAsync(new ListproductsPage());
+                IsPresented = false;
+            }
             //   else
             // {
             //   Application.Current.Properties["MenuName"] = item.Title;
@@ -55,7 +75,11 @@ namespace IndependienteStaFe.Views
             {
                 new MasterPageList() { Title = "Usuario", Icon = "home.png" },
                 new MasterPageList() { Title = "Puntos", Icon = "admin.png" },
-                new MasterPageList() { Title = "Videos", Icon = "setting.png" }
+                new MasterPageList() { Title = "Membresía", Icon = "home.png" },
+                new MasterPageList() { Title = "Productos", Icon = "home.png" },
+                new MasterPageList() { Title = "Perfiles", Icon = "setting.png" },
+                new MasterPageList() { Title = "Videos", Icon = "setting.png" },
+                new MasterPageList() { Title = "Ciudades", Icon = "setting.png" }
             };
         }
     }
