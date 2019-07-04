@@ -187,39 +187,27 @@ namespace IndependienteStaFe.Services
         }
         /**************************************************************************/
         /*********************************Usuario, Post Usuario, Update Usuario, Recuperar Pw, Login*****************************************/
-        public async  Task<Login> getLogin(string pid, string pass)
+
+
+        public async Task<Login> ConnectUser(string id, string password)
         {
-            
-            try
+            object userInfos = new { id = id, password = mdpass.MD5Hash(password)  };
+            var jsonObj = JsonConvert.SerializeObject(userInfos);
+            using (HttpClient client = new HttpClient())
             {
-
-                var param = JsonConvert.SerializeObject(new
+                StringContent content = new StringContent(jsonObj.ToString(), Encoding.UTF8, "application/json");
+                var request = new HttpRequestMessage()
                 {
-                    id = pid,
-                    password = mdpass.MD5Hash(pass)
-
-                });
-                Task<Login> login;
-                var URLWebAPI = "https://crmpuntos.oliviadirect.co/services/user/login.php?";
-                using (var Client = new System.Net.Http.HttpClient())
-                {
-                    //+HttpUtility.UrlEncode(request)
-                    HttpContent content = new StringContent(param, Encoding.UTF8, "application/json");
-
-                    var resp = await Client.PostAsync(URLWebAPI, content);
-                    if (resp.IsSuccessStatusCode)
-                    {
-                         login = JsonConvert.DeserializeObject<Task<Login>>(resp.Content.ReadAsStringAsync().Result);
-                        return await login;
-                    }
-                  //  login = Newtonsoft.Json.JsonConvert.DeserializeObject<Login>(JSON.Result);
-                }
-
-                return null;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
+                    RequestUri = new Uri("https://crmpuntos.oliviadirect.co/services/user/login.php"),
+                    Method = HttpMethod.Post,
+                    Content = content
+                };
+                //you can add headers                
+                //request.Headers.Add("key", "value");
+                var response = await client.SendAsync(request).ConfigureAwait(false);
+                string dataResult = response.Content.ReadAsStringAsync().Result;
+                Login result = JsonConvert.DeserializeObject<Login>(dataResult);
+                return result;
             }
         }
 

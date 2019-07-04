@@ -46,9 +46,9 @@ namespace IndependienteStaFe.Views
 
             if(usuario.Text!="" && password.Text != "")
             {
-               Login login = repo.getLogin(usuario.Text, password.Text).Result;
+               Login login = repo.ConnectUser(usuario.Text, password.Text).Result;
 
-                if(login.Status=="Ok")
+                if(login.Status=="ok")
                 {
                     App.Current.Properties["token"] = login.Jwt;
 
