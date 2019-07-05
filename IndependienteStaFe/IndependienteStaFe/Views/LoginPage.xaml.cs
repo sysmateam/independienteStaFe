@@ -62,6 +62,13 @@ namespace IndependienteStaFe.Views
                 }
 
             }
+            else
+            {
+                Dialogs.ShowLoading("Ingrese datos válidos...");
+                await Task.Delay(1000);
+                Dialogs.HideLoading();
+
+            }
          
            
 

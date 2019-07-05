@@ -16,17 +16,20 @@ namespace IndependienteStaFe.Views
     [DesignTimeVisible(false)]
     public partial class UserInfoPage : ContentPage
     {
+        IUserDialogs Dialogs = UserDialogs.Instance;
         public UserInfoPage()
         {
             InitializeComponent();
 
             Repository repo = new Repository();
-            User user= repo.getGetUser();
+            string token = App.Current.Properties["token"].ToString();
+            userInfo user = repo.postUserInfo(token).Result;
+            
 
-            nombre.Text = user.name;
-            apellido.Text = user.Lastname;
-            ciudad.Text = user.City;
-            telefono.Text = user.Cellnumber;
+            nombre.Text = user.data.Name;
+            apellido.Text = user.data.LastName;
+            ciudad.Text = user.data.City;
+            telefono.Text = user.data.CellNumber;
         }
 
 
@@ -52,13 +55,14 @@ namespace IndependienteStaFe.Views
 
                 try
                 {
+                    UserUpdate userUpdate = new UserUpdate();
+                    userCreate update = repository.PostUpdateUser(userUpdate).Result;
+                    Dialogs.ShowLoading(update.Message.ToString()); ;
+                    await Task.Delay(2000);
+                    Dialogs.HideLoading();
 
-                    repository.PostUpdateUser(usuario);
                     MainPage myHomePage = new MainPage();
-
-
                     NavigationPage.SetHasNavigationBar(myHomePage, false);
-
                     await Navigation.PushModalAsync(myHomePage);
                 }
 

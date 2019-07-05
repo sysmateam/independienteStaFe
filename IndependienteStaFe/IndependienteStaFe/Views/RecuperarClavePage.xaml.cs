@@ -1,4 +1,6 @@
 ﻿using Acr.UserDialogs;
+using IndependienteStaFe.Models;
+using IndependienteStaFe.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,32 +16,26 @@ namespace IndependienteStaFe.Views
     public partial class RecuperarClavePage : ContentPage
     {
         IUserDialogs Dialogs = UserDialogs.Instance;
+        Repository repository = new Repository();
         public RecuperarClavePage()
         {
             InitializeComponent();
+
+
         }
 
         public async void OnRecuperarClave(object sender, EventArgs e)
         {
-            
 
-            Dialogs.ShowLoading( "Hemos enviado la nueva contraseña al correo registrado"); ;
+
+            rememberPassword rPw=  repository.PostRecuperarPw(rcIDtext.Text, rcEMailtext.Text).Result;
+   
+            Dialogs.ShowLoading(rPw.Message.ToString()); ;
             await Task.Delay(2000);
             Dialogs.HideLoading();
-
-
-
-            
-
-            MainPage myHomePage = new MainPage();
-
-
+            LoginPage myHomePage = new LoginPage();
             NavigationPage.SetHasNavigationBar(myHomePage, false);
-
-
-
             await Navigation.PushModalAsync(myHomePage);
-
 
         }
 
@@ -51,13 +47,8 @@ namespace IndependienteStaFe.Views
             await Task.Delay(1000);
             Dialogs.HideLoading();
 
-            MainPage myHomePage = new MainPage();
-
-
+            LoginPage myHomePage = new LoginPage();
             NavigationPage.SetHasNavigationBar(myHomePage, false);
-
-
-
             await Navigation.PushModalAsync(myHomePage);
 
 

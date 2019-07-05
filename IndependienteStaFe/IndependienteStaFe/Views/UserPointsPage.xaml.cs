@@ -1,4 +1,6 @@
-﻿using System;
+﻿using IndependienteStaFe.Models;
+using IndependienteStaFe.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +17,13 @@ namespace IndependienteStaFe.Views
         public UserPointsPage()
         {
             InitializeComponent();
+            Repository repository = new Repository();
+            string token = App.Current.Properties["token"].ToString();
+
+            userPuntos uPoints =  repository.getGetUserPoints(token).Result;
+
+            puntos.Text = uPoints.Points.ToString();
+
         }
     }
 }

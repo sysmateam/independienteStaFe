@@ -34,10 +34,10 @@ namespace IndependienteStaFe.Views
             }
             if (item.Title == "Puntos")
             {
-                Detail.Navigation.PushAsync(new UserInfoPage());
+                Detail.Navigation.PushAsync(new UserPointsPage());
                 IsPresented = false;
             }
-            if (item.Title == "Usuario")
+            if (item.Title == "Videos")
             {
                 Detail.Navigation.PushAsync(new ListvideosPage());
                 IsPresented = false;
@@ -78,8 +78,9 @@ namespace IndependienteStaFe.Views
                 new MasterPageList() { Title = "Membresía", Icon = "home.png" },
                 new MasterPageList() { Title = "Productos", Icon = "home.png" },
                 new MasterPageList() { Title = "Perfiles", Icon = "setting.png" },
-                new MasterPageList() { Title = "Videos", Icon = "setting.png" },
-                new MasterPageList() { Title = "Ciudades", Icon = "setting.png" }
+                new MasterPageList() { Title = "Ciudades", Icon = "setting.png" },
+                new MasterPageList() { Title = "Videos", Icon = "setting.png" }
+                
             };
         }
     }

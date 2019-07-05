@@ -211,112 +211,117 @@ namespace IndependienteStaFe.Services
             }
         }
 
-        public User getGetUser()
+        public async Task<rememberPassword> PostRecuperarPw(string id, string email)
         {
-            try
+            object userInfos = new { id = id,email=email};
+            var jsonObj = JsonConvert.SerializeObject(userInfos);
+            using (HttpClient client = new HttpClient())
             {
-                User usuario;
-                var URLWebAPI = "https://crmpuntos.oliviadirect.co/services/user/info.php";
-                using (var Client = new System.Net.Http.HttpClient())
+                StringContent content = new StringContent(jsonObj.ToString(), Encoding.UTF8, "application/json");
+                var request = new HttpRequestMessage()
                 {
-                    var JSON = Client.GetStringAsync(URLWebAPI);
-                    usuario = Newtonsoft.Json.JsonConvert.DeserializeObject<User>(JSON.Result);
-                }
-
-                return usuario;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        public async void PostUser(User usuario)
-        {
-            HttpResponseMessage response = null;
-            using (var Client = new System.Net.Http.HttpClient())
-            {
-                try
-                {
-                    var JSON = Newtonsoft.Json.JsonConvert.SerializeObject(usuario);
-                    var content = new StringContent(JSON, System.Text.Encoding.UTF8, "application/json");
-                    var URLWebAPI = "https://crmpuntos.oliviadirect.co/services/user/create.php";
-                    var token = CancellationToken.None;
-
-                    response = await Client.PostAsync(URLWebAPI, content, token);
-                    // 405 Method not allow
-                    Debug.WriteLine(response.StatusCode);
-                    if (response.StatusCode != System.Net.HttpStatusCode.OK)
-                    {
-                        throw new Exception();
-                    }
-
-                }
-                catch (Exception e)
-                {
-                    throw e;
-                }
+                    RequestUri = new Uri("https://crmpuntos.oliviadirect.co/services/user/remember-password.php"),
+                    Method = HttpMethod.Post,
+                    Content = content
+                };
+                //you can add headers                
+                //request.Headers.Add("key", "value");
+                var response = await client.SendAsync(request).ConfigureAwait(false);
+                string dataResult = response.Content.ReadAsStringAsync().Result;
+                rememberPassword result = JsonConvert.DeserializeObject<rememberPassword>(dataResult);
+                return result;
             }
         }
 
-        public async void PostRecuperarPw(string id, string email)
+        public async Task<userInfo> postUserInfo(string token)
         {
-            HttpResponseMessage response = null;
-            using (var Client = new System.Net.Http.HttpClient())
+            object param = new { token };
+            var jsonObj = JsonConvert.SerializeObject(param);
+            using (HttpClient client = new HttpClient())
             {
-                try
+                StringContent content = new StringContent(jsonObj.ToString(), Encoding.UTF8, "application/json");
+                var request = new HttpRequestMessage()
                 {
-                    User usuario = new User();
-                    var JSON = Newtonsoft.Json.JsonConvert.SerializeObject(usuario);
-                    var content = new StringContent(JSON, System.Text.Encoding.UTF8, "application/json");
-                    var URLWebAPI = "https://crmpuntos.oliviadirect.co/services/user/remember-password.php?id="+id+"&email="+email;
-                    var token = CancellationToken.None;
-
-                    response = await Client.PostAsync(URLWebAPI, content, token);
-                    // 405 Method not allow
-                    Debug.WriteLine(response.StatusCode);
-                    if (response.StatusCode != System.Net.HttpStatusCode.OK)
-                    {
-                        throw new Exception();
-                    }
-
-                }
-                catch (Exception e)
-                {
-                    throw e;
-                }
-            } 
-            
+                    RequestUri = new Uri("https://crmpuntos.oliviadirect.co/services/user/info.php"),
+                    Method = HttpMethod.Post,
+                    Content = content
+                };
+                //you can add headers                
+                //request.Headers.Add("key", "value");
+                var response = await client.SendAsync(request).ConfigureAwait(false);
+                string dataResult = response.Content.ReadAsStringAsync().Result;
+                userInfo result = JsonConvert.DeserializeObject<userInfo>(dataResult);
+                
+                return result;
+            }
         }
-        public async void PostUpdateUser(User user)
+        public async Task<userPuntos> getGetUserPoints(string token)
         {
-            HttpResponseMessage response = null;
-            using (var Client = new System.Net.Http.HttpClient())
+            object userInfos = new { token };
+            var jsonObj = JsonConvert.SerializeObject(userInfos);
+            using (HttpClient client = new HttpClient())
             {
-                try
+                StringContent content = new StringContent(jsonObj.ToString(), Encoding.UTF8, "application/json");
+                var request = new HttpRequestMessage()
                 {
-
-                    var JSON = Newtonsoft.Json.JsonConvert.SerializeObject(user);
-                    var content = new StringContent(JSON, System.Text.Encoding.UTF8, "application/json");
-                    var URLWebAPI = "https://crmpuntos.oliviadirect.co/services/user/update.php";
-                    var token = CancellationToken.None;
-
-                    response = await Client.PostAsync(URLWebAPI, content, token);
-                    // 405 Method not allow
-                    Debug.WriteLine(response.StatusCode);
-                    if (response.StatusCode != System.Net.HttpStatusCode.OK)
-                    {
-                        throw new Exception();
-                    }
-
-                }
-                catch (Exception e)
-                {
-                    throw e;
-                }
+                    RequestUri = new Uri("https://crmpuntos.oliviadirect.co/services/user/points.php"),
+                    Method = HttpMethod.Post,
+                    Content = content
+                };
+                //you can add headers                
+                //request.Headers.Add("key", "value");
+                var response = await client.SendAsync(request).ConfigureAwait(false);
+                string dataResult = response.Content.ReadAsStringAsync().Result;
+                userPuntos result = JsonConvert.DeserializeObject<userPuntos>(dataResult);
+                return result;
             }
         }
 
+        public async Task<userCreate> postUserCreate(User user)
+        {
+            object userInfos = new { user };
+            var jsonObj = JsonConvert.SerializeObject(userInfos);
+            using (HttpClient client = new HttpClient())
+            {
+                StringContent content = new StringContent(jsonObj.ToString(), Encoding.UTF8, "application/json");
+                var request = new HttpRequestMessage()
+                {
+                    RequestUri = new Uri("https://crmpuntos.oliviadirect.co/services/user/create.php"),
+                    Method = HttpMethod.Post,
+                    Content = content
+                };
+                //you can add headers                
+                //request.Headers.Add("key", "value");
+                var response = await client.SendAsync(request).ConfigureAwait(false);
+                string dataResult = response.Content.ReadAsStringAsync().Result;
+                userCreate result = JsonConvert.DeserializeObject<userCreate>(dataResult);
+                return result;
+            }
+        }
+
+
+        public async Task<userCreate> PostUpdateUser(UserUpdate user)
+        {
+            object userInfos = new { user };
+            var jsonObj = JsonConvert.SerializeObject(userInfos);
+            using (HttpClient client = new HttpClient())
+            {
+                StringContent content = new StringContent(jsonObj.ToString(), Encoding.UTF8, "application/json");
+                var request = new HttpRequestMessage()
+                {
+                    RequestUri = new Uri("https://crmpuntos.oliviadirect.co/services/user/update.php"),
+                    Method = HttpMethod.Post,
+                    Content = content
+                };
+                //you can add headers                
+                //request.Headers.Add("key", "value");
+                var response = await client.SendAsync(request).ConfigureAwait(false);
+                string dataResult = response.Content.ReadAsStringAsync().Result;
+                userCreate result = JsonConvert.DeserializeObject<userCreate>(dataResult);
+                return result;
+            }
+        }
+      
         /**************************************************************************/
         /*******************************Productos, Registro Pago, Redenciones*******************************************/
         public Product getProductos()

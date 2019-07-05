@@ -1,4 +1,5 @@
-﻿using IndependienteStaFe.Helpers;
+﻿using Acr.UserDialogs;
+using IndependienteStaFe.Helpers;
 using IndependienteStaFe.Models;
 using IndependienteStaFe.Services;
 using System;
@@ -15,6 +16,7 @@ namespace IndependienteStaFe.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RegisterPage : CarouselPage
     {
+        IUserDialogs Dialogs = UserDialogs.Instance;
         public RegisterPage()
         {
             InitializeComponent();
@@ -56,12 +58,12 @@ namespace IndependienteStaFe.Views
                 try
                 {
 
-                    repository.PostUser(usuario);
+                    userCreate user=repository.postUserCreate(usuario).Result;
+                    Dialogs.ShowLoading(user.Message.ToString()); ;
+                    await Task.Delay(2000);
+                    Dialogs.HideLoading();
                     MainPage myHomePage = new MainPage();
-
-
                     NavigationPage.SetHasNavigationBar(myHomePage, false);
-
                     await Navigation.PushModalAsync(myHomePage);
                 }
 

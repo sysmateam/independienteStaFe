@@ -92,15 +92,14 @@
                 <Setter Property="BorderWidth" Value="0"/>
                 <Setter Property="BorderColor" Value="Transparent" />
             </Style>
-            <Style TargetType="Label" x:Key="SaldoStyle">
-                <Setter Property="TextColor" Value="#FFFFFF"/>
-                <Setter Property="BackgroundColor" Value="#026798"/>
+            <Style TargetType="Label" x:Key="PuntosStyle">
+                <Setter Property="TextColor" Value="#026798"/>
                 <Setter Property="FontAttributes" Value="Bold"/>
                 <Setter Property="HorizontalTextAlignment" Value="Center"/>
                 <Setter Property="VerticalTextAlignment" Value="Center"/>
                 <Setter Property="HorizontalOptions" Value="End"/>
                 <Setter Property="WidthRequest" Value="128" />
-                <Setter Property="HeightRequest" Value="8" />
+                <Setter Property="HeightRequest" Value="80" />
             </Style>
             <!--<Style TargetType="controls:CircleImage" x:Key="ProfilePhoto">
                 <Setter Property="HeightRequest" Value="64"/>
