@@ -14,8 +14,13 @@
                             <ViewCell>
                                 <StackLayout BackgroundColor="White" Orientation="Vertical">
                                     <StackLayout Orientation="Horizontal">
-                                        <Image Source="{Binding Image}" HeightRequest="50" WidthRequest="50"/>
                                         <Label Text="{Binding Name}" TextColor="Black"/>
+                                        <WebView Source="{Binding Description}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+                                        <Image Source="{Binding Image}" HeightRequest="50" WidthRequest="50"/>
+                                        <Label Text="{Binding Date}" TextColor="Black"/>
+                                        <Label Text="{Binding TypePay}" TextColor="Black"/>
+                                        <Label Text="{Binding Points}" TextColor="Black"/>
+                                        <Label Text="{Binding Value}" TextColor="Black"/>
                                     </StackLayout>
                                 </StackLayout>
                             </ViewCell>

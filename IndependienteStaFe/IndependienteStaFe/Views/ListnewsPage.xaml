@@ -16,13 +16,13 @@
     <ContentPage.Content>
         <ScrollView Style="{StaticResource ScrollViewStyle}">
             <StackLayout Style="{StaticResource StackLayoutStyle}" VerticalOptions="CenterAndExpand">
-                <ListView x:Name="Lista">
+                <ListView x:Name="Lista" ItemSelected="EvetClicked">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
                                 <StackLayout BackgroundColor="White" Orientation="Vertical">
                                     <StackLayout Orientation="Horizontal">
-                                        <Image Source="{Binding Image}" HeightRequest="50" WidthRequest="50"/>
+                                        <Image Source="{Binding Image}" HeightRequest="50" WidthRequest="100"/>
                                         <Label Text="{Binding Name}" TextColor="Black"/>
                                     </StackLayout>
                                 </StackLayout>

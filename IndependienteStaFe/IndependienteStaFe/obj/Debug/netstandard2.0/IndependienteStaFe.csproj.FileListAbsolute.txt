@@ -28,3 +28,4 @@ C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\In
 C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe\obj\Debug\netstandard2.0\Views\UpdateMembershipPage.xaml.g.cs
 C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe\obj\Debug\netstandard2.0\Views\ListproductsPage.xaml.g.cs
 C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe\obj\Debug\netstandard2.0\Views\ProductPage.xaml.g.cs
+C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe\obj\Debug\netstandard2.0\Views\NewsDetailPage.xaml.g.cs

@@ -22,7 +22,7 @@ namespace IndependienteStaFe.Views
             Repository repo = new Repository();
             var membresias = repo.getMembresia();
 
-            Lista.ItemsSource = membresias.data.ToString();
+            Lista.ItemsSource = membresias.data;
         }
 
         public async void UpdateMembreship_Clicked(object sender, EventArgs e)

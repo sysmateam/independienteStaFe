@@ -147,6 +147,29 @@ namespace IndependienteStaFe.Services
             }
         }
 
+        
+        public async Task<NewsDetail> getNewsDetail(string newsId)
+        {
+            object param = new { newsId };
+            var jsonObj = JsonConvert.SerializeObject(param);
+            using (HttpClient client = new HttpClient())
+            {
+                StringContent content = new StringContent(jsonObj.ToString(), Encoding.UTF8, "application/json");
+                var request = new HttpRequestMessage()
+                {
+                    RequestUri = new Uri("https://crmpuntos.oliviadirect.co/services/content/detail-news.php"),
+                    Method = HttpMethod.Post,
+                    Content = content
+                };
+                //you can add headers                
+                //request.Headers.Add("key", "value");
+                var response = await client.SendAsync(request).ConfigureAwait(false);
+                string dataResult = response.Content.ReadAsStringAsync().Result;
+                NewsDetail result = JsonConvert.DeserializeObject<NewsDetail>(dataResult);
+                return result;
+            }
+        }
+
         public TermConds getTermConds()
         {
             try
@@ -321,109 +344,142 @@ namespace IndependienteStaFe.Services
                 return result;
             }
         }
-      
+
+        public async Task<userLogOut> LogOut(string token)
+        {
+            object userInfos = new { token };
+            var jsonObj = JsonConvert.SerializeObject(userInfos);
+            using (HttpClient client = new HttpClient())
+            {
+                StringContent content = new StringContent(jsonObj.ToString(), Encoding.UTF8, "application/json");
+                var request = new HttpRequestMessage()
+                {
+                    RequestUri = new Uri("https://crmpuntos.oliviadirect.co/services/user/logout.php"),
+                    Method = HttpMethod.Post,
+                    Content = content
+                };
+                //you can add headers                
+                //request.Headers.Add("key", "value");
+                var response = await client.SendAsync(request).ConfigureAwait(false);
+                string dataResult = response.Content.ReadAsStringAsync().Result;
+                userLogOut result = JsonConvert.DeserializeObject<userLogOut>(dataResult);
+                return result;
+            }
+        }
+
+
         /**************************************************************************/
         /*******************************Productos, Registro Pago, Redenciones*******************************************/
-        public Product getProductos()
+        public async Task<Product> getProductos (string token)
         {
-            try
+            object param = new { token };
+            var jsonObj = JsonConvert.SerializeObject(param);
+            using (HttpClient client = new HttpClient())
             {
-                Product product;
-                var URLWebAPI = "https://crmpuntos.oliviadirect.co/services/product/list.php";
-                using (var Client = new System.Net.Http.HttpClient())
+                StringContent content = new StringContent(jsonObj.ToString(), Encoding.UTF8, "application/json");
+                var request = new HttpRequestMessage()
                 {
-                    var JSON = Client.GetStringAsync(URLWebAPI);
-                    product = Newtonsoft.Json.JsonConvert.DeserializeObject<Product>(JSON.Result);
-                }
-
-                return product;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
+                    RequestUri = new Uri("https://crmpuntos.oliviadirect.co/services/product/list.php"),
+                    Method = HttpMethod.Post,
+                    Content = content
+                };
+                //you can add headers                
+                //request.Headers.Add("key", "value");
+                var response = await client.SendAsync(request).ConfigureAwait(false);
+                string dataResult = response.Content.ReadAsStringAsync().Result;
+                Product result = JsonConvert.DeserializeObject<Product>(dataResult);
+                return result;
             }
         }
 
-
-        public ProductInfo getProductosInfo()
+        public async Task<ProductInfo>  getProductosInfo(string token, string productId)
         {
-            try
+            object param = new { token, productId };
+            var jsonObj = JsonConvert.SerializeObject(param);
+            using (HttpClient client = new HttpClient())
             {
-                ProductInfo product;
-                var URLWebAPI = "https://crmpuntos.oliviadirect.co/services/product/info.php";
-                using (var Client = new System.Net.Http.HttpClient())
+                StringContent content = new StringContent(jsonObj.ToString(), Encoding.UTF8, "application/json");
+                var request = new HttpRequestMessage()
                 {
-                    var JSON = Client.GetStringAsync(URLWebAPI);
-                    product = Newtonsoft.Json.JsonConvert.DeserializeObject<ProductInfo>(JSON.Result);
-                }
-
-                return product;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
+                    RequestUri = new Uri("https://crmpuntos.oliviadirect.co/services/product/info.php"),
+                    Method = HttpMethod.Post,
+                    Content = content
+                };
+                //you can add headers                
+                //request.Headers.Add("key", "value");
+                var response = await client.SendAsync(request).ConfigureAwait(false);
+                string dataResult = response.Content.ReadAsStringAsync().Result;
+                ProductInfo result = JsonConvert.DeserializeObject<ProductInfo>(dataResult);
+                return result;
             }
         }
 
-        public ProductStock getProductosStock()
+        public async Task<ProductStock>  getProductosStock(string productId)
         {
-            try
+            object param = new {productId };
+            var jsonObj = JsonConvert.SerializeObject(param);
+            using (HttpClient client = new HttpClient())
             {
-                ProductStock product;
-                var URLWebAPI = "https://crmpuntos.oliviadirect.co/services/product/stock-product.php";
-                using (var Client = new System.Net.Http.HttpClient())
+                StringContent content = new StringContent(jsonObj.ToString(), Encoding.UTF8, "application/json");
+                var request = new HttpRequestMessage()
                 {
-                    var JSON = Client.GetStringAsync(URLWebAPI);
-                    product = Newtonsoft.Json.JsonConvert.DeserializeObject<ProductStock>(JSON.Result);
-                }
-
-                return product;
+                    RequestUri = new Uri("https://crmpuntos.oliviadirect.co/services/product/stock-product.php"),
+                    Method = HttpMethod.Post,
+                    Content = content
+                };
+                //you can add headers                
+                //request.Headers.Add("key", "value");
+                var response = await client.SendAsync(request).ConfigureAwait(false);
+                string dataResult = response.Content.ReadAsStringAsync().Result;
+                ProductStock result = JsonConvert.DeserializeObject<ProductStock>(dataResult);
+                return result;
             }
-            catch (Exception ex)
+        }
+        public async Task<Redencion> getRedencion(string token,string productId, string attribute, string quantity)
+        {
+            object param = new { token, productId, attribute, quantity };
+            var jsonObj = JsonConvert.SerializeObject(param);
+            using (HttpClient client = new HttpClient())
             {
-                throw ex;
+                StringContent content = new StringContent(jsonObj.ToString(), Encoding.UTF8, "application/json");
+                var request = new HttpRequestMessage()
+                {
+                    RequestUri = new Uri("https://crmpuntos.oliviadirect.co/services/product/redemption.php"),
+                    Method = HttpMethod.Post,
+                    Content = content
+                };
+                //you can add headers                
+                //request.Headers.Add("key", "value");
+                var response = await client.SendAsync(request).ConfigureAwait(false);
+                string dataResult = response.Content.ReadAsStringAsync().Result;
+                Redencion result = JsonConvert.DeserializeObject<Redencion>(dataResult);
+                return result;
             }
         }
 
-        public Redencion getRedencion()
+        public async Task<RegisterPay> getRegisterPay(string token, string productId, string attribute, string quantity, string dateHourPayment, string statusPayment)
         {
-            try
+            object param = new { token, productId, attribute, quantity, dateHourPayment, statusPayment };
+            var jsonObj = JsonConvert.SerializeObject(param);
+            using (HttpClient client = new HttpClient())
             {
-                Redencion redencion;
-                var URLWebAPI = "https://crmpuntos.oliviadirect.co/services/product/redemption.php";
-                using (var Client = new System.Net.Http.HttpClient())
+                StringContent content = new StringContent(jsonObj.ToString(), Encoding.UTF8, "application/json");
+                var request = new HttpRequestMessage()
                 {
-                    var JSON = Client.GetStringAsync(URLWebAPI);
-                    redencion = Newtonsoft.Json.JsonConvert.DeserializeObject<Redencion>(JSON.Result);
-                }
-
-                return redencion;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
+                    RequestUri = new Uri("https://crmpuntos.oliviadirect.co/services/product/register-pay.php"),
+                    Method = HttpMethod.Post,
+                    Content = content
+                };
+                //you can add headers                
+                //request.Headers.Add("key", "value");
+                var response = await client.SendAsync(request).ConfigureAwait(false);
+                string dataResult = response.Content.ReadAsStringAsync().Result;
+                RegisterPay result = JsonConvert.DeserializeObject<RegisterPay>(dataResult);
+                return result;
             }
         }
 
-        public RegisterPay getRegisterPay()
-        {
-            try
-            {
-                RegisterPay registerpay;
-                var URLWebAPI = "https://crmpuntos.oliviadirect.co/services/product/register-pay.php";
-                using (var Client = new System.Net.Http.HttpClient())
-                {
-                    var JSON = Client.GetStringAsync(URLWebAPI);
-                    registerpay = Newtonsoft.Json.JsonConvert.DeserializeObject<RegisterPay>(JSON.Result);
-                }
-
-                return registerpay;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
+      
         /**************************************************************************/
 
 

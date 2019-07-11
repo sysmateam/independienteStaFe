@@ -18,8 +18,10 @@ namespace IndependienteStaFe.Views
             InitializeComponent();
 
             Repository repo = new Repository();
-            var productos=repo.getProductos();
-            Lista.ItemsSource = productos.data.ToString();
+            string token = App.Current.Properties["token"].ToString();
+            var productos=repo.getProductos(token).Result;
+            Lista.ItemsSource = productos.data;
+            
         }
     }
 }

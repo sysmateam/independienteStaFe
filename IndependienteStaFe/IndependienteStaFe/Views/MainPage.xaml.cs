@@ -73,13 +73,13 @@ namespace IndependienteStaFe.Views
         {
             return new List<MasterPageList>
             {
-                new MasterPageList() { Title = "Usuario", Icon = "home.png" },
-                new MasterPageList() { Title = "Puntos", Icon = "admin.png" },
-                new MasterPageList() { Title = "Membresía", Icon = "home.png" },
-                new MasterPageList() { Title = "Productos", Icon = "home.png" },
-                new MasterPageList() { Title = "Perfiles", Icon = "setting.png" },
-                new MasterPageList() { Title = "Ciudades", Icon = "setting.png" },
-                new MasterPageList() { Title = "Videos", Icon = "setting.png" }
+                new MasterPageList() { Title = "Usuario", Icon = "usuario.png" },
+                new MasterPageList() { Title = "Puntos", Icon = "puntos.png" },
+                new MasterPageList() { Title = "Membresía", Icon = "membresia.png" },
+                new MasterPageList() { Title = "Productos", Icon = "productos.png" },
+                new MasterPageList() { Title = "Perfiles", Icon = "perfiles.png" },
+                new MasterPageList() { Title = "Ciudades", Icon = "ciudades.png" },
+                new MasterPageList() { Title = "Videos", Icon = "videos.png" }
                 
             };
         }
