@@ -7,10 +7,10 @@ namespace IndependienteStaFe.Controls
 {
     public class CheckBox : StackLayout
     {
-        BoxView boxBackground = new BoxView { HeightRequest = 25, WidthRequest = 25, BackgroundColor = Color.LightGray, VerticalOptions = LayoutOptions.CenterAndExpand };
+        BoxView boxBackground = new BoxView { HeightRequest = 25, WidthRequest = 25, BackgroundColor = Color.White, VerticalOptions = LayoutOptions.CenterAndExpand };
         BoxView boxSelected = new BoxView { IsVisible = false, HeightRequest = 18, WidthRequest = 18, BackgroundColor = Color.Accent, VerticalOptions = LayoutOptions.CenterAndExpand, HorizontalOptions = LayoutOptions.Center };
-        Label lblSelected = new Label { Text = "✓", FontSize = 19, FontAttributes = FontAttributes.Bold, IsVisible = false, TextColor = Color.Accent, HorizontalOptions = LayoutOptions.Center, VerticalOptions = LayoutOptions.CenterAndExpand };
-        Label lblOption = new Label { VerticalOptions = LayoutOptions.CenterAndExpand, FontSize = 14 };
+        Label lblSelected = new Label { Text = "✓", FontSize = 16, FontAttributes = FontAttributes.Bold, IsVisible = false, TextColor = Color.White, HorizontalOptions = LayoutOptions.Center, VerticalOptions = LayoutOptions.CenterAndExpand };
+        Label lblOption = new Label { VerticalOptions = LayoutOptions.CenterAndExpand, FontSize = 14, FontFamily= "MyriadPro-BoldCondIt.otf" , TextColor=Color.White};
         private CheckType _type = CheckType.Box;
 
         public CheckBox()

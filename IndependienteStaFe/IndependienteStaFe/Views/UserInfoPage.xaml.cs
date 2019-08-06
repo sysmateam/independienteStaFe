@@ -21,6 +21,8 @@ namespace IndependienteStaFe.Views
         {
             InitializeComponent();
 
+            fechaNacimiento.MaximumDate = DateTime.Parse(DateTime.Now.Month.ToString() + "-" + DateTime.Now.Day.ToString() + "-" + (DateTime.Now.Year - 18).ToString());
+
             Repository repo = new Repository();
             string token = App.Current.Properties["token"].ToString();
             userInfo user = repo.postUserInfo(token).Result;

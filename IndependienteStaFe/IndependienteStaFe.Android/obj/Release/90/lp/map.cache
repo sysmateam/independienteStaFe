@@ -1,9 +1,14 @@
 Acr.UserDialogs
 AndHUD
+DLToolkit.Forms.Controls.FlowListView
 FormsViewGroup
 IndependienteStaFe
 Newtonsoft.Json
 Plugin.CurrentActivity
+Plugin.Settings.Abstractions
+Plugin.Settings
+Rg.Plugins.Popup
+Rg.Plugins.Popup.Droid
 System.Runtime
 Xamarin.Android.Arch.Core.Common
 Xamarin.Android.Arch.Core.Runtime
@@ -50,3 +55,5 @@ Xamarin.Forms.Platform.Android
 Xamarin.Forms.Platform
 Xamarin.Forms.Xaml
 netstandard
+System.Resources.ResourceManager
+System.Reflection.Extensions

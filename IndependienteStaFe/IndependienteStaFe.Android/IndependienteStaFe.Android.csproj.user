@@ -3,5 +3,7 @@
   <PropertyGroup>
     <SelectedDevice>Xiaomi Redmi Note 5</SelectedDevice>
     <DefaultDevice>goro</DefaultDevice>
+    <AndroidDesignerPreferredDevice>Nexus 4</AndroidDesignerPreferredDevice>
+    <AndroidDesignerPreferredTheme>Theme.DeviceDefault.Light.NoActionBar.Fullscreen</AndroidDesignerPreferredTheme>
   </PropertyGroup>
 </Project>

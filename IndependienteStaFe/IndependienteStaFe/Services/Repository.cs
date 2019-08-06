@@ -88,7 +88,7 @@ namespace IndependienteStaFe.Services
             }
         }
         /**************************************************************************/
-        /***********************************Servicios de Ciudades, Videos, Noticias, TermCons y Poldatos***************************************/
+        /***********************************Servicios de Ciudades,Partidos, Equipos, Videos, Noticias, TermCons y Poldatos***************************************/
         public Ciudades getCiudades()
         {
             try
@@ -127,20 +127,30 @@ namespace IndependienteStaFe.Services
                 throw ex;
             }
         }
-        public News getNews()
+        public async Task<News> getNews(string token, string limit)
         {
             try
             {
-                News news;
-                var URLWebAPI = "https://crmpuntos.oliviadirect.co/services/content/list-news.php";
-                    using (var Client = new System.Net.Http.HttpClient())
-                    {
-                        var JSON =  Client.GetStringAsync(URLWebAPI);
-                            news = Newtonsoft.Json.JsonConvert.DeserializeObject<News>(JSON.Result);
-                    }
 
-                return news;
+                object param = new { token, limit};
+                var jsonObj = JsonConvert.SerializeObject(param);
+                using (HttpClient client = new HttpClient())
+                {
+                    StringContent content = new StringContent(jsonObj.ToString(), Encoding.UTF8, "application/json");
+                    var request = new HttpRequestMessage()
+                    {
+                        RequestUri = new Uri("https://crmpuntos.oliviadirect.co/services/content/list-news.php"),
+                        Method = HttpMethod.Post,
+                        Content = content
+                    };
+                    //you can add headers                
+                    //request.Headers.Add("key", "value");
+                    var response = await client.SendAsync(request).ConfigureAwait(false);
+                    string dataResult = response.Content.ReadAsStringAsync().Result;
+                    News result = JsonConvert.DeserializeObject<News>(dataResult);
+                    return result;
                 }
+            }
                 catch (Exception ex)
             {
                 throw ex;
@@ -189,6 +199,25 @@ namespace IndependienteStaFe.Services
                 throw ex;
             }
         }
+        public TermConds getHowWorks()
+        {
+            try
+            {
+                TermConds termconds;
+                var URLWebAPI = "https://crmpuntos.oliviadirect.co/services/content/how-works.php";
+                using (var Client = new System.Net.Http.HttpClient())
+                {
+                    var JSON = Client.GetStringAsync(URLWebAPI);
+                    termconds = Newtonsoft.Json.JsonConvert.DeserializeObject<TermConds>(JSON.Result);
+                }
+
+                return termconds;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         public Poldatos getPolDatos()
         {
             try
@@ -202,6 +231,55 @@ namespace IndependienteStaFe.Services
                 }
 
                 return poldatos;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public async Task<Game> getPartidos(string limit)
+        {
+            try
+            {
+                
+                object param = new { limit };
+                var jsonObj = JsonConvert.SerializeObject(param);
+                using (HttpClient client = new HttpClient())
+                {
+                    StringContent content = new StringContent(jsonObj.ToString(), Encoding.UTF8, "application/json");
+                    var request = new HttpRequestMessage()
+                    {
+                        RequestUri = new Uri("https://crmpuntos.oliviadirect.co/services/game/game.php"),
+                        Method = HttpMethod.Post,
+                        Content = content
+                    };
+                    //you can add headers                
+                    //request.Headers.Add("key", "value");
+                    var response = await client.SendAsync(request).ConfigureAwait(false);
+                    string dataResult = response.Content.ReadAsStringAsync().Result;
+                    Game result = JsonConvert.DeserializeObject<Game>(dataResult);
+                    return result;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public Team getTeam()
+        {
+            try
+            {
+                Team team;
+                var URLWebAPI = "https://crmpuntos.oliviadirect.co/services/game/team.php";
+                using (var Client = new System.Net.Http.HttpClient())
+                {
+                    var JSON = Client.GetStringAsync(URLWebAPI);
+                    team = Newtonsoft.Json.JsonConvert.DeserializeObject<Team>(JSON.Result);
+                }
+
+                return team;
             }
             catch (Exception ex)
             {

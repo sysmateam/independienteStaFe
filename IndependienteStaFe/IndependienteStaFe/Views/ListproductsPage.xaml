@@ -4,29 +4,45 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
              x:Class="IndependienteStaFe.Views.ListproductsPage">
     <ContentPage.Content>
         <ScrollView Style="{StaticResource ScrollViewStyle}">
-            <StackLayout Style="{StaticResource StackLayoutStyle}" VerticalOptions="CenterAndExpand">
-                <ListView x:Name="Lista">
+            <StackLayout  VerticalOptions="CenterAndExpand">
+                <ListView x:Name="Lista" ItemSelected="EvetClicked" SeparatorColor="#63191B" HasUnevenRows="True">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <StackLayout BackgroundColor="White" Orientation="Vertical">
-                                    <StackLayout Orientation="Horizontal">
-                                        <Label Text="{Binding Name}" TextColor="Black"/>
-                                        <WebView Source="{Binding Description}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
-                                        <Image Source="{Binding Image}" HeightRequest="50" WidthRequest="50"/>
-                                        <Label Text="{Binding Date}" TextColor="Black"/>
-                                        <Label Text="{Binding TypePay}" TextColor="Black"/>
-                                        <Label Text="{Binding Points}" TextColor="Black"/>
-                                        <Label Text="{Binding Value}" TextColor="Black"/>
-                                    </StackLayout>
-                                </StackLayout>
+
+                                <Grid>
+                                    <Grid.RowDefinitions>
+
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="50"/>
+                                        <RowDefinition Height="50"/>
+                                        <RowDefinition Height="50"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+
+                                        <ColumnDefinition Width="200"/>
+                                        <ColumnDefinition Width="200"/>
+
+                                    </Grid.ColumnDefinitions>
+
+                                    <Image Source="{Binding Image}" Grid.RowSpan="3" Grid.Row="0" Grid.Column="0" Aspect="AspectFill" Margin="5,5,5,5" HeightRequest="200" WidthRequest="200"/>
+                                    <Label Text="{Binding Name}"  Grid.Row="0" Grid.Column="1"  TextColor="#B00000" />
+                                    <Label Text="{Binding Value}" Grid.Row="1" Grid.Column="1"   TextColor="Black" />
+                                    <Label Text="{Binding TypePay}" Grid.Row="2" Grid.Column="1"  TextColor="#63191B" FontSize="Micro" />
+                                    <Button  Grid.Row="2" Text="Comprar" Grid.Column="1"   Style="{StaticResource ButtonCompraStyle}" ></Button>
+
+                                </Grid>
                             </ViewCell>
+
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
+
+              
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

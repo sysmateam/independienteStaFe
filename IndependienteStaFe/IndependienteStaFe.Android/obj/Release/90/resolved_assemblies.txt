@@ -1,6 +1,7 @@
 C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe.Android\obj\Release\90\android\assets\IndependienteStaFe.Android.dll
 C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe.Android\obj\Release\90\android\assets\Acr.UserDialogs.dll
 C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe.Android\obj\Release\90\android\assets\AndHUD.dll
+C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe.Android\obj\Release\90\android\assets\DLToolkit.Forms.Controls.FlowListView.dll
 C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe.Android\obj\Release\90\android\assets\FormsViewGroup.dll
 C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe.Android\obj\Release\90\android\assets\IndependienteStaFe.dll
 C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe.Android\obj\Release\90\android\assets\Java.Interop.dll
@@ -8,6 +9,10 @@ C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\In
 C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe.Android\obj\Release\90\android\assets\mscorlib.dll
 C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe.Android\obj\Release\90\android\assets\Newtonsoft.Json.dll
 C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe.Android\obj\Release\90\android\assets\Plugin.CurrentActivity.dll
+C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe.Android\obj\Release\90\android\assets\Plugin.Settings.Abstractions.dll
+C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe.Android\obj\Release\90\android\assets\Plugin.Settings.dll
+C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe.Android\obj\Release\90\android\assets\Rg.Plugins.Popup.dll
+C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe.Android\obj\Release\90\android\assets\Rg.Plugins.Popup.Droid.dll
 C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe.Android\obj\Release\90\android\assets\System.Core.dll
 C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe.Android\obj\Release\90\android\assets\System.dll
 C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe.Android\obj\Release\90\android\assets\System.Numerics.dll

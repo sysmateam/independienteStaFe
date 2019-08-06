@@ -6,17 +6,30 @@
              mc:Ignorable="d"
              x:Class="IndependienteStaFe.Views.NewsDetailPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label x:Name="name" Text=""
-                VerticalOptions="CenterAndExpand" 
+        <ScrollView Style="{StaticResource ScrollViewStyle}">
+            <StackLayout Style="{StaticResource StackLayoutStyle}" VerticalOptions="CenterAndExpand">
+                <Grid Style="{StaticResource GridStyle}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="300"/>
+                        <RowDefinition Height="400"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    
+                    <Label x:Name="name"  Grid.Row="0"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" TextColor="#EB0000" Margin="5,5,5,5" FontSize="Large" />
+                    <Image x:Name="image" Grid.Row="1"  WidthRequest="300" HeightRequest="300" Aspect="AspectFill"  HorizontalOptions="Center"/>
+                    <WebView x:Name="content" Grid.Row="2" VerticalOptions="Center"  
                 HorizontalOptions="CenterAndExpand" />
-            <WebView x:Name="content" VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-            <Image x:Name="image"  />
-            
-            <Label x:Name="date" Text=""
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+                   <Label x:Name="date" Grid.Row="3" FontSize="Small"
+                VerticalOptions="End" 
+                HorizontalOptions="End" />
+                </Grid>
+
+            </StackLayout>
+        </ScrollView>
+       
     </ContentPage.Content>
 </ContentPage>

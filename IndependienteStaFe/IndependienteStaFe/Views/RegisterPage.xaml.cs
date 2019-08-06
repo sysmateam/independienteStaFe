@@ -26,15 +26,33 @@ namespace IndependienteStaFe.Views
             var termconds = repo.getTermConds();
             var poldatos = repo.getPolDatos();
 
-            lbltermconds.Text = termconds.data[0].Name.ToString()+'\n' + termconds.data[0].Content.ToString();
+            Ciudades listciudades = repo.getCiudades();
 
-            lblpoldatos.Text = poldatos.data[0].Name.ToString() + '\n' + poldatos.data[0].Content.ToString();
+            fechaNacimiento.MaximumDate = DateTime.Parse(DateTime.Now.Month.ToString() + "-" + DateTime.Now.Day.ToString() + "-" + (DateTime.Now.Year - 18).ToString());
+
+            foreach (var item in listciudades.data)
+            {
+
+                ciudad.Items.Add(item.Name);
+                ciudad.Items.IndexOf(item.id.ToString());
+
+            }
+
+            lbltermconds.Source = new HtmlWebViewSource
+            {
+                Html = termconds.data[0].Name.ToString() + "<br/>" + termconds.data[0].Content
+            };
+
+            lblpoldatos.Source = new HtmlWebViewSource
+            {
+                Html = poldatos.data[0].Name.ToString() + "<br/>" + poldatos.data[0].Content
+            };
+
+
         }
-
-
         public async void OnClickedFinalizar(object sender, EventArgs args)
         {
-            if (nombre.Text != null && password.Text != null && correo.Text != null && password.Text != null && telefono.Text != null)
+            if (nombre.Text != null && password.Text != null && correo.Text != null && password.Text != null && telefono.Text != null && password.Equals(passwordconf.Text))
             {
                 MD5HashX2 pwtohash = new MD5HashX2();
                
@@ -44,7 +62,7 @@ namespace IndependienteStaFe.Views
                 usuario.Id = userid.Text;
                 usuario.Emal = correo.Text;
                 usuario.Password = pwtohash.MD5Hash(password.Text);
-                usuario.City = ciudad.Text;
+                usuario.City = ciudad.SelectedIndex.ToString();
                 usuario.Address = address.Text;
                 usuario.Cellnumber = telefono.Text;
                 usuario.Gender = lstViewGeneros.SelectedIndex.ToString();
@@ -110,6 +128,11 @@ namespace IndependienteStaFe.Views
         public void OnClickedBack1(object sender, EventArgs e)
         {
             CurrentPage = page2;
+
+        }
+
+        private void FechaNacimiento_DateSelected(object sender, DateChangedEventArgs e)
+        {
 
         }
     }

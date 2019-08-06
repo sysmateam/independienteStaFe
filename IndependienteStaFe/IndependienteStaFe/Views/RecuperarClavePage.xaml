@@ -4,20 +4,21 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="IndependienteStaFe.Views.RecuperarClavePage">
+             x:Class="IndependienteStaFe.Views.RecuperarClavePage" BackgroundColor="#63191B">
     <ContentPage.Content>
         <ScrollView Style="{StaticResource ScrollViewStyle}">
             <StackLayout Style="{StaticResource StackLayoutStyle}" VerticalOptions="CenterAndExpand">
                 <Grid Style="{StaticResource GridStyle}">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="256"/>
                         <RowDefinition Height="50"/>
                         <RowDefinition Height="50"/>
                         <RowDefinition Height="50"/>
                         <RowDefinition Height="50"/>
                     </Grid.RowDefinitions>
-
-                    <Entry x:Name="rcIDtext"  Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource EntryStyle}" Placeholder="Id del Usuario" />
+                    <Image x:Name="logo" Grid.Row="0"  Source="logosf.png" Grid.ColumnSpan="2" WidthRequest="250" HeightRequest="250" 
+                   HorizontalOptions="CenterAndExpand" Margin="20,20,20,0" />
+                    <Entry x:Name="rcIDtext"  Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource EntryStyle}" Placeholder="Número de cédula" />
                     <Entry x:Name="rcEMailtext"  Grid.Row="2" Grid.ColumnSpan="2" Keyboard ="Email"  Style="{StaticResource EntryStyle}" Placeholder="Email de Ususario" />
                      <Button x:Name="rclave" Grid.Row="3" Grid.Column="0" Style="{StaticResource ButtonStyle}" Clicked="OnRecuperarClave" Text="Recuperar" />
                     <Button x:Name="rclaveback" Grid.Row="3" Grid.Column="1"  Style="{StaticResource ButtonActStyle}" Clicked="OnCancelar" Text="Cancelar" />

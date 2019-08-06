@@ -34,5 +34,7 @@ namespace IndependienteStaFe.Droid
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
+
+
     }
 }

@@ -4,10 +4,12 @@ using Xamarin.Forms.Xaml;
 using IndependienteStaFe.Services;
 using IndependienteStaFe.Views;
 
+
 namespace IndependienteStaFe
 {
     public partial class App : Application
     {
+        public static bool IsUserLoggedIn { get; set; }
 
         public App()
         {
@@ -15,15 +17,18 @@ namespace IndependienteStaFe
 
             DependencyService.Register<Repository>();
             // MainPage = new MainPage();
-             MainPage = new LoginPage();
+           
+            MainPage = new AppShell();
 
-            
+            ///OneSignal.Current.StartInit("{Insert Your OneSignal ID}").EndInit();
 
-        }
+
+    }
 
         protected override void OnStart()
         {
             // Handle when your app starts
+            Xamarin.Forms.Application.Current.Properties.Clear();
         }
 
         protected override void OnSleep()

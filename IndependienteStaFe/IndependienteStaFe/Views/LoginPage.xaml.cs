@@ -1,4 +1,5 @@
 ﻿using Acr.UserDialogs;
+using IndependienteStaFe.Helpers;
 using IndependienteStaFe.Models;
 using IndependienteStaFe.Services;
 using IndependienteStaFe.ViewModels;
@@ -44,12 +45,18 @@ namespace IndependienteStaFe.Views
 
             
 
-            if(usuario.Text!="" && password.Text != "")
+            if(!string.IsNullOrWhiteSpace(usuario.Text) && !string.IsNullOrWhiteSpace(password.Text))
             {
                Login login = repo.ConnectUser(usuario.Text, password.Text).Result;
 
                 if(login.Status=="ok")
                 {
+                    App.IsUserLoggedIn = true;
+
+                    // REMEMBER LOGIN STATUS!
+                    Application.Current.Properties["IsLoggedIn"] = true;
+                    Settings.IsLoggedIn = true;
+
                     App.Current.Properties["token"] = login.Jwt;
 
                     Dialogs.ShowLoading("Ingresando...");
@@ -64,37 +71,46 @@ namespace IndependienteStaFe.Views
             }
             else
             {
-                Dialogs.ShowLoading("Ingrese datos válidos...");
+                Dialogs.ShowLoading("Datos NO válidos...");
                 await Task.Delay(1000);
                 Dialogs.HideLoading();
 
             }
-         
+        
+
+        }
+      
+
+        public async void ClickedRecuperarClave(object sender, EventArgs e)
+        {
+            IUserDialogs Dialogs = UserDialogs.Instance;
+            Dialogs.ShowLoading("Espere por favor...");
+            await Task.Delay(1000);
+            Dialogs.HideLoading();
+
+            RecuperarClavePage myHomePage = new RecuperarClavePage();
+            NavigationPage.SetHasNavigationBar(myHomePage, true);
+            await Navigation.PushModalAsync(myHomePage);
+
            
 
 
-
-
         }
-        public void ClickedSignin(object sender, EventArgs e)
+
+        public async void ClickedRegistrarse(object sender, EventArgs e)
         {
-            var navPage = new NavigationPage(new LoginPage());
-            Application.Current.MainPage = navPage;
+            IUserDialogs Dialogs = UserDialogs.Instance;
+            Dialogs.ShowLoading("Espere por favor...");
+            await Task.Delay(1000);
+            Dialogs.HideLoading();
 
-            navPage.PushAsync(new RegisterPage());
+            RegisterPage myHomePage = new RegisterPage();
+            NavigationPage.SetHasNavigationBar(myHomePage, true);
+            await Navigation.PushModalAsync(myHomePage);
 
 
-        }
-
-        public void ClickedRecuperarClave(object sender, EventArgs e)
-        {
-            var navPage = new NavigationPage(new LoginPage());
-            Application.Current.MainPage = navPage;
-
-            navPage.PushAsync(new RecuperarClavePage());
 
 
         }
-
     }
 }
