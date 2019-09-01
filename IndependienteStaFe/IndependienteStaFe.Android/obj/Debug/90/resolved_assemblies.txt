@@ -1,5 +1,7 @@
 C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe.Android\obj\Debug\90\android\assets\IndependienteStaFe.Android.dll
 C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe.Android\obj\Debug\90\android\assets\Acr.UserDialogs.dll
+C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe.Android\obj\Debug\90\android\assets\AdvancedTimer.Forms.Plugin.Abstractions.dll
+C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe.Android\obj\Debug\90\android\assets\AdvancedTimer.Forms.Plugin.Android.dll
 C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe.Android\obj\Debug\90\android\assets\AndHUD.dll
 C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe.Android\obj\Debug\90\android\assets\DLToolkit.Forms.Controls.FlowListView.dll
 C:\Users\Ybrahim Miquilena\source\repos\IndependienteStaFe\IndependienteStaFe\IndependienteStaFe.Android\obj\Debug\90\android\assets\FormsViewGroup.dll

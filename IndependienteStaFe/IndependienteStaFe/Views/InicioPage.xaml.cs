@@ -1,6 +1,9 @@
 ﻿using Acr.UserDialogs;
+using IndependienteStaFe.Controls;
 using IndependienteStaFe.Models;
 using IndependienteStaFe.Services;
+using IndependienteStaFe.ViewModels;
+using IndependienteStaFe.ViewModels.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,13 +33,16 @@ namespace IndependienteStaFe.Views
         string token = "";
         Game partido = new Game();
         string cTimer;
+        private int counter = 60;
         System.Timers.Timer timer;
         public InicioPage()
         {
             InitializeComponent();
+            BindingContext = new CountdownViewModel();
             var current = Connectivity.NetworkAccess;
             var profiles = Connectivity.ConnectionProfiles;
             News news = new News();
+            CountDownTimer countDownTimer = new CountDownTimer();
             if (current == NetworkAccess.Internet)
             {
                 string limit = "3";
@@ -51,7 +57,10 @@ namespace IndependienteStaFe.Views
 
                 partido = repo.getPartidos("3").Result;
 
+                
                 countdown.Text = StartCountDownTimer();
+
+
             }
             else
             {
@@ -115,14 +124,15 @@ namespace IndependienteStaFe.Views
             Navigation.PushModalAsync(myHomePage);
 
         }
-        
-       
+
+
         public string  StartCountDownTimer()
         {
             endTime = Convert.ToDateTime(partido.data[0].DateGame);
             timer = new System.Timers.Timer();
             timer.Interval = 1000;
-            timer.Elapsed += t_Tick;
+            
+            timer.Enabled = true;
             TimeSpan ts = endTime - DateTime.Now;
             cTimer = ts.ToString("d' Días 'h' Horas 'm' Minutos 's' Segundos'");
             timer.Start();
@@ -133,14 +143,20 @@ namespace IndependienteStaFe.Views
             return cTimer;
         }
        
-        void t_Tick(object sender, EventArgs e)
+       
+
+        protected override async void OnAppearing()
         {
-            TimeSpan ts = endTime - DateTime.Now;
-            cTimer = ts.ToString("d' Días 'h' Horas 'm' Minutos 's' Segundos'");
-            if ((ts.TotalMilliseconds < 0) || (ts.TotalMilliseconds < 1000))
-            {
-                timer.Stop();
-            }
+            base.OnAppearing();
+            var vm = BindingContext as BaseViewModel;
+            await vm?.LoadAsync();
+        }
+
+        protected override async void OnDisappearing()
+        {
+            base.OnDisappearing();
+            var vm = BindingContext as BaseViewModel;
+            await vm?.UnloadAsync();
         }
     }
 }

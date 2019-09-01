@@ -38,7 +38,7 @@ namespace IndependienteStaFe.Views {
         private global::Xamarin.Forms.Label ppartidos;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Label countdown;
+        private global::IndependienteStaFe.Controls.CountDownTimer countdown;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
@@ -50,7 +50,7 @@ namespace IndependienteStaFe.Views {
             Lista = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ListView>(this, "Lista");
             noticias = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "noticias");
             ppartidos = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "ppartidos");
-            countdown = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "countdown");
+            countdown = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::IndependienteStaFe.Controls.CountDownTimer>(this, "countdown");
         }
     }
 }

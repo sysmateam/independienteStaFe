@@ -15,6 +15,11 @@ namespace IndependienteStaFe.Models
         [JsonProperty("data")]
         public Data[] data { get; set; }
 
+        public static implicit operator List<object>(Game v)
+        {
+            throw new NotImplementedException();
+        }
+
         public class Data
         {
             [JsonProperty("gameName")]
