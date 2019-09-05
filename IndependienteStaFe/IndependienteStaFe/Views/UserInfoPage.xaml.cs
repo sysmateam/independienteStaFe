@@ -2,14 +2,9 @@
 using IndependienteStaFe.Models;
 using IndependienteStaFe.Services;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace IndependienteStaFe.Views
 {
@@ -26,7 +21,7 @@ namespace IndependienteStaFe.Views
             Repository repo = new Repository();
             string token = App.Current.Properties["token"].ToString();
             userInfo user = repo.postUserInfo(token).Result;
-            
+
 
             nombre.Text = user.data.Name;
             apellido.Text = user.data.LastName;
@@ -35,16 +30,16 @@ namespace IndependienteStaFe.Views
         }
 
 
-       public async void OnUpdateUser(object sender, EventArgs e)
+        public async void OnUpdateUser(object sender, EventArgs e)
         {
-            if (nombre.Text != null    && telefono.Text != null)
+            if (nombre.Text != null && telefono.Text != null)
             {
-              
+
 
                 User usuario = new User();
                 usuario.name = nombre.Text;
                 usuario.Lastname = apellido.Text;
-               
+
                 usuario.City = ciudad.Text;
                 usuario.Cellnumber = telefono.Text;
                 usuario.Gender = lstViewGeneros.SelectedIndex.ToString();
@@ -63,7 +58,7 @@ namespace IndependienteStaFe.Views
                     await Task.Delay(2000);
                     Dialogs.HideLoading();
 
-                    MainPage myHomePage = new MainPage();
+                    InicioPage myHomePage = new InicioPage();
                     NavigationPage.SetHasNavigationBar(myHomePage, false);
                     await Navigation.PushModalAsync(myHomePage);
                 }

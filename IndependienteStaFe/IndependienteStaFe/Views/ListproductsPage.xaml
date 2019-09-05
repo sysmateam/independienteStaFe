@@ -14,26 +14,26 @@
                         <DataTemplate>
                             <ViewCell>
 
-                                <Grid>
+                                <Grid BackgroundColor="DarkGray">
                                     <Grid.RowDefinitions>
 
-                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="100"/>
                                         <RowDefinition Height="50"/>
                                         <RowDefinition Height="50"/>
                                         <RowDefinition Height="50"/>
                                     </Grid.RowDefinitions>
                                     <Grid.ColumnDefinitions>
 
-                                        <ColumnDefinition Width="200"/>
-                                        <ColumnDefinition Width="200"/>
+                                        <ColumnDefinition Width="6*"/>
+                                        <ColumnDefinition Width="4*"/>
 
                                     </Grid.ColumnDefinitions>
 
-                                    <Image Source="{Binding Image}" Grid.RowSpan="3" Grid.Row="0" Grid.Column="0" Aspect="AspectFill" Margin="5,5,5,5" HeightRequest="200" WidthRequest="200"/>
-                                    <Label Text="{Binding Name}"  Grid.Row="0" Grid.Column="1"  TextColor="#B00000" />
-                                    <Label Text="{Binding Value}" Grid.Row="1" Grid.Column="1"   TextColor="Black" />
-                                    <Label Text="{Binding TypePay}" Grid.Row="2" Grid.Column="1"  TextColor="#63191B" FontSize="Micro" />
-                                    <Button  Grid.Row="2" Text="Comprar" Grid.Column="1"   Style="{StaticResource ButtonCompraStyle}" ></Button>
+                                    <Image Source="{Binding Image}" Grid.RowSpan="3" Grid.Row="0" Grid.Column="0" Aspect="AspectFill" Margin="5,5,5,5" HeightRequest="100"/>
+                                    <Label Text="{Binding Name}"  Grid.Row="0" Grid.Column="1"  TextColor="DarkRed" VerticalOptions="Center"/>
+                                    <Label Text="{Binding Value}" Grid.Row="1" Grid.Column="1"   TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center"/>
+                                    <Label Text="{Binding TypePay}" Grid.Row="2" Grid.Column="1"  TextColor="Gray" FontSize="Micro" VerticalOptions="Center" HorizontalOptions="Center" />
+                                    <Button  Grid.Row="3" Text="Comprar" Grid.Column="0" Grid.ColumnSpan="2"   Style="{StaticResource ButtonCompraStyle}" VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="DarkRed" Margin="0,0,0,5"/>
 
                                 </Grid>
                             </ViewCell>

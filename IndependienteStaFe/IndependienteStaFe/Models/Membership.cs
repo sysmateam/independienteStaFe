@@ -1,19 +1,16 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace IndependienteStaFe.Models
 {
     public class Membership
     {
-         [JsonProperty("status")]
+        [JsonProperty("status")]
         public string Status { get; set; }
-        [JsonProperty("message")] 
+        [JsonProperty("message")]
         public string Message { get; set; }
         [JsonProperty("data")]
         public Data[] data { get; set; }
-        
+
 
         public class Data
         {
@@ -27,7 +24,7 @@ namespace IndependienteStaFe.Models
             public string Money { get; set; }
             [JsonProperty("content")]
             public string Content { get; set; }
-            
+
         }
     }
 }

@@ -1,11 +1,4 @@
-﻿using IndependienteStaFe.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace IndependienteStaFe.Views
@@ -15,16 +8,16 @@ namespace IndependienteStaFe.Views
     {
         public howWorksPage()
         {
-            InitializeComponent();
-            Repository repository = new Repository();
+            //InitializeComponent();
+            //Repository repository = new Repository();
 
-            var how =repository.getHowWorks();
-            //  howitworks.Source = how.data[0].Content;
+            //var how =repository.getHowWorks();
+            //howitworks.Source = how.data[0].Content;
 
-            howitworks.Source = new HtmlWebViewSource
-            {
-                Html = how.data[0].Name.ToString() + "<br/>" + how.data[0].Content
-            };
+            //howitworks.Source = new HtmlWebViewSource
+            //{
+            //Html = how.data[0].Name.ToString() + "<br/>" + how.data[0].Content
+            //};
         }
     }
 }

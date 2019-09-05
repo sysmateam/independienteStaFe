@@ -4,11 +4,7 @@ using IndependienteStaFe.Models;
 using IndependienteStaFe.Services;
 using IndependienteStaFe.ViewModels;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -23,7 +19,7 @@ namespace IndependienteStaFe.Views
             var vm = new LoginViewModel();
             this.BindingContext = vm;
 
-            
+
 
 
             InitializeComponent();
@@ -43,13 +39,13 @@ namespace IndependienteStaFe.Views
         {
             IUserDialogs Dialogs = UserDialogs.Instance;
 
-            
 
-            if(!string.IsNullOrWhiteSpace(usuario.Text) && !string.IsNullOrWhiteSpace(password.Text))
+
+            if (!string.IsNullOrWhiteSpace(usuario.Text) && !string.IsNullOrWhiteSpace(password.Text))
             {
-               Login login = repo.ConnectUser(usuario.Text, password.Text).Result;
+                Login login = repo.ConnectUser(usuario.Text, password.Text).Result;
 
-                if(login.Status=="ok")
+                if (login.Status == "ok")
                 {
                     App.IsUserLoggedIn = true;
 
@@ -63,7 +59,7 @@ namespace IndependienteStaFe.Views
                     await Task.Delay(2000);
                     Dialogs.HideLoading();
 
-                    MainPage myHomePage = new MainPage();
+                    InicioPage myHomePage = new InicioPage();
                     NavigationPage.SetHasNavigationBar(myHomePage, false);
                     await Navigation.PushModalAsync(myHomePage);
                 }
@@ -76,10 +72,10 @@ namespace IndependienteStaFe.Views
                 Dialogs.HideLoading();
 
             }
-        
+
 
         }
-      
+
 
         public async void ClickedRecuperarClave(object sender, EventArgs e)
         {
@@ -92,7 +88,7 @@ namespace IndependienteStaFe.Views
             NavigationPage.SetHasNavigationBar(myHomePage, true);
             await Navigation.PushModalAsync(myHomePage);
 
-           
+
 
 
         }

@@ -3,37 +3,43 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:controls="clr-namespace:IndependienteStaFe.Controls"
              mc:Ignorable="d"
              x:Class="IndependienteStaFe.Views.InicioPage">
     <ContentPage.ToolbarItems>
-
+        
         <ToolbarItem Name="Login" Order="Primary" Icon="usuario.png" Clicked="Button_Clicked" Text="LogIn" Priority="0" />
-
+        
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <ScrollView Style="{StaticResource ScrollViewStyle}">
             <StackLayout Style="{StaticResource StackLayoutStyle}" VerticalOptions="CenterAndExpand">
-                <Grid Style="{StaticResource GridStyle}" BackgroundColor="Black" >
+                <Grid Style="{StaticResource GridStyle}" BackgroundColor="DarkGray" >
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="1"/>
-                        <RowDefinition Height="50"/>
-                        <RowDefinition Height="1"/>
+                        <RowDefinition Height="40"/>
                         <RowDefinition Height="150"/>
-                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="60"/>
                         <RowDefinition Height="1"/>
-
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="15"/>
                     </Grid.RowDefinitions>
-                    <BoxView HeightRequest="1" Grid.Row="0" Grid.ColumnSpan="2" Color="#63191B"></BoxView>
-                    <Button x:Name="vip" Grid.Row="1" Grid.Column="0" Text="QUIERES SER VIP☆" Clicked="Membership_Clicked" HeightRequest="50" Style="{StaticResource BtnFlaIniciotStyle}" HorizontalOptions="Center" VerticalOptions="Center" />
-                    <Button x:Name="registrate" Grid.Row="1" Grid.Column="1" Text="REGISTRATE" Clicked="Register_Clicked" HeightRequest="50"  Style="{StaticResource BtnFlaIniciotStyle}" HorizontalOptions="Center" VerticalOptions="Center"  />
-                    <BoxView HeightRequest="1" Grid.Row="2" Grid.ColumnSpan="2" Color="#63191B"></BoxView>
-                    <Image x:Name="imagen" Grid.Row="3" Grid.ColumnSpan="2" Margin="5,10,10,5"  HeightRequest="150" WidthRequest="150" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
-                    <Label x:Name="noticiad" Grid.Row="4" Grid.ColumnSpan="2"  Margin="5,10,10,5"  Style="{StaticResource LabelDestacado}"  HeightRequest="50" WidthRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
-                    <BoxView HeightRequest="1" Grid.Row="5" Grid.ColumnSpan="2" Color="#63191B"></BoxView>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2"/>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="1"/>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="2"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="vip" Grid.Row="0" Grid.Column="1" Text="☆SER VIP" Clicked="Membership_Clicked" HeightRequest="40" Style="{StaticResource BtnFlaIniciotStyle}" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium" FontFamily="Arial" FontAttributes="Bold" BackgroundColor="DarkGray"/>
+                    <BoxView BackgroundColor="White" Grid.Row="0" Grid.Column="2" Margin="0,0,0,5"/>
+                    <Button x:Name="registrate" Grid.Row="0" Grid.Column="3" Text="REGISTRO" Clicked="Register_Clicked" HeightRequest="40"  Style="{StaticResource BtnFlaIniciotStyle}" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium" FontFamily="Arial" FontAttributes="Bold" BackgroundColor="DarkGray"/>
+                    <Image x:Name="imagen" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5" WidthRequest="220" HeightRequest="150" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Margin="0,-13,0,0"/>
+                    <Label x:Name="noticiad" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="5" Style="{StaticResource LabelDestacado}"  HeightRequest="60" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" FontSize="Medium" FontFamily="Arial" FontAttributes="Bold" TextColor="DarkRed"/>
+                    <BoxView Color="White" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Margin="15,0,15,0" HorizontalOptions="Center"/>
+                    <Label Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" Text="Fotografia AP" FontFamily="Arial" FontAttributes="Bold" FontSize="Micro" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Label Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" Text="2019-02-06 12:10:22" FontFamily="Arial" FontAttributes="Italic" FontSize="Caption" TextColor="Gray" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <BoxView BackgroundColor="DarkRed" Grid.Row="0" Grid.Column="0" Margin="0,0,0,5"/>
+                    <BoxView BackgroundColor="DarkRed" Grid.Row="0" Grid.Column="4" Margin="0,0,0,5"/>
                 </Grid>
-
-
                 <Grid
                 Grid.Row="2"
                 RowSpacing="0"
@@ -56,121 +62,129 @@
                     Grid.Column="0"
                     Grid.Row="0"
                     Text="{Binding Days, StringFormat='{0:D2}'}"
+                    Style="{StaticResource LabelStyle}"
                     />
                     <Label 
                     Grid.Column="0"
                     Grid.Row="1"
-                    Text="days"
+                    Text="días"
+                    Style="{StaticResource LabelStyle}"
                     />
                     <Label 
                     Grid.Column="1"
                     Grid.Row="0"
                     Text=":"
+                    Style="{StaticResource LabelStyle}"
                     />
                     <Label 
                     Grid.Column="2"
                     Grid.Row="0"
                     Text="{Binding Hours, StringFormat='{0:D2}'}"
+                    Style="{StaticResource LabelStyle}"
                     />
                     <Label 
                     Grid.Column="2"
                     Grid.Row="1"
-                    Text="hours"
+                    Text="horas"
+                    Style="{StaticResource LabelStyle}"
                     />
                     <Label 
                     Grid.Column="3"
                     Grid.Row="0"
                     Text=":"
+                    Style="{StaticResource LabelStyle}"
                     />
                     <Label 
                     Grid.Column="4"
                     Grid.Row="0"
                     Text="{Binding Minutes, StringFormat='{0:D2}'}"
+                    Style="{StaticResource LabelStyle}"
                     />
                     <Label 
                     Grid.Column="4"
                     Grid.Row="1"
-                    Text="minutes"  
+                    Text="minutos" 
+                    Style="{StaticResource LabelStyle}"
                     />
                     <Label 
                     Grid.Column="5"
                     Grid.Row="0"
                     Text=":"
+                    Style="{StaticResource LabelStyle}"
                     />
                     <Label 
                     Grid.Column="6"
                     Grid.Row="0"
                     Text="{Binding Seconds, StringFormat='{0:D2}'}"
+                    Style="{StaticResource LabelStyle}"
                     />
                     <Label 
                     Grid.Column="6"
                     Grid.Row="1"
-                    Text="seconds"  
+                    Text="segundos"  
+                    Style="{StaticResource LabelStyle}"
                     />
                 </Grid>
-               
-                
-                   
-                        <Button  
-                        HeightRequest="60"      
-                        CornerRadius="96"
-                      
-                        Command="{Binding RestartCommand}"/>
-                        <Label       
-                        Text="RESTART"  
-                     
-                        HorizontalOptions="Center"
-                        VerticalOptions="Center"
-                        InputTransparent="True"/>
-                    
-                
-                
 
-                <ListView x:Name="Lista" ItemSelected="EvetClicked" SeparatorColor="#63191B" HasUnevenRows="True" Margin="5,10,10,5" >
+
+                <ListView x:Name="Lista" ItemSelected="EvetClicked" SeparatorColor="#63191B" HasUnevenRows="True" Margin="2,2,2,2" >
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
 
-                                <Grid Style="{StaticResource GridStyle}"  Margin="5,10,10,5">
+                                <Grid Style="{StaticResource GridStyle}">
                                     <Grid.RowDefinitions>
 
-                                        <RowDefinition Height="50"/>
-                                        <RowDefinition Height="50"/>
-                                        <RowDefinition Height="50"/>
+                                        <RowDefinition Height="20"/>
+                                        <RowDefinition Height="20"/>
+                                        <RowDefinition Height="20"/>
                                     </Grid.RowDefinitions>
                                     <Grid.ColumnDefinitions>
-
-                                        <ColumnDefinition Width="200"/>
-                                        <ColumnDefinition Width="200"/>
-
+                                        <ColumnDefinition Width="3*"/>
+                                        <ColumnDefinition Width="7*"/>
                                     </Grid.ColumnDefinitions>
 
-                                    <Image Source="{Binding Image}" Grid.RowSpan="3" Grid.Row="0" Grid.Column="0" Aspect="AspectFill" Margin="5,5,5,5" HeightRequest="70" WidthRequest="70"/>
-                                    <Label Text="{Binding Name}"  Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"   TextColor="#B00000"    />
+                                    <Image Source="{Binding Image}" Grid.RowSpan="3" Grid.Row="0" Grid.Column="0" Aspect="AspectFill" Margin="2,2,2,2" VerticalOptions="Fill" HorizontalOptions="Fill"/>
+                                    <Label Text="{Binding Name}"  Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"   TextColor="DarkRed" />
                                     <Label Text="{Binding Description}" Grid.Row="1" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"    FontSize="Small" TextColor="Black"/>
-                                    <Label Text="{Binding Date}" Grid.Row="2" Grid.Column="1"  TextColor="#63191B" FontSize="Micro" HorizontalOptions="Start"    />
+                                    <Label Text="{Binding Date}" Grid.Row="2" Grid.Column="1"  TextColor="Gray" FontSize="Micro" HorizontalOptions="Start"    />
                                 </Grid>
+                           
                             </ViewCell>
+                            
 
                         </DataTemplate>
+                        
                     </ListView.ItemTemplate>
                 </ListView>
-                <Grid Style="{StaticResource GridStyle}" >
+                <Grid Style="{StaticResource GridStyle}" BackgroundColor="DarkGray">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="50"/>
-                        <RowDefinition Height="50"/>
-                        <RowDefinition Height="1"/>
-                        <RowDefinition Height="100"/>
-                        <RowDefinition Height="1"/>
+                        <RowDefinition Height="2"/>
+                        <RowDefinition Height="5*"/>
+                        <RowDefinition Height="5*"/>
+                        <RowDefinition Height="2"/>
 
                     </Grid.RowDefinitions>
-                    
-                    <Button x:Name="noticias" Grid.Row="1" Grid.ColumnSpan="2" Text="Todas las Noticias" Clicked="Noticias_Clicked" HeightRequest="50" Style="{StaticResource ButtonVideosTodosStyle}" HorizontalOptions="Center" VerticalOptions="Center" />
-                    <BoxView HeightRequest="1" Grid.Row="2" Grid.ColumnSpan="2" Color="#63191B"></BoxView>
-                    <Label x:Name="ppartidos" Grid.Row="3" Grid.Column="0"   Style="{StaticResource LabelProxPartido}" Text="PRÓXIMO PARTIDO: " HeightRequest="50" WidthRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
-                    <controls:CountDownTimer x:Name="countdown" Grid.Row="3" Grid.Column="1"   Style="{StaticResource LabelProxPartidoTime}"  HeightRequest="50" WidthRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
-                    <BoxView HeightRequest="1" Grid.Row="4" Grid.ColumnSpan="2" Color="#63191B"></BoxView>
+                    <BoxView HeightRequest="1" Grid.Row="0" Grid.ColumnSpan="4" Color="DarkRed"></BoxView>
+                    <Image x:Name="imagen0" Grid.Row="1" Grid.Column="0"  HeightRequest="50" WidthRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+                    <Image x:Name="imagen1" Grid.Row="1" Grid.Column="1"  HeightRequest="50" WidthRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+                    <Image x:Name="imagen2" Grid.Row="1" Grid.Column="1"  HeightRequest="50" WidthRequest="200" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+                    <Image x:Name="imagen3" Grid.Row="1" Grid.Column="1"  HeightRequest="50" WidthRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+                    <BoxView HeightRequest="1" Grid.Row="3" Grid.ColumnSpan="4" Color="DarkRed"></BoxView>
                 </Grid>
+                <Grid Style="{StaticResource GridStyle}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="5*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="70"/>
+                    </Grid.RowDefinitions>
+                    <Button x:Name="noticias" Grid.Row="1" Grid.Column="0" FontSize="Medium" Text="Noticias" Clicked="Noticias_Clicked" HeightRequest="50" Style="{StaticResource ButtonVideosTodosStyle}" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="DarkRed"/>
+                    <Button Grid.Row="1" Grid.Column="1" Style="{StaticResource ButtonActStyle}" FontSize="Medium"  BackgroundColor="DarkRed" Text="Videos" TextColor="White" Command="{Binding GetUsuariosCommand}" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Videos_Clicked" />
+                </Grid>
+
 
             </StackLayout>
         </ScrollView>

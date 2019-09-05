@@ -112,8 +112,6 @@ class MonoPackageManager_Resources {
 		/* We need to ensure that "IndependienteStaFe.Android.dll" comes first in this list. */
 		"IndependienteStaFe.Android.dll",
 		"Acr.UserDialogs.dll",
-		"AdvancedTimer.Forms.Plugin.Abstractions.dll",
-		"AdvancedTimer.Forms.Plugin.Android.dll",
 		"AndHUD.dll",
 		"DLToolkit.Forms.Controls.FlowListView.dll",
 		"FormsViewGroup.dll",

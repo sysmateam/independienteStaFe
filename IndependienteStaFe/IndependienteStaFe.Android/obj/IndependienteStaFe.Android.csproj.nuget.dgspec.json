@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ybrahim Miquilena\\source\\repos\\IndependienteStaFe\\IndependienteStaFe\\IndependienteStaFe.Android\\IndependienteStaFe.Android.csproj": {}
+    "C:\\Users\\Ybrahim Miquilena\\Desktop\\IndependieteStaFe\\IndependieteStaFe\\IndependienteStaFe\\IndependienteStaFe.Android\\IndependienteStaFe.Android.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ybrahim Miquilena\\source\\repos\\IndependienteStaFe\\IndependienteStaFe\\IndependienteStaFe.Android\\IndependienteStaFe.Android.csproj": {
+    "C:\\Users\\Ybrahim Miquilena\\Desktop\\IndependieteStaFe\\IndependieteStaFe\\IndependienteStaFe\\IndependienteStaFe.Android\\IndependienteStaFe.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ybrahim Miquilena\\source\\repos\\IndependienteStaFe\\IndependienteStaFe\\IndependienteStaFe.Android\\IndependienteStaFe.Android.csproj",
+        "projectUniqueName": "C:\\Users\\Ybrahim Miquilena\\Desktop\\IndependieteStaFe\\IndependieteStaFe\\IndependienteStaFe\\IndependienteStaFe.Android\\IndependienteStaFe.Android.csproj",
         "projectName": "IndependienteStaFe.Android",
-        "projectPath": "C:\\Users\\Ybrahim Miquilena\\source\\repos\\IndependienteStaFe\\IndependienteStaFe\\IndependienteStaFe.Android\\IndependienteStaFe.Android.csproj",
+        "projectPath": "C:\\Users\\Ybrahim Miquilena\\Desktop\\IndependieteStaFe\\IndependieteStaFe\\IndependienteStaFe\\IndependienteStaFe.Android\\IndependienteStaFe.Android.csproj",
         "packagesPath": "C:\\Users\\Ybrahim Miquilena\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ybrahim Miquilena\\source\\repos\\IndependienteStaFe\\IndependienteStaFe\\IndependienteStaFe.Android\\obj\\",
+        "outputPath": "C:\\Users\\Ybrahim Miquilena\\Desktop\\IndependieteStaFe\\IndependieteStaFe\\IndependienteStaFe\\IndependienteStaFe.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid90": {
             "projectReferences": {
-              "C:\\Users\\Ybrahim Miquilena\\source\\repos\\IndependienteStaFe\\IndependienteStaFe\\IndependienteStaFe\\IndependienteStaFe.csproj": {
-                "projectPath": "C:\\Users\\Ybrahim Miquilena\\source\\repos\\IndependienteStaFe\\IndependienteStaFe\\IndependienteStaFe\\IndependienteStaFe.csproj"
+              "C:\\Users\\Ybrahim Miquilena\\Desktop\\IndependieteStaFe\\IndependieteStaFe\\IndependienteStaFe\\IndependienteStaFe\\IndependienteStaFe.csproj": {
+                "projectPath": "C:\\Users\\Ybrahim Miquilena\\Desktop\\IndependieteStaFe\\IndependieteStaFe\\IndependienteStaFe\\IndependienteStaFe\\IndependienteStaFe.csproj"
               }
             }
           }
@@ -80,24 +80,24 @@
             },
             "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[1.2.0, )"
+              "version": "[1.3.0, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.1.0.618606, )"
+              "version": "[4.2.0.709249, )"
             }
           }
         }
       }
     },
-    "C:\\Users\\Ybrahim Miquilena\\source\\repos\\IndependienteStaFe\\IndependienteStaFe\\IndependienteStaFe\\IndependienteStaFe.csproj": {
+    "C:\\Users\\Ybrahim Miquilena\\Desktop\\IndependieteStaFe\\IndependieteStaFe\\IndependienteStaFe\\IndependienteStaFe\\IndependienteStaFe.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ybrahim Miquilena\\source\\repos\\IndependienteStaFe\\IndependienteStaFe\\IndependienteStaFe\\IndependienteStaFe.csproj",
+        "projectUniqueName": "C:\\Users\\Ybrahim Miquilena\\Desktop\\IndependieteStaFe\\IndependieteStaFe\\IndependienteStaFe\\IndependienteStaFe\\IndependienteStaFe.csproj",
         "projectName": "IndependienteStaFe",
-        "projectPath": "C:\\Users\\Ybrahim Miquilena\\source\\repos\\IndependienteStaFe\\IndependienteStaFe\\IndependienteStaFe\\IndependienteStaFe.csproj",
+        "projectPath": "C:\\Users\\Ybrahim Miquilena\\Desktop\\IndependieteStaFe\\IndependieteStaFe\\IndependienteStaFe\\IndependienteStaFe\\IndependienteStaFe.csproj",
         "packagesPath": "C:\\Users\\Ybrahim Miquilena\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ybrahim Miquilena\\source\\repos\\IndependienteStaFe\\IndependienteStaFe\\IndependienteStaFe\\obj\\",
+        "outputPath": "C:\\Users\\Ybrahim Miquilena\\Desktop\\IndependieteStaFe\\IndependieteStaFe\\IndependienteStaFe\\IndependienteStaFe\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -137,10 +137,6 @@
               "target": "Package",
               "version": "[2.0.11, )"
             },
-            "Mobilist.AdvancedTimer.Forms.Plugin": {
-              "target": "Package",
-              "version": "[1.0.1, )"
-            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
@@ -165,11 +161,11 @@
             },
             "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[1.2.0, )"
+              "version": "[1.3.0, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.1.0.618606, )"
+              "version": "[4.2.0.709249, )"
             }
           },
           "imports": [

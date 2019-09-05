@@ -1,7 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace IndependienteStaFe.Models
 {
@@ -14,11 +11,6 @@ namespace IndependienteStaFe.Models
         public string Message { get; set; }
         [JsonProperty("data")]
         public Data[] data { get; set; }
-
-        public static implicit operator List<object>(Game v)
-        {
-            throw new NotImplementedException();
-        }
 
         public class Data
         {

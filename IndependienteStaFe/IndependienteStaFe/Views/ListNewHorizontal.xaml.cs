@@ -1,10 +1,4 @@
 ﻿using IndependienteStaFe.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -18,7 +12,7 @@ namespace IndependienteStaFe.Views
         {
             InitializeComponent();
             //var news = repo.getNews();
-           // MessagesListView.ItemsSource = news.data;
+            // MessagesListView.ItemsSource = news.data;
 
             var padding = (MessagesListView.Width - MessagesListView.Height) / 20;
 
@@ -32,7 +26,7 @@ namespace IndependienteStaFe.Views
             // */
         }
 
-       
-    
+
+
     }
 }

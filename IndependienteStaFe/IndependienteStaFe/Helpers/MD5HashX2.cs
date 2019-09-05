@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Security.Cryptography;
+﻿using System.Security.Cryptography;
 using System.Text;
 
 namespace IndependienteStaFe.Helpers
@@ -12,8 +10,8 @@ namespace IndependienteStaFe.Helpers
             StringBuilder hash = new StringBuilder();
             MD5CryptoServiceProvider m5provider = new MD5CryptoServiceProvider();
             byte[] bytes = m5provider.ComputeHash(new UTF8Encoding().GetBytes(input));
-            
-            for (int i=0 ; i <bytes.Length; i++)
+
+            for (int i = 0; i < bytes.Length; i++)
             {
                 hash.Append(bytes[i].ToString("X2"));
 

@@ -3,11 +3,7 @@ using IndependienteStaFe.Helpers;
 using IndependienteStaFe.Models;
 using IndependienteStaFe.Services;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -55,7 +51,7 @@ namespace IndependienteStaFe.Views
             if (nombre.Text != null && password.Text != null && correo.Text != null && password.Text != null && telefono.Text != null && password.Equals(passwordconf.Text))
             {
                 MD5HashX2 pwtohash = new MD5HashX2();
-               
+
                 User usuario = new User();
                 usuario.name = nombre.Text;
                 usuario.Lastname = apellido.Text;
@@ -69,18 +65,18 @@ namespace IndependienteStaFe.Views
                 usuario.Birdhdate = fechaNacimiento.Date;
                 usuario.Datapolicy = true;
                 usuario.Termsandconditions = true;
-                
+
 
                 Repository repository = new Repository();
 
                 try
                 {
 
-                    userCreate user=repository.postUserCreate(usuario).Result;
+                    userCreate user = repository.postUserCreate(usuario).Result;
                     Dialogs.ShowLoading(user.Message.ToString()); ;
                     await Task.Delay(2000);
                     Dialogs.HideLoading();
-                    MainPage myHomePage = new MainPage();
+                    InicioPage myHomePage = new InicioPage();
                     NavigationPage.SetHasNavigationBar(myHomePage, false);
                     await Navigation.PushModalAsync(myHomePage);
                 }

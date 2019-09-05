@@ -1,13 +1,9 @@
 ﻿using Acr.UserDialogs;
-using IndependienteStaFe.Controls;
 using IndependienteStaFe.Models;
 using IndependienteStaFe.Services;
 using IndependienteStaFe.ViewModels;
 using IndependienteStaFe.ViewModels.Base;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Essentials;
@@ -19,7 +15,7 @@ namespace IndependienteStaFe.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class InicioPage : ContentPage
     {
-        public ICommand command { get; private set; }
+        public ICommand Command { get; private set; }
         public partial class CustomerNavigationPage : NavigationPage
         {
 
@@ -29,12 +25,14 @@ namespace IndependienteStaFe.Views
 
         IUserDialogs Dialogs = UserDialogs.Instance;
         Repository repo = new Repository();
+        private int counter = 60;
         DateTime endTime = new DateTime();
         string token = "";
         Game partido = new Game();
         string cTimer;
-        private int counter = 60;
         System.Timers.Timer timer;
+
+
         public InicioPage()
         {
             InitializeComponent();
@@ -42,7 +40,7 @@ namespace IndependienteStaFe.Views
             var current = Connectivity.NetworkAccess;
             var profiles = Connectivity.ConnectionProfiles;
             News news = new News();
-            CountDownTimer countDownTimer = new CountDownTimer();
+
             if (current == NetworkAccess.Internet)
             {
                 string limit = "3";
@@ -50,24 +48,33 @@ namespace IndependienteStaFe.Views
                 {
                     token = App.Current.Properties["token"].ToString();
                 }
-                news = repo.getNews(token,limit).Result;
+                news = repo.getNews(token, limit).Result;
                 imagen.Source = news.data[0].Image;
                 noticiad.Text = news.data[0].Name.ToString();
+                var videos = repo.getVideos();
+                imagen0.Source = videos.data[0].Image;
+                imagen1.Source = videos.data[1].Image;
+                imagen2.Source = videos.data[2].Image;
+                imagen3.Source = videos.data[3].Image;
                 Lista.ItemsSource = news.data;
+
+
+
 
                 partido = repo.getPartidos("3").Result;
 
-                
-                countdown.Text = StartCountDownTimer();
-
+                //countdown.Text = StartCountDownTimer();
 
             }
             else
             {
                 Lista.ItemsSource = news.data;
+
             }
 
+
         }
+
 
         public async void Button_Clicked(object sender, EventArgs e)
         {
@@ -90,11 +97,22 @@ namespace IndependienteStaFe.Views
             NavigationPage.SetHasNavigationBar(myHomePage, true);
             await Navigation.PushModalAsync(myHomePage);
         }
-        
+
+        public async void Videos_Clicked(object sender, EventArgs e)
+        {
+            Dialogs.ShowLoading("Espere por favor...");
+            await Task.Delay(2000);
+            Dialogs.HideLoading();
+
+            ListvideosPage myHomePage = new ListvideosPage();
+            NavigationPage.SetHasNavigationBar(myHomePage, true);
+            await Navigation.PushModalAsync(myHomePage);
+        }
+
         public async void Register_Clicked(object sender, EventArgs e)
         {
             Dialogs.ShowLoading("Espere por favor...");
-            await Task.Delay(1000);
+            await Task.Delay(2000);
             Dialogs.HideLoading();
 
             RegisterPage myHomePage = new RegisterPage();
@@ -104,7 +122,7 @@ namespace IndependienteStaFe.Views
         public async void Membership_Clicked(object sender, EventArgs e)
         {
             Dialogs.ShowLoading("Espere por favor...");
-            await Task.Delay(1000);
+            await Task.Delay(2000);
             Dialogs.HideLoading();
 
             MembemshipPage myHomePage = new MembemshipPage();
@@ -124,27 +142,6 @@ namespace IndependienteStaFe.Views
             Navigation.PushModalAsync(myHomePage);
 
         }
-
-
-        public string  StartCountDownTimer()
-        {
-            endTime = Convert.ToDateTime(partido.data[0].DateGame);
-            timer = new System.Timers.Timer();
-            timer.Interval = 1000;
-            
-            timer.Enabled = true;
-            TimeSpan ts = endTime - DateTime.Now;
-            cTimer = ts.ToString("d' Días 'h' Horas 'm' Minutos 's' Segundos'");
-            timer.Start();
-            if ((ts.TotalMilliseconds < 0) || (ts.TotalMilliseconds < 1000))
-            {
-                timer.Stop();
-            }
-            return cTimer;
-        }
-       
-       
-
         protected override async void OnAppearing()
         {
             base.OnAppearing();
@@ -158,5 +155,35 @@ namespace IndependienteStaFe.Views
             var vm = BindingContext as BaseViewModel;
             await vm?.UnloadAsync();
         }
+
+
+        //public string StartCountDownTimer()
+        //{
+        //    endTime = Convert.ToDateTime(partido.data[0].DateGame);
+        //    timer = new System.Timers.Timer();
+        //    timer.Interval = 1000;
+        //    timer.Elapsed += t_Tick;
+        //     TimeSpan ts = endTime - DateTime.Now;
+        //     cTimer = ts.ToString("d' Días 'h' Horas 'm' Minutos 's' Segundos'");
+        //     timer.Start();
+        //     if ((ts.TotalMilliseconds < 0) || (ts.TotalMilliseconds < 1000))
+        //     {
+        //         timer.Stop();
+        //      }
+        //     return cTimer;
+        // }
+
+        // void t_Tick(object sender, EventArgs e)
+        // {
+        //     TimeSpan ts = endTime - DateTime.Now;
+        //      cTimer = ts.ToString("'d' Días 'h' Horas 'm' Minutos 's' Segundos'");
+        //      counter--;
+        //      if (counter == 0)
+        //         timer.Stop();
+        //  if ((ts.TotalMilliseconds < 0) || (ts.TotalMilliseconds < 1000))
+        // {
+        //     timer.Stop();
+        //  }
+        // }
     }
 }

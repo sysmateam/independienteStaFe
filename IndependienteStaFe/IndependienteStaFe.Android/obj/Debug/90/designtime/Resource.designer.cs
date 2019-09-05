@@ -2007,6 +2007,7 @@ namespace IndependienteStaFe.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense = global::IndependienteStaFe.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Widget_MaterialComponents_Toolbar = global::IndependienteStaFe.Droid.Resource.Style.Widget_MaterialComponents_Toolbar;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Widget_Support_CoordinatorLayout = global::IndependienteStaFe.Droid.Resource.Style.Widget_Support_CoordinatorLayout;
+			global::Xamarin.Forms.Platform.Android.Resource.Style.collectionViewStyle = global::IndependienteStaFe.Droid.Resource.Style.collectionViewStyle;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.ActionBar = global::IndependienteStaFe.Droid.Resource.Styleable.ActionBar;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.ActionBar_background = global::IndependienteStaFe.Droid.Resource.Styleable.ActionBar_background;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.ActionBar_backgroundSplit = global::IndependienteStaFe.Droid.Resource.Styleable.ActionBar_backgroundSplit;
@@ -5803,7 +5804,10 @@ namespace IndependienteStaFe.Droid
 			public const int avd_show_password = 2131296342;
 			
 			// aapt resource value: 0x7F010002
-			public const int como = 2130771970;
+			public const int ciudades = 2130771970;
+			
+			// aapt resource value: 0x7F010003
+			public const int como = 2130771971;
 			
 			// aapt resource value: 0x7F090057
 			public const int design_bottom_navigation_item_background = 2131296343;
@@ -5823,8 +5827,8 @@ namespace IndependienteStaFe.Droid
 			// aapt resource value: 0x7F09005C
 			public const int design_snackbar_background = 2131296348;
 			
-			// aapt resource value: 0x7F010003
-			public const int euro = 2130771971;
+			// aapt resource value: 0x7F010004
+			public const int euro = 2130771972;
 			
 			// aapt resource value: 0x7F090055
 			public const int ic_audiotrack_dark = 2131296341;
@@ -5838,8 +5842,8 @@ namespace IndependienteStaFe.Droid
 			// aapt resource value: 0x7F090058
 			public const int ic_dialog_close_light = 2131296344;
 			
-			// aapt resource value: 0x7F010017
-			public const int ic_errorstatus = 2130771991;
+			// aapt resource value: 0x7F010020
+			public const int ic_errorstatus = 2130772000;
 			
 			// aapt resource value: 0x7F090059
 			public const int ic_group_collapse_00 = 2131296345;
@@ -6351,8 +6355,8 @@ namespace IndependienteStaFe.Droid
 			// aapt resource value: 0x7F09005F
 			public const int ic_mtrl_chip_close_circle = 2131296351;
 			
-			// aapt resource value: 0x7F010018
-			public const int ic_successstatus = 2130771992;
+			// aapt resource value: 0x7F010021
+			public const int ic_successstatus = 2130772001;
 			
 			// aapt resource value: 0x7F090100
 			public const int ic_vol_type_speaker_dark = 2131296512;
@@ -6372,14 +6376,14 @@ namespace IndependienteStaFe.Droid
 			// aapt resource value: 0x7F090105
 			public const int ic_vol_type_tv_light = 2131296517;
 			
-			// aapt resource value: 0x7F010004
-			public const int logosf = 2130771972;
-			
 			// aapt resource value: 0x7F010005
-			public const int logout = 2130771973;
+			public const int logosf = 2130771973;
 			
 			// aapt resource value: 0x7F010006
-			public const int membresia = 2130771974;
+			public const int logout = 2130771974;
+			
+			// aapt resource value: 0x7F010007
+			public const int membresia = 2130771975;
 			
 			// aapt resource value: 0x7F090106
 			public const int mr_button_connected_dark = 2131296518;
@@ -6450,8 +6454,8 @@ namespace IndependienteStaFe.Droid
 			// aapt resource value: 0x7F090062
 			public const int navigation_empty_icon = 2131296354;
 			
-			// aapt resource value: 0x7F010007
-			public const int noticias = 2130771975;
+			// aapt resource value: 0x7F010008
+			public const int noticias = 2130771976;
 			
 			// aapt resource value: 0x7F090001
 			public const int notification_action_background = 2131296257;
@@ -6489,26 +6493,29 @@ namespace IndependienteStaFe.Droid
 			// aapt resource value: 0x7F09000C
 			public const int notify_panel_notification_icon_bg = 2131296268;
 			
-			// aapt resource value: 0x7F010008
-			public const int partidos = 2130771976;
-			
 			// aapt resource value: 0x7F010009
-			public const int perfiles = 2130771977;
+			public const int partidos = 2130771977;
 			
 			// aapt resource value: 0x7F010010
-			public const int puntos = 2130771984;
-			
-			// aapt resource value: 0x7F010015
-			public const int roundedbg = 2130771989;
-			
-			// aapt resource value: 0x7F010016
-			public const int roundedbgdark = 2130771990;
+			public const int perfiles = 2130771984;
 			
 			// aapt resource value: 0x7F010011
-			public const int splash_logo = 2130771985;
+			public const int productos = 2130771985;
 			
 			// aapt resource value: 0x7F010012
-			public const int tienda = 2130771986;
+			public const int puntos = 2130771986;
+			
+			// aapt resource value: 0x7F010018
+			public const int roundedbg = 2130771992;
+			
+			// aapt resource value: 0x7F010019
+			public const int roundedbgdark = 2130771993;
+			
+			// aapt resource value: 0x7F010013
+			public const int splash_logo = 2130771987;
+			
+			// aapt resource value: 0x7F010014
+			public const int tienda = 2130771988;
 			
 			// aapt resource value: 0x7F09006F
 			public const int tooltip_frame_dark = 2131296367;
@@ -6516,11 +6523,14 @@ namespace IndependienteStaFe.Droid
 			// aapt resource value: 0x7F090070
 			public const int tooltip_frame_light = 2131296368;
 			
-			// aapt resource value: 0x7F010013
-			public const int usuario = 2130771987;
+			// aapt resource value: 0x7F010015
+			public const int usuario = 2130771989;
 			
-			// aapt resource value: 0x7F010014
-			public const int videos = 2130771988;
+			// aapt resource value: 0x7F010016
+			public const int videos = 2130771990;
+			
+			// aapt resource value: 0x7F010017
+			public const int xamarin_logo = 2130771991;
 			
 			static Drawable()
 			{
@@ -6648,6 +6658,9 @@ namespace IndependienteStaFe.Droid
 			
 			// aapt resource value: 0x7F0C0008
 			public const int chronometer = 2131492872;
+			
+			// aapt resource value: 0x7F020227
+			public const int collectionViewStyle = 2130838055;
 			
 			// aapt resource value: 0x7F0C001E
 			public const int container = 2131492894;
@@ -6781,14 +6794,14 @@ namespace IndependienteStaFe.Droid
 			// aapt resource value: 0x7F020221
 			public const int main.appbar = 2130838049;
 			
-			// aapt resource value: 0x7F020224
-			public const int main.scrollview = 2130838052;
-			
 			// aapt resource value: 0x7F020223
 			public const int main.tablayout = 2130838051;
 			
 			// aapt resource value: 0x7F020222
 			public const int main.toolbar = 2130838050;
+			
+			// aapt resource value: 0x7F020224
+			public const int main.viewpager = 2130838052;
 			
 			// aapt resource value: 0x7F0C0043
 			public const int masked = 2131492931;
@@ -7062,9 +7075,6 @@ namespace IndependienteStaFe.Droid
 			
 			// aapt resource value: 0x7F020225
 			public const int shellcontent.appbar = 2130838053;
-			
-			// aapt resource value: 0x7F020227
-			public const int shellcontent.scrollview = 2130838055;
 			
 			// aapt resource value: 0x7F020226
 			public const int shellcontent.toolbar = 2130838054;
@@ -8469,6 +8479,9 @@ namespace IndependienteStaFe.Droid
 			
 			// aapt resource value: 0x7F1600C5
 			public const int CardView_Light = 2132148421;
+			
+			// aapt resource value: 0x7F060517
+			public const int collectionViewStyle = 2131100951;
 			
 			// aapt resource value: 0x7F060002
 			public const int MainTheme = 2131099650;

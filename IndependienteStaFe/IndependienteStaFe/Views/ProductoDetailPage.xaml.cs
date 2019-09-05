@@ -1,11 +1,7 @@
 ﻿using Acr.UserDialogs;
 using IndependienteStaFe.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -26,7 +22,7 @@ namespace IndependienteStaFe.Views
             typepay.Text = product.data[0].TypePay;
 
             productGracias = product;
-            
+
         }
         private async void BackEvetClicked(object sender, EventArgs e)
         {
@@ -39,7 +35,7 @@ namespace IndependienteStaFe.Views
 
             await Navigation.PopModalAsync(true);
         }
-            
+
         private async void EvetClicked(object sender, EventArgs e)
         {
 

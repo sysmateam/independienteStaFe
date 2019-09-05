@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndependienteStaFe.Android"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndependienteStaFe.iOS", "IndependienteStaFe\IndependienteStaFe.iOS\IndependienteStaFe.iOS.csproj", "{1804B36C-02CF-48AB-8729-7A5939E5447C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndependienteStaFe", "IndependienteStaFe\IndependienteStaFe\IndependienteStaFe.csproj", "{347C83C5-BB2B-4FE6-8073-D88348C8659B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IndependienteStaFe", "IndependienteStaFe\IndependienteStaFe\IndependienteStaFe.csproj", "{347C83C5-BB2B-4FE6-8073-D88348C8659B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

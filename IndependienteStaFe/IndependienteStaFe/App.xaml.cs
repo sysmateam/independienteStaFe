@@ -1,9 +1,6 @@
-﻿using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-using IndependienteStaFe.Services;
+﻿using IndependienteStaFe.Services;
 using IndependienteStaFe.Views;
-
+using Xamarin.Forms;
 
 namespace IndependienteStaFe
 {
@@ -16,14 +13,14 @@ namespace IndependienteStaFe
             InitializeComponent();
 
             DependencyService.Register<Repository>();
-            // MainPage = new MainPage();
-           
+             //MainPage = new MainPage();
+
             MainPage = new AppShell();
 
             ///OneSignal.Current.StartInit("{Insert Your OneSignal ID}").EndInit();
 
 
-    }
+        }
 
         protected override void OnStart()
         {

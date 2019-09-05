@@ -1,11 +1,7 @@
 ﻿using Acr.UserDialogs;
 using IndependienteStaFe.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -21,7 +17,7 @@ namespace IndependienteStaFe.Views
             InitializeComponent();
             image.Source = product.data[0].Image;
             name.Text = product.data[0].Name;
-           
+
         }
 
         private async void EvetClicked(object sender, EventArgs e)
@@ -31,7 +27,7 @@ namespace IndependienteStaFe.Views
             await Task.Delay(2000);
             Dialogs.HideLoading();
 
-        
+
 
             await Navigation.PopModalAsync(true);
 

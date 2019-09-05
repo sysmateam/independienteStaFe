@@ -2,15 +2,11 @@
 using IndependienteStaFe.Models;
 using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Net.Http;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Web;
-using static IndependienteStaFe.Models.News;
 
 namespace IndependienteStaFe.Services
 {
@@ -60,7 +56,7 @@ namespace IndependienteStaFe.Services
             }
         }
 
-          public async void PostBuymembership(Membership membresia)
+        public async void PostBuymembership(Membership membresia)
         {
             HttpResponseMessage response = null;
             using (var Client = new System.Net.Http.HttpClient())
@@ -132,7 +128,7 @@ namespace IndependienteStaFe.Services
             try
             {
 
-                object param = new { token, limit};
+                object param = new { token, limit };
                 var jsonObj = JsonConvert.SerializeObject(param);
                 using (HttpClient client = new HttpClient())
                 {
@@ -151,13 +147,13 @@ namespace IndependienteStaFe.Services
                     return result;
                 }
             }
-                catch (Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
             }
         }
 
-        
+
         public async Task<NewsDetail> getNewsDetail(string newsId)
         {
             object param = new { newsId };
@@ -242,7 +238,7 @@ namespace IndependienteStaFe.Services
         {
             try
             {
-                
+
                 object param = new { limit };
                 var jsonObj = JsonConvert.SerializeObject(param);
                 using (HttpClient client = new HttpClient())
@@ -292,7 +288,7 @@ namespace IndependienteStaFe.Services
 
         public async Task<Login> ConnectUser(string id, string password)
         {
-            object userInfos = new { id = id, password = mdpass.MD5Hash(password)  };
+            object userInfos = new { id = id, password = mdpass.MD5Hash(password) };
             var jsonObj = JsonConvert.SerializeObject(userInfos);
             using (HttpClient client = new HttpClient())
             {
@@ -314,7 +310,7 @@ namespace IndependienteStaFe.Services
 
         public async Task<rememberPassword> PostRecuperarPw(string id, string email)
         {
-            object userInfos = new { id = id,email=email};
+            object userInfos = new { id = id, email = email };
             var jsonObj = JsonConvert.SerializeObject(userInfos);
             using (HttpClient client = new HttpClient())
             {
@@ -352,7 +348,7 @@ namespace IndependienteStaFe.Services
                 var response = await client.SendAsync(request).ConfigureAwait(false);
                 string dataResult = response.Content.ReadAsStringAsync().Result;
                 userInfo result = JsonConvert.DeserializeObject<userInfo>(dataResult);
-                
+
                 return result;
             }
         }
@@ -448,7 +444,7 @@ namespace IndependienteStaFe.Services
 
         /**************************************************************************/
         /*******************************Productos, Registro Pago, Redenciones*******************************************/
-        public async Task<Product> getProductos (string token)
+        public async Task<Product> getProductos(string token)
         {
             object param = new { token };
             var jsonObj = JsonConvert.SerializeObject(param);
@@ -470,7 +466,7 @@ namespace IndependienteStaFe.Services
             }
         }
 
-        public async Task<ProductInfo>  getProductosInfo(string token, string productId)
+        public async Task<ProductInfo> getProductosInfo(string token, string productId)
         {
             object param = new { token, productId };
             var jsonObj = JsonConvert.SerializeObject(param);
@@ -492,9 +488,9 @@ namespace IndependienteStaFe.Services
             }
         }
 
-        public async Task<ProductStock>  getProductosStock(string productId)
+        public async Task<ProductStock> getProductosStock(string productId)
         {
-            object param = new {productId };
+            object param = new { productId };
             var jsonObj = JsonConvert.SerializeObject(param);
             using (HttpClient client = new HttpClient())
             {
@@ -513,7 +509,7 @@ namespace IndependienteStaFe.Services
                 return result;
             }
         }
-        public async Task<Redencion> getRedencion(string token,string productId, string attribute, string quantity)
+        public async Task<Redencion> getRedencion(string token, string productId, string attribute, string quantity)
         {
             object param = new { token, productId, attribute, quantity };
             var jsonObj = JsonConvert.SerializeObject(param);
@@ -557,7 +553,7 @@ namespace IndependienteStaFe.Services
             }
         }
 
-      
+
         /**************************************************************************/
 
 

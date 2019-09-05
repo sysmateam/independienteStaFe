@@ -1,11 +1,5 @@
 ﻿using IndependienteStaFe.Models;
 using IndependienteStaFe.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -20,7 +14,7 @@ namespace IndependienteStaFe.Views
             Repository repository = new Repository();
             string token = App.Current.Properties["token"].ToString();
 
-            userPuntos uPoints =  repository.getGetUserPoints(token).Result;
+            userPuntos uPoints = repository.getGetUserPoints(token).Result;
 
             puntos.Text = uPoints.Points.ToString();
 

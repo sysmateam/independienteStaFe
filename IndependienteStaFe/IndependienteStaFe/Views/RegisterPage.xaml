@@ -6,7 +6,7 @@
              xmlns:controls="clr-namespace:IndependienteStaFe.Controls"
              mc:Ignorable="d"
              x:Class="IndependienteStaFe.Views.RegisterPage">
-    <ContentPage x:Name="page1" BackgroundColor="#63191B">
+    <ContentPage x:Name="page1" BackgroundColor="WhiteSmoke">
         <StackLayout>
             <StackLayout VerticalOptions="CenterAndExpand">
                 <Grid Style="{StaticResource GridStyle}">
@@ -24,13 +24,13 @@
                         <RowDefinition Height="50"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="10*"/>
                     </Grid.ColumnDefinitions>
-                    <Entry x:Name="userid" Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource EntryStyle}" Placeholder="Número de cédula"/>
-                    <Entry x:Name="nombre" Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource EntryStyle}" Placeholder="Nombre"/>
-                    <Entry x:Name="apellido" Grid.Row="3" Grid.ColumnSpan="2" Style="{StaticResource EntryStyle}" Placeholder="Apellido"/>
-                    <DatePicker x:Name="fechaNacimiento" Grid.Row="3"  Grid.ColumnSpan="2"></DatePicker>
-                    <Picker x:Name="lstViewGeneros" Title="Género" Grid.Row="4"  Grid.ColumnSpan="2" >
+                    <Entry x:Name="userid" Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource EntryStyle}" Placeholder="Número de cédula" PlaceholderColor="DarkGray"/>
+                    <Entry x:Name="nombre" Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource EntryStyle}" Placeholder="Nombre" PlaceholderColor="DarkGray"/>
+                    <Entry x:Name="apellido" Grid.Row="3" Grid.ColumnSpan="2" Style="{StaticResource EntryStyle}" Placeholder="Apellido" PlaceholderColor="DarkGray"/>
+                    <DatePicker x:Name="fechaNacimiento" Grid.Row="3" Grid.ColumnSpan="2" TextColor="DarkGray"></DatePicker>
+                    <Picker x:Name="lstViewGeneros" Title="Género" Grid.Row="4"  Grid.ColumnSpan="2" TextColor="DarkGray" >
                         <Picker.Items>
                             <x:String>Masculino</x:String>
                             <x:String>Femenino</x:String>
@@ -39,13 +39,13 @@
                     </Picker>
                     
 
-                    <Button x:Name="siguiente" Grid.Row="7" Grid.Column="1" Style="{StaticResource ButtonActStyle}" Text="Siguiente" Clicked="OnClickedNext1" />
+                    <Button x:Name="siguiente" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource ButtonActStyle}" Text="Siguiente" Clicked="OnClickedNext1" BackgroundColor="DarkRed" TextColor="White" HorizontalOptions="Center"/>
                 </Grid>
             </StackLayout>
            
         </StackLayout>
     </ContentPage>
-    <ContentPage x:Name="page2" BackgroundColor="#63191B" >
+    <ContentPage x:Name="page2" BackgroundColor="WhiteSmoke" >
         <StackLayout>
             <StackLayout VerticalOptions="CenterAndExpand">
                 <Grid Style="{StaticResource GridStyle}">
@@ -59,23 +59,23 @@
                         <RowDefinition Height="50"/>
                         <RowDefinition Height="50"/>
                     </Grid.RowDefinitions>
-                    <Picker x:Name="ciudad" Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource EntryStyle}" Title="Ciudad">
+                    <Picker x:Name="ciudad" Grid.Row="0" Grid.ColumnSpan="2" Title="Ciudad" TextColor="DarkGray">
                     </Picker>
-                    <Entry x:Name="address" Grid.Row="2" Grid.ColumnSpan="2" Placeholder="Dirección" Style="{StaticResource EntryStyle}"/>
+                    <Entry x:Name="address" Grid.Row="2" Grid.ColumnSpan="2" Placeholder="Dirección" Style="{StaticResource EntryStyle}" PlaceholderColor="DarkGray"/>
 
-                    <Entry x:Name="telefono" Grid.Row="3" Grid.ColumnSpan="2" Placeholder="Celular" Style="{StaticResource EntryStyle}"/>
-                    
-                    <Entry x:Name="correo" Grid.Row="4" Grid.ColumnSpan="2" Style="{StaticResource EntryStyle}" Placeholder="Correo Electrónico"/>
-                    <Entry x:Name="password" Grid.Row="5" Grid.ColumnSpan="2" Style="{StaticResource EntryStyle}" Placeholder="Contraseña" IsPassword="True"/>
-                    <Entry x:Name="passwordconf" Grid.Row="6" Grid.ColumnSpan="2" Style="{StaticResource EntryStyle}" Placeholder="Confirmar contraseña" IsPassword="True"/>
-                    <Button x:Name="regresar" Grid.Row="7" Grid.Column="0" Style="{StaticResource ButtonStyle}" Text="Regresar"  Clicked="OnClickedBack" />
-                    <Button x:Name="siguiente2" Grid.Row="7" Grid.Column="1" Style="{StaticResource ButtonActStyle}" Text="Siguiente" Clicked="OnClickedNext2" />
+                    <Entry x:Name="telefono" Grid.Row="3" Grid.ColumnSpan="2" Placeholder="Celular" Style="{StaticResource EntryStyle}" PlaceholderColor="DarkGray"/>
+
+                    <Entry x:Name="correo" Grid.Row="4" Grid.ColumnSpan="2" Style="{StaticResource EntryStyle}" Placeholder="Correo Electrónico" PlaceholderColor="DarkGray"/>
+                    <Entry x:Name="password" Grid.Row="5" Grid.ColumnSpan="2" Style="{StaticResource EntryStyle}" Placeholder="Contraseña" IsPassword="True" PlaceholderColor="DarkGray"/>
+                    <Entry x:Name="passwordconf" Grid.Row="6" Grid.ColumnSpan="2" Style="{StaticResource EntryStyle}" Placeholder="Confirmar contraseña" IsPassword="True" PlaceholderColor="DarkGray"/>
+                    <Button x:Name="regresar" Grid.Row="7" Grid.Column="0" Style="{StaticResource ButtonStyle}" Text="Regresar"  Clicked="OnClickedBack" BackgroundColor="DarkRed" TextColor="White"/>
+                    <Button x:Name="siguiente2" Grid.Row="7" Grid.Column="1" Style="{StaticResource ButtonActStyle}" Text="Siguiente" Clicked="OnClickedNext2" BackgroundColor="DarkRed" TextColor="White"/>
                 </Grid>
             </StackLayout>
           
         </StackLayout>
     </ContentPage>
-    <ContentPage x:Name="page3" BackgroundColor="#63191B">
+    <ContentPage x:Name="page3" BackgroundColor="WhiteSmoke">
         <StackLayout>
             <StackLayout VerticalOptions="CenterAndExpand">
                 <Grid Style="{StaticResource GridStyle}">
@@ -87,17 +87,17 @@
                         
                     </Grid.RowDefinitions>
                     <WebView x:Name="lblpoldatos" Grid.Row="0" Grid.ColumnSpan="2" ></WebView>
-                    <controls:CheckBox Grid.Row="1" x:Name="poldatos"  Grid.ColumnSpan="2"   Text="¿Acepta las Politicas de Datos ?" IsChecked="{Binding YourProperty}" Type="Check" Color="#63191B"  />
-                   
-                    <Button x:Name="regresar1" Grid.Row="3" Grid.Column="0" Style="{StaticResource ButtonStyle}" Text="Regresar"  Clicked="OnClickedBack1" />
-                    <Button x:Name="siguiente3" Grid.Row="3" Grid.Column="1" Style="{StaticResource ButtonActStyle}" Text="Siguiente" Clicked="OnClickedNext3" />
+                    <controls:CheckBox Grid.Row="1" x:Name="poldatos"  Grid.ColumnSpan="2"   Text="¿Acepta las Politicas de Datos ?" IsChecked="{Binding YourProperty}" Type="Check" TextColor="DarkGray" Color="DarkGray"/>
+
+                    <Button x:Name="regresar1" Grid.Row="3" Grid.Column="0" Style="{StaticResource ButtonStyle}" Text="Regresar"  Clicked="OnClickedBack1" BackgroundColor="DarkRed" TextColor="White" />
+                    <Button x:Name="siguiente3" Grid.Row="3" Grid.Column="1" Style="{StaticResource ButtonActStyle}" Text="Siguiente" Clicked="OnClickedNext3" BackgroundColor="DarkRed" TextColor="White"/>
                 </Grid>
             </StackLayout>
 
         </StackLayout>
     </ContentPage>
 
-    <ContentPage x:Name="page4" BackgroundColor="#63191B">
+    <ContentPage x:Name="page4" BackgroundColor="WhiteSmoke">
         <StackLayout>
             <StackLayout VerticalOptions="CenterAndExpand">
                 <Grid Style="{StaticResource GridStyle}">
@@ -111,9 +111,9 @@
                     </Grid.RowDefinitions>
                     
                     <WebView x:Name="lbltermconds" Grid.Row="0" ></WebView>
-                    <controls:CheckBox Grid.Row="1" x:Name="termconds" Text="¿Acepta Términos y Condiciones ?" IsChecked="{Binding YourProperty}" Type="Check" Color="#63191B"  />
+                    <controls:CheckBox Grid.Row="1" x:Name="termconds" Text="¿Acepta Términos y Condiciones ?" IsChecked="{Binding YourProperty}" Type="Check" TextColor="DarkGray" Color="DarkGray" />
 
-                    <Button x:Name="finalizar" Grid.Row="3" Style="{StaticResource ButtonStyle}" Text="Registrar" Clicked="OnClickedFinalizar" />
+                    <Button x:Name="finalizar" Grid.Row="3" Style="{StaticResource ButtonStyle}" Text="Registrar" Clicked="OnClickedFinalizar" BackgroundColor="DarkRed" TextColor="White"/>
                 </Grid>
             </StackLayout>
            

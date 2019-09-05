@@ -1,10 +1,6 @@
 ﻿using Acr.UserDialogs;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -25,7 +21,7 @@ namespace IndependienteStaFe.Views
             await Task.Delay(1000);
             Dialogs.HideLoading();
 
-            MainPage myHomePage = new MainPage();
+            InicioPage myHomePage = new InicioPage();
 
 
             NavigationPage.SetHasNavigationBar(myHomePage, false);
@@ -43,7 +39,7 @@ namespace IndependienteStaFe.Views
             await Task.Delay(1000);
             Dialogs.HideLoading();
 
-            MainPage myHomePage = new MainPage();
+            InicioPage myHomePage = new InicioPage();
 
 
             NavigationPage.SetHasNavigationBar(myHomePage, false);

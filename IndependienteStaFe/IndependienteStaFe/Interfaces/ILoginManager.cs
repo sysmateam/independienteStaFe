@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace IndependienteStaFe.Interfaces
+﻿namespace IndependienteStaFe.Interfaces
 {
     public interface ILoginManager
     {

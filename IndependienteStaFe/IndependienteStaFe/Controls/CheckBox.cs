@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace IndependienteStaFe.Controls
 {
@@ -10,7 +7,7 @@ namespace IndependienteStaFe.Controls
         BoxView boxBackground = new BoxView { HeightRequest = 25, WidthRequest = 25, BackgroundColor = Color.White, VerticalOptions = LayoutOptions.CenterAndExpand };
         BoxView boxSelected = new BoxView { IsVisible = false, HeightRequest = 18, WidthRequest = 18, BackgroundColor = Color.Accent, VerticalOptions = LayoutOptions.CenterAndExpand, HorizontalOptions = LayoutOptions.Center };
         Label lblSelected = new Label { Text = "✓", FontSize = 16, FontAttributes = FontAttributes.Bold, IsVisible = false, TextColor = Color.White, HorizontalOptions = LayoutOptions.Center, VerticalOptions = LayoutOptions.CenterAndExpand };
-        Label lblOption = new Label { VerticalOptions = LayoutOptions.CenterAndExpand, FontSize = 14, FontFamily= "MyriadPro-BoldCondIt.otf" , TextColor=Color.White};
+        Label lblOption = new Label { VerticalOptions = LayoutOptions.CenterAndExpand, FontSize = 14, FontFamily = "MyriadPro-BoldCondIt.otf", TextColor = Color.White };
         private CheckType _type = CheckType.Box;
 
         public CheckBox()

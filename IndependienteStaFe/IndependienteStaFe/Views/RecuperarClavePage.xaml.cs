@@ -2,11 +2,7 @@
 using IndependienteStaFe.Models;
 using IndependienteStaFe.Services;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -28,8 +24,8 @@ namespace IndependienteStaFe.Views
         {
 
 
-            rememberPassword rPw=  repository.PostRecuperarPw(rcIDtext.Text, rcEMailtext.Text).Result;
-   
+            rememberPassword rPw = repository.PostRecuperarPw(rcIDtext.Text, rcEMailtext.Text).Result;
+
             Dialogs.ShowLoading(rPw.Message.ToString()); ;
             await Task.Delay(2000);
             Dialogs.HideLoading();
@@ -39,7 +35,7 @@ namespace IndependienteStaFe.Views
 
         }
 
-       
+
 
         public async void OnCancelar(object sender, EventArgs e)
         {
@@ -53,7 +49,7 @@ namespace IndependienteStaFe.Views
 
 
         }
-        
+
 
     }
 }

@@ -22,7 +22,7 @@
                 HorizontalOptions="Center" TextColor="#EB0000" Margin="5,5,5,5" FontSize="Large" />
                     <Image x:Name="image" Grid.Row="1"  WidthRequest="300" HeightRequest="300" Aspect="AspectFill"  HorizontalOptions="Center"/>
                     <WebView x:Name="content" Grid.Row="2" VerticalOptions="Center"  
-                HorizontalOptions="CenterAndExpand" />
+                HorizontalOptions="Center" WidthRequest="200" />
                    <Label x:Name="date" Grid.Row="3" FontSize="Small"
                 VerticalOptions="End" 
                 HorizontalOptions="End" />

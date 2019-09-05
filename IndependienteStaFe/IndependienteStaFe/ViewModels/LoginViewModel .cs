@@ -1,8 +1,5 @@
-﻿using IndependienteStaFe.Views;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.ComponentModel;
-using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -41,7 +38,7 @@ namespace IndependienteStaFe.ViewModels
         {
             if (email != "superadmin" || password != "olivia123*")
             {
-               // DisplayInvalidLoginPrompt();
+                // DisplayInvalidLoginPrompt();
             }
         }
     }

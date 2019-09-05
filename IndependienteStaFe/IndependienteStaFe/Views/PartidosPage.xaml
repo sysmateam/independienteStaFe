@@ -8,20 +8,25 @@
     <ContentPage.Content>
         <ScrollView Style="{StaticResource ScrollViewStyle}">
             <StackLayout Style="{StaticResource StackLayoutStyle}" VerticalOptions="CenterAndExpand">
-                <Grid Style="{StaticResource GridStyle}" BackgroundColor="#63191B">
+                <Grid Style="{StaticResource GridStyle}" BackgroundColor="DarkGray">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="100"/>
-                        <RowDefinition Height="1"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="2"/>
                         <RowDefinition Height="200"/>
-                        <RowDefinition Height="1"/>
+                        <RowDefinition Height="2"/>
                     
                     </Grid.RowDefinitions>
-                    <Label x:Name="partido" Grid.Row="0" Grid.ColumnSpan="3" TextColor="Yellow"  Style="{StaticResource LabelProxPartidoTime}" HeightRequest="50" WidthRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
-                    <BoxView HeightRequest="1" Grid.Row="1" Grid.ColumnSpan="3" Color="White"></BoxView>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="3*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="partido" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" TextColor="Yellow"  Style="{StaticResource LabelProxPartidoTime}" HeightRequest="50" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Italic" FontSize="Large" />
+                    <BoxView HeightRequest="2" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Color="DarkRed"></BoxView>
                     <Image x:Name="team1" Grid.Row="2" Grid.Column="0"    HeightRequest="200" WidthRequest="200" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
-                    <Label x:Name="vs" Grid.Row="2" Grid.ColumnSpan="1" FontSize="Large" Margin="100,5,5,5" Text="VS" TextColor="White"   Style="{StaticResource LabelProxPartidoTime}" HeightRequest="50" WidthRequest="50" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
+                    <Label x:Name="vs" Grid.Row="2" Grid.Column="1" FontSize="Large" Text="Vs." TextColor="White"   Style="{StaticResource LabelProxPartidoTime}" HorizontalOptions="Center" VerticalOptions="Center" />
                     <Image x:Name="team2" Grid.Row="2" Grid.Column="2"    HeightRequest="200" WidthRequest="200" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
-                    <BoxView HeightRequest="1" Grid.Row="3" Grid.ColumnSpan="3" Color="White"></BoxView>
+                    <BoxView HeightRequest="1" Grid.Row="3" Grid.ColumnSpan="3" Color="DarkRed"></BoxView>
 
 
 

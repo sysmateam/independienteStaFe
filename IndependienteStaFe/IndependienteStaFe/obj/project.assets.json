@@ -41,18 +41,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Mobilist.AdvancedTimer.Forms.Plugin/1.0.1": {
-        "type": "package",
-        "dependencies": {
-          "Xamarin.Forms": "1.3.1.6296"
-        },
-        "compile": {
-          "lib/portable-net45+wp8+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/AdvancedTimer.Forms.Plugin.Abstractions.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+wp8+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/AdvancedTimer.Forms.Plugin.Abstractions.dll": {}
-        }
-      },
       "NETStandard.Library/2.0.3": {
         "type": "package",
         "dependencies": {
@@ -122,7 +110,7 @@
           "lib/netstandard1.0/Plugin.Settings.dll": {}
         }
       },
-      "Xamarin.Essentials/1.2.0": {
+      "Xamarin.Essentials/1.3.0": {
         "type": "package",
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
@@ -134,7 +122,7 @@
           "lib/netstandard2.0/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/4.1.0.618606": {
+      "Xamarin.Forms/4.2.0.709249": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Xamarin.Forms.Core.dll": {},
@@ -226,46 +214,13 @@
         "runtime.json"
       ]
     },
-    "Mobilist.AdvancedTimer.Forms.Plugin/1.0.1": {
-      "sha512": "YWzTorYVov4yJHmaEAFNk+ahxVU/LFQAZIKjWiAFckIVY1mkVU3HT/La00dpqzqticX5YiP8MTF9wEELOblz/w==",
-      "type": "package",
-      "path": "mobilist.advancedtimer.forms.plugin/1.0.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/MonoAndroid10/AdvancedTimer.Forms.Plugin.Abstractions.dll",
-        "lib/MonoAndroid10/AdvancedTimer.Forms.Plugin.Abstractions.pdb",
-        "lib/MonoAndroid10/AdvancedTimer.Forms.Plugin.Abstractions.xml",
-        "lib/MonoAndroid10/AdvancedTimer.Forms.Plugin.Android.dll",
-        "lib/MonoAndroid10/AdvancedTimer.Forms.Plugin.Android.pdb",
-        "lib/MonoAndroid10/AdvancedTimer.Forms.Plugin.Android.xml",
-        "lib/MonoTouch10/AdvancedTimer.Forms.Plugin.Abstractions.dll",
-        "lib/MonoTouch10/AdvancedTimer.Forms.Plugin.Abstractions.xml",
-        "lib/MonoTouch10/AdvancedTimer.Forms.Plugin.iOS.dll",
-        "lib/MonoTouch10/AdvancedTimer.Forms.Plugin.iOS.xml",
-        "lib/Xamarin.iOS10/AdvancedTimer.Forms.Plugin.Abstractions.dll",
-        "lib/Xamarin.iOS10/AdvancedTimer.Forms.Plugin.Abstractions.xml",
-        "lib/Xamarin.iOS10/AdvancedTimer.Forms.Plugin.iOSUnified.dll",
-        "lib/Xamarin.iOS10/AdvancedTimer.Forms.Plugin.iOSUnified.xml",
-        "lib/portable-net45+wp8+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/AdvancedTimer.Forms.Plugin.Abstractions.dll",
-        "lib/portable-net45+wp8+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/AdvancedTimer.Forms.Plugin.Abstractions.pdb",
-        "lib/portable-net45+wp8+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/AdvancedTimer.Forms.Plugin.Abstractions.xml",
-        "lib/wp8/AdvancedTimer.Forms.Plugin.Abstractions.dll",
-        "lib/wp8/AdvancedTimer.Forms.Plugin.Abstractions.pdb",
-        "lib/wp8/AdvancedTimer.Forms.Plugin.Abstractions.xml",
-        "lib/wp8/AdvancedTimer.Forms.Plugin.WindowsPhone.dll",
-        "lib/wp8/AdvancedTimer.Forms.Plugin.WindowsPhone.pdb",
-        "lib/wp8/AdvancedTimer.Forms.Plugin.WindowsPhone.xml",
-        "mobilist.advancedtimer.forms.plugin.1.0.1.nupkg.sha512",
-        "mobilist.advancedtimer.forms.plugin.nuspec"
-      ]
-    },
     "NETStandard.Library/2.0.3": {
       "sha512": "st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
       "type": "package",
       "path": "netstandard.library/2.0.3",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "build/netstandard2.0/NETStandard.Library.targets",
@@ -426,6 +381,7 @@
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/MonoAndroid/Rg.Plugins.Popup.Droid.dll",
+        "lib/MonoAndroid/Rg.Plugins.Popup.Droid.dll.mdb",
         "lib/MonoAndroid/Rg.Plugins.Popup.Droid.pdb",
         "lib/MonoAndroid/Rg.Plugins.Popup.dll",
         "lib/MonoAndroid/Rg.Plugins.Popup.pdb",
@@ -603,9 +559,11 @@
         "content/xamarintvOS/Helpers/Settings.cs.pp",
         "content/xamarinwatchOS/Helpers/Settings.cs.pp",
         "lib/MonoAndroid10/Plugin.Settings.Abstractions.dll",
+        "lib/MonoAndroid10/Plugin.Settings.Abstractions.dll.mdb",
         "lib/MonoAndroid10/Plugin.Settings.Abstractions.pdb",
         "lib/MonoAndroid10/Plugin.Settings.Abstractions.xml",
         "lib/MonoAndroid10/Plugin.Settings.dll",
+        "lib/MonoAndroid10/Plugin.Settings.dll.mdb",
         "lib/MonoAndroid10/Plugin.Settings.pdb",
         "lib/MonoAndroid10/Plugin.Settings.xml",
         "lib/UAP10/Plugin.Settings.Abstractions.dll",
@@ -655,10 +613,10 @@
         "xam.plugins.settings.nuspec"
       ]
     },
-    "Xamarin.Essentials/1.2.0": {
-      "sha512": "o3i5uAchUpAvAlJX0onYFFiDo6jpKl9vgvrdDtXEuEfum0UDrSx8oGGBUjlFyUoRpvWVumXwo0VS3AbzuwEofg==",
+    "Xamarin.Essentials/1.3.0": {
+      "sha512": "AI6NZ7ngolTQmUI2dnsP/t6xxwPNWXuOY1sfol2yNVPSw4RfI8+D/kjz5p7Yabl5vRtoFhI6sWDT40IK9VwlBg==",
       "type": "package",
-      "path": "xamarin.essentials/1.2.0",
+      "path": "xamarin.essentials/1.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -686,6 +644,9 @@
         "lib/netstandard2.0/Xamarin.Essentials.dll",
         "lib/netstandard2.0/Xamarin.Essentials.pdb",
         "lib/netstandard2.0/Xamarin.Essentials.xml",
+        "lib/tizen40/Xamarin.Essentials.dll",
+        "lib/tizen40/Xamarin.Essentials.pdb",
+        "lib/tizen40/Xamarin.Essentials.xml",
         "lib/uap10.0.16299/Xamarin.Essentials.dll",
         "lib/uap10.0.16299/Xamarin.Essentials.pdb",
         "lib/uap10.0.16299/Xamarin.Essentials.pri",
@@ -693,15 +654,21 @@
         "lib/xamarinios10/Xamarin.Essentials.dll",
         "lib/xamarinios10/Xamarin.Essentials.pdb",
         "lib/xamarinios10/Xamarin.Essentials.xml",
+        "lib/xamarintvos10/Xamarin.Essentials.dll",
+        "lib/xamarintvos10/Xamarin.Essentials.pdb",
+        "lib/xamarintvos10/Xamarin.Essentials.xml",
+        "lib/xamarinwatchos10/Xamarin.Essentials.dll",
+        "lib/xamarinwatchos10/Xamarin.Essentials.pdb",
+        "lib/xamarinwatchos10/Xamarin.Essentials.xml",
         "readme.txt",
-        "xamarin.essentials.1.2.0.nupkg.sha512",
+        "xamarin.essentials.1.3.0.nupkg.sha512",
         "xamarin.essentials.nuspec"
       ]
     },
-    "Xamarin.Forms/4.1.0.618606": {
-      "sha512": "qJoOu0DiSzsfQj7nuMtKUcl39KsUxfU9yDJ5HU1flM+hnOrSD6IyDgKKxOkqIdmVwAL8R6hISz+b8MB4P5oDFw==",
+    "Xamarin.Forms/4.2.0.709249": {
+      "sha512": "3DWqPSn9kSKJW5mwjmICV/+4IpPQrequEN1VXUhsF0i9KKnfj49jFk9VbJnT9o2aesJAk00NED67XPbSmbxKjw==",
       "type": "package",
-      "path": "xamarin.forms/4.1.0.618606",
+      "path": "xamarin.forms/4.2.0.709249",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -921,13 +888,13 @@
         "lib/uap10.0/Xamarin.Forms.Platform.UAP.pdb",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP.pri",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/AutoSuggestStyle.xbf",
+        "lib/uap10.0/Xamarin.Forms.Platform.UAP/CollectionView/ItemsViewStyles.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsCheckBoxStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsCommandBarStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsEmbeddedPageWrapper.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsFlyout.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsProgressBarStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsTextBoxStyle.xbf",
-        "lib/uap10.0/Xamarin.Forms.Platform.UAP/Items/ItemsViewStyles.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/MasterDetailControlStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/PageControlStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/Properties/Xamarin.Forms.Platform.UAP.rd.xml",
@@ -940,7 +907,7 @@
         "lib/uap10.0/Xamarin.Forms.Xaml.dll",
         "lib/uap10.0/Xamarin.Forms.Xaml.pdb",
         "lib/uap10.0/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.4.1.0.618606.nupkg.sha512",
+        "xamarin.forms.4.2.0.709249.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
     }
@@ -949,14 +916,13 @@
     ".NETStandard,Version=v2.0": [
       "Acr.UserDialogs >= 7.0.4",
       "DLToolkit.Forms.Controls.FlowListView >= 2.0.11",
-      "Mobilist.AdvancedTimer.Forms.Plugin >= 1.0.1",
       "NETStandard.Library >= 2.0.3",
       "Newtonsoft.Json >= 12.0.2",
       "Rg.Plugins.Popup >= 1.1.5.188",
       "System.Runtime >= 4.3.1",
       "Xam.Plugins.Settings >= 3.1.1",
-      "Xamarin.Essentials >= 1.2.0",
-      "Xamarin.Forms >= 4.1.0.618606"
+      "Xamarin.Essentials >= 1.3.0",
+      "Xamarin.Forms >= 4.2.0.709249"
     ]
   },
   "packageFolders": {
@@ -967,11 +933,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ybrahim Miquilena\\source\\repos\\IndependienteStaFe\\IndependienteStaFe\\IndependienteStaFe\\IndependienteStaFe.csproj",
+      "projectUniqueName": "C:\\Users\\Ybrahim Miquilena\\Desktop\\IndependieteStaFe\\IndependieteStaFe\\IndependienteStaFe\\IndependienteStaFe\\IndependienteStaFe.csproj",
       "projectName": "IndependienteStaFe",
-      "projectPath": "C:\\Users\\Ybrahim Miquilena\\source\\repos\\IndependienteStaFe\\IndependienteStaFe\\IndependienteStaFe\\IndependienteStaFe.csproj",
+      "projectPath": "C:\\Users\\Ybrahim Miquilena\\Desktop\\IndependieteStaFe\\IndependieteStaFe\\IndependienteStaFe\\IndependienteStaFe\\IndependienteStaFe.csproj",
       "packagesPath": "C:\\Users\\Ybrahim Miquilena\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ybrahim Miquilena\\source\\repos\\IndependienteStaFe\\IndependienteStaFe\\IndependienteStaFe\\obj\\",
+      "outputPath": "C:\\Users\\Ybrahim Miquilena\\Desktop\\IndependieteStaFe\\IndependieteStaFe\\IndependienteStaFe\\IndependienteStaFe\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -1011,10 +977,6 @@
             "target": "Package",
             "version": "[2.0.11, )"
           },
-          "Mobilist.AdvancedTimer.Forms.Plugin": {
-            "target": "Package",
-            "version": "[1.0.1, )"
-          },
           "NETStandard.Library": {
             "suppressParent": "All",
             "target": "Package",
@@ -1039,11 +1001,11 @@
           },
           "Xamarin.Essentials": {
             "target": "Package",
-            "version": "[1.2.0, )"
+            "version": "[1.3.0, )"
           },
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "[4.1.0.618606, )"
+            "version": "[4.2.0.709249, )"
           }
         },
         "imports": [
@@ -1053,17 +1015,5 @@
         "warn": true
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "El paquete \"Mobilist.AdvancedTimer.Forms.Plugin 1.0.1\" se restauró con \".NETFramework,Version=v4.6.1\" en lugar de la plataforma de destino del proyecto \".NETStandard,Version=v2.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
-      "libraryId": "Mobilist.AdvancedTimer.Forms.Plugin",
-      "targetGraphs": [
-        ".NETStandard,Version=v2.0"
-      ]
-    }
-  ]
+  }
 }

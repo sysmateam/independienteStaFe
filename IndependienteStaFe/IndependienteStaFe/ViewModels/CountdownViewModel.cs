@@ -2,9 +2,7 @@
 using IndependienteStaFe.Services;
 using IndependienteStaFe.ViewModels.Base;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -21,7 +19,7 @@ namespace IndependienteStaFe.ViewModels
         private int _seconds;
         private double _progress;
         private DateTime endTime = new DateTime();
-        
+
         Repository repository = new Repository();
 
         public CountdownViewModel()
@@ -32,7 +30,7 @@ namespace IndependienteStaFe.ViewModels
         Game _games;
         public Game Games
         {
-            get { return Games =  repository.getPartidos("1").Result; }
+            get { return Games = repository.getPartidos("1").Result; }
             set
             {
                 if (value == _games) return;
@@ -142,7 +140,7 @@ namespace IndependienteStaFe.ViewModels
                 GameDate = DateTime.Now + new TimeSpan(daygame.Day, daygame.Hour, daygame.Minute, daygame.Second),
                 Now = DateTime.Now.AddHours(-8) //DateTime.Now.AddHours(Convert.ToDateTime(Games.data[0].DateGame).Hour)
             };
-            
+
             NextGame = nextgame;
         }
 

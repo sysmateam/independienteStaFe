@@ -1,12 +1,4 @@
 ﻿using IndependienteStaFe.Helpers;
-using IndependienteStaFe.Views;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace IndependienteStaFe
@@ -20,7 +12,7 @@ namespace IndependienteStaFe
 
             if (Settings.IsLoggedIn == false)
             {
-               // products.ContentTemplate = new DataTemplate { LoginPage };
+                // products.ContentTemplate = new DataTemplate { LoginPage };
             }
 
         }

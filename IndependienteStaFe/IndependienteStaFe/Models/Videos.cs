@@ -1,7 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace IndependienteStaFe.Models
 {
@@ -21,7 +18,7 @@ namespace IndependienteStaFe.Models
             public string VideoId { get; set; }
             [JsonProperty("name")]
             public string Name { get; set; }
-           
+
             [JsonProperty("image")]
             public string Image { get; set; }
             [JsonProperty("profile")]

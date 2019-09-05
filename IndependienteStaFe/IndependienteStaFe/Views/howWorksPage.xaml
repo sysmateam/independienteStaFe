@@ -10,10 +10,15 @@
             <StackLayout Style="{StaticResource StackLayoutStyle}" VerticalOptions="CenterAndExpand">
                 <Grid Style="{StaticResource GridStyle}">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="250"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="10*"/>
                     </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10*"/>
+                    </Grid.ColumnDefinitions>
 
-                    <WebView x:Name="howitworks"  Grid.Row="0"  WidthRequest="400" HeightRequest="1000" VerticalOptions="CenterAndExpand" Margin="5,5,5,5" HorizontalOptions="CenterAndExpand" />
+                    <Label Grid.Row="0" Grid.Column="0" Text="COMO FUNCIONA" FontSize="Large" FontAttributes="Bold" TextColor="DarkRed" HorizontalOptions="Center"/>
+                    <Editor Grid.Row="1" Grid.Column="0" Text="prueba" FontSize="Small" FontAttributes="None" TextColor="Gray"/>
 
                 </Grid>
             </StackLayout>

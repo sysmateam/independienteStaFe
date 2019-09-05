@@ -13,18 +13,18 @@
     -->
     <Shell.Resources>
         <ResourceDictionary>
-            <Color x:Key="NavigationPrimary">#63191B</Color>
+            <Color x:Key="NavigationPrimary">#000000</Color>
           
             <Style x:Key="BaseStyle" TargetType="Element">
-                <Setter Property="Shell.BackgroundColor" Value="{StaticResource NavigationPrimary}" />
+                <Setter Property="Shell.BackgroundColor" Value="Black" />
                 <Setter Property="Shell.ForegroundColor" Value="White" />
                 <Setter Property="Shell.TitleColor" Value="White" />
                 <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
                 <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
-                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
-                <Setter Property="Shell.TabBarForegroundColor" Value="White"/>
-                <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF"/>
-                <Setter Property="Shell.TabBarTitleColor" Value="Wheat"/>
+                <Setter Property="Shell.TabBarBackgroundColor" Value="White" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="DarkRed"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="Gray"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="LightGray"/>
             </Style>
             <Style TargetType="ShellItem" BasedOn="{StaticResource BaseStyle}" />
         </ResourceDictionary>
@@ -32,8 +32,11 @@
 
     <!-- Your Pages -->
     <TabBar>
-        <Tab Title="Noticias"  Icon="noticias.png"  >
+        <Tab Title="Inicio"  Icon="euro.png"  >
             <ShellContent Style="{StaticResource BaseStyle}" ContentTemplate="{DataTemplate local:InicioPage}"/>
+        </Tab>
+        <Tab Title="Noticias"  Icon="noticias.png"  >
+            <ShellContent Style="{StaticResource BaseStyle}" ContentTemplate="{DataTemplate local:ListnewsPage}"/>
         </Tab>
         <Tab Title="Partidos"   Icon="partidos.png"  >
             <ShellContent  Style="{StaticResource BaseStyle}" ContentTemplate="{DataTemplate local:PartidosPage}" />
@@ -41,10 +44,10 @@
         <Tab Title="Videos"  Icon="videos.png">
             <ShellContent Style="{StaticResource BaseStyle}" ContentTemplate="{DataTemplate local:ListvideosPage}" />
         </Tab>
-        <Tab Title="Productos"  Icon="tienda.png">
+        <Tab Title="Tienda"  Icon="tienda.png">
             <ShellContent  Style="{StaticResource BaseStyle}" ContentTemplate="{DataTemplate local:ListproductsPage}" />
         </Tab>
-        <Tab Title="¿Cómo funciona?"  Icon="como.png">
+        <Tab Title="¿Cómo?"  Icon="como.png">
             <ShellContent Style="{StaticResource BaseStyle}" ContentTemplate="{DataTemplate local:howWorksPage}" />
         </Tab>
         

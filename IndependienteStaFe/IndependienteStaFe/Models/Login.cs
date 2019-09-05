@@ -1,8 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace IndependienteStaFe.Models
 {
@@ -15,6 +11,6 @@ namespace IndependienteStaFe.Models
         [JsonProperty("Jwt")]
         public string Jwt { get; set; }
 
-       
+
     }
 }
