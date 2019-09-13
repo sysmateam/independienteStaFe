@@ -1,5 +1,7 @@
 ﻿using IndependienteStaFe.Helpers;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+
 
 namespace IndependienteStaFe
 {
@@ -9,6 +11,8 @@ namespace IndependienteStaFe
         public AppShell()
         {
             InitializeComponent();
+
+            Shell.SetNavBarIsVisible(this, false);
 
             if (Settings.IsLoggedIn == false)
             {

@@ -26,8 +26,8 @@
                     <Entry x:Name="lstViewCantidad" Placeholder="Cantidad" Style="{StaticResource EntryStyle}"  Grid.Row="3"  Grid.ColumnSpan="2" >
                        
                     </Entry>
-                    <Button  Grid.Row="5" Text="Agregar al Carrito" Grid.Column="1" BackgroundColor="GreenYellow"  Style="{StaticResource ButtonActStyle}" Clicked="EvetClicked"></Button>
-                    <Button  Grid.Row="5" Text="Ir a Compras" Grid.Column="0"  Style="{StaticResource ButtonActStyle}" Clicked="BackEvetClicked"></Button>
+                    <Button  Grid.Row="5" Text="Agregar al Carrito" Grid.Column="1" BackgroundColor="DarkRed"  Style="{StaticResource ButtonActStyle}" Clicked="EvetClicked"></Button>
+                    <Button  Grid.Row="5" Text="Ir a Compras" Grid.Column="0"  Style="{StaticResource ButtonActStyle}" BackgroundColor="DarkRed" Clicked="BackEvetClicked"></Button>
 
                 </Grid>
 

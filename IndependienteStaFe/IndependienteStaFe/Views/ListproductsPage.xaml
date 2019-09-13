@@ -9,18 +9,35 @@
     <ContentPage.Content>
         <ScrollView Style="{StaticResource ScrollViewStyle}">
             <StackLayout  VerticalOptions="CenterAndExpand">
+                <Grid RowSpacing="0" Padding="2,2,2,2" BackgroundColor="Black">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="65" />
+                    </Grid.RowDefinitions>
+                    <Button Text="HOME" TextColor="White" Grid.Row="0" Grid.Column="0" FontSize="Medium" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Start" BackgroundColor="Transparent" Clicked="Home_Clicked" />
+                    <Image Source="logonavbar.png" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Transparent" HeightRequest="40"  />
+                    <Image Source="userwhite.png" Grid.Row="0" Grid.Column="2" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="End" HeightRequest="40">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Button_Clicked" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Grid>
                 <ListView x:Name="Lista" ItemSelected="EvetClicked" SeparatorColor="#63191B" HasUnevenRows="True">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
 
-                                <Grid BackgroundColor="DarkGray">
+                                <Grid BackgroundColor="White">
                                     <Grid.RowDefinitions>
 
                                         <RowDefinition Height="100"/>
                                         <RowDefinition Height="50"/>
                                         <RowDefinition Height="50"/>
-                                        <RowDefinition Height="50"/>
+                                        <RowDefinition Height="70"/>
                                     </Grid.RowDefinitions>
                                     <Grid.ColumnDefinitions>
 
@@ -33,7 +50,7 @@
                                     <Label Text="{Binding Name}"  Grid.Row="0" Grid.Column="1"  TextColor="DarkRed" VerticalOptions="Center"/>
                                     <Label Text="{Binding Value}" Grid.Row="1" Grid.Column="1"   TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center"/>
                                     <Label Text="{Binding TypePay}" Grid.Row="2" Grid.Column="1"  TextColor="Gray" FontSize="Micro" VerticalOptions="Center" HorizontalOptions="Center" />
-                                    <Button  Grid.Row="3" Text="Comprar" Grid.Column="0" Grid.ColumnSpan="2"   Style="{StaticResource ButtonCompraStyle}" VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="DarkRed" Margin="0,0,0,5"/>
+                                    <Button  Grid.Row="3" FontSize="Medium" Text="Comprar" Grid.Column="0" Grid.ColumnSpan="2"   Style="{StaticResource ButtonCompraStyle}" VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="DarkRed" Margin="0,0,0,10"/>
 
                                 </Grid>
                             </ViewCell>

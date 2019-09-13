@@ -6,28 +6,56 @@
              mc:Ignorable="d"
              xmlns:views="clr-namespace:IndependienteStaFe.Views"
              x:Class="IndependienteStaFe.Views.ListnewsPage">
-    <ContentPage.ToolbarItems>
-       
-        
 
-    </ContentPage.ToolbarItems>
     <ContentPage.Content>
-      
+
         <ScrollView Style="{StaticResource ScrollViewStyle}">
             <StackLayout Style="{StaticResource StackLayoutStyle}" VerticalOptions="CenterAndExpand">
-                <Grid Style="{StaticResource GridStyle}" BackgroundColor="DarkGray" >
+                <Grid RowSpacing="0" Padding="2,2,2,2" BackgroundColor="Black" Margin="0,-3,0,0" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="2"/>
-                        <RowDefinition Height="150"/>
-                        <RowDefinition Height="50"/>
-                        <RowDefinition Height="2"/>
-                       
+                        <RowDefinition Height="65" />
                     </Grid.RowDefinitions>
-                    <BoxView HeightRequest="1" Grid.Row="0" Grid.ColumnSpan="2" Color="DarkRed"></BoxView>
-                    <Image x:Name="imagen" Grid.Row="1" Grid.ColumnSpan="2"  HeightRequest="150" WidthRequest="200" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" />
-                    <Label x:Name="noticiad" Grid.Row="2" Grid.ColumnSpan="2"  Text="Noticia Destacada" Style="{StaticResource LabelDestacado}" HeightRequest="50" WidthRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
-                    <BoxView HeightRequest="1" Grid.Row="3" Grid.ColumnSpan="2" Color="DarkRed"></BoxView>
-                    <!--<views:ListNewHorizontal Grid.Row="4" Grid.ColumnSpan="2"  />-->
+                    <Button Text="HOME" TextColor="White" Grid.Row="0" Grid.Column="0" FontSize="Medium" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Start" BackgroundColor="Transparent" Clicked="Home_Clicked" />
+                    <Image Source="logonavbar.png" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Transparent" HeightRequest="40"  />
+                    <Image Source="userwhite.png" Grid.Row="0" Grid.Column="2" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="End" HeightRequest="40">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Button_Clicked" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Grid>
+                <Grid BackgroundColor="DarkRed" Grid.Row="1" RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="3"/>
+                    </Grid.RowDefinitions>
+                    <Label Text="en nombre de Dios y la Virgen de Coromoto" TextColor="Transparent" FontSize="Micro"/>
+                </Grid>
+                <AbsoluteLayout>
+                    <Image AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" Source="fondoinicio.png" Margin="0,-330,0,-325"/>
+                    <Grid Style="{StaticResource GridStyle}" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" BackgroundColor="Transparent" Padding="0,0,0,0"  RowSpacing="0" >
+                        <Grid.RowDefinitions>
+
+                            <RowDefinition Height="150"/>
+                            <RowDefinition Height="50"/>
+
+
+                        </Grid.RowDefinitions>
+
+                        <Image x:Name="imagen" Grid.Row="0" Grid.ColumnSpan="2"  HeightRequest="150" WidthRequest="200" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" />
+                        <Label x:Name="noticiad" Grid.Row="1" Grid.ColumnSpan="2"  Text="Noticia Destacada" Style="{StaticResource LabelDestacado}" HeightRequest="50" WidthRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" TextColor="White" FontAttributes="Bold" />
+
+                        <!--<views:ListNewHorizontal Grid.Row="4" Grid.ColumnSpan="2"  />-->
+                    </Grid>
+                </AbsoluteLayout>
+                <Grid BackgroundColor="Black" Grid.Row="1" RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10"/>
+                    </Grid.RowDefinitions>
+                    <Label Text="en nombre de Dios y la Virgen de Coromoto" TextColor="Transparent" FontSize="Micro"/>
                 </Grid>
 
                 <ListView x:Name="Lista" ItemSelected="EvetClicked" SeparatorColor="#63191B" HasUnevenRows="True" Margin="2,2,2,2">
@@ -36,31 +64,31 @@
                             <ViewCell>
 
                                 <Grid>
-                                            <Grid.RowDefinitions>
-        
-                                                <RowDefinition Height="20"/>
-                                                <RowDefinition Height="20"/>
-                                                <RowDefinition Height="20"/>
-                                            </Grid.RowDefinitions>
-                                            <Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
 
-                                                <ColumnDefinition Width="3*"/>
-                                                <ColumnDefinition Width="7*"/>
-                                              
-                                            </Grid.ColumnDefinitions>
-                                        
+                                        <RowDefinition Height="20"/>
+                                        <RowDefinition Height="20"/>
+                                        <RowDefinition Height="20"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+
+                                        <ColumnDefinition Width="3*"/>
+                                        <ColumnDefinition Width="7*"/>
+
+                                    </Grid.ColumnDefinitions>
+
                                     <Image Source="{Binding Image}" Grid.RowSpan="3" Grid.Row="0" Grid.Column="0" Aspect="AspectFill" Margin="6,6,6,6" VerticalOptions="Fill" HorizontalOptions="Fill"/>
                                     <Label Text="{Binding Name}"  Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"   TextColor="DarkRed"  />
                                     <Label Text="{Binding Description}" Grid.Row="1" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"    FontSize="Small" TextColor="Black"/>
                                     <Label Text="{Binding Date}" Grid.Row="2" Grid.Column="1" TextColor="Gray" FontSize="Micro" HorizontalOptions="Start" />
                                 </Grid>
                             </ViewCell>
-                            
+
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-                
-               
+
+
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

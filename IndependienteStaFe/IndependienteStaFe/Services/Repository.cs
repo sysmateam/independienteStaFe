@@ -123,6 +123,27 @@ namespace IndependienteStaFe.Services
                 throw ex;
             }
         }
+        public async Task<Videos> getVideoDetail(string VideoId)
+        {
+            object param = new { VideoId };
+            var jsonObj = JsonConvert.SerializeObject(param);
+            using (HttpClient client = new HttpClient())
+            {
+                StringContent content = new StringContent(jsonObj.ToString(), Encoding.UTF8, "application/json");
+                var request = new HttpRequestMessage()
+                {
+                    RequestUri = new Uri("https://crmpuntos.oliviadirect.co/services/content/list-video.php"),
+                    Method = HttpMethod.Post,
+                    Content = content
+                };
+                //you can add headers                
+                //request.Headers.Add("key", "value");
+                var response = await client.SendAsync(request).ConfigureAwait(false);
+                string dataResult = response.Content.ReadAsStringAsync().Result;
+                Videos result = JsonConvert.DeserializeObject<Videos>(dataResult);
+                return result;
+            }
+        }
         public async Task<News> getNews(string token, string limit)
         {
             try

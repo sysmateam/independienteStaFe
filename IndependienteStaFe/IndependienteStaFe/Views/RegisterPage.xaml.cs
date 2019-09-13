@@ -19,7 +19,7 @@ namespace IndependienteStaFe.Views
 
             Repository repo = new Repository();
 
-            var termconds = repo.getTermConds();
+            var termconds = "";// repo.getTermConds();
             var poldatos = repo.getPolDatos();
 
             Ciudades listciudades = repo.getCiudades();
@@ -36,7 +36,8 @@ namespace IndependienteStaFe.Views
 
             lbltermconds.Source = new HtmlWebViewSource
             {
-                Html = termconds.data[0].Name.ToString() + "<br/>" + termconds.data[0].Content
+                // Html = termconds.data[0].Name.ToString() + "<br/>" + termconds.data[0].Content
+                Html = ""
             };
 
             lblpoldatos.Source = new HtmlWebViewSource
@@ -48,7 +49,7 @@ namespace IndependienteStaFe.Views
         }
         public async void OnClickedFinalizar(object sender, EventArgs args)
         {
-            if (nombre.Text != null && password.Text != null && correo.Text != null && password.Text != null && telefono.Text != null && password.Equals(passwordconf.Text))
+            if (nombre.Text != null && password.Text != null && correo.Text != null && password.Text != null && telefono.Text != null && password.Text.Equals(passwordconf.Text))
             {
                 MD5HashX2 pwtohash = new MD5HashX2();
 

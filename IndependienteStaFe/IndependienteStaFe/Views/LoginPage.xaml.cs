@@ -97,7 +97,7 @@ namespace IndependienteStaFe.Views
         {
             IUserDialogs Dialogs = UserDialogs.Instance;
             Dialogs.ShowLoading("Espere por favor...");
-            await Task.Delay(1000);
+            await Task.Delay(2000);
             Dialogs.HideLoading();
 
             RegisterPage myHomePage = new RegisterPage();

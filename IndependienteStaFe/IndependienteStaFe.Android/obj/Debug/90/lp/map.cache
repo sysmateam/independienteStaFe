@@ -1,15 +1,15 @@
-IndependienteStaFe
-System.Runtime
 Acr.UserDialogs
 AndHUD
 DLToolkit.Forms.Controls.FlowListView
 FormsViewGroup
+IndependienteStaFe
 Newtonsoft.Json
 Plugin.CurrentActivity
 Plugin.Settings.Abstractions
 Plugin.Settings
 Rg.Plugins.Popup
 Rg.Plugins.Popup.Droid
+System.Runtime
 Xamarin.Android.Arch.Core.Common
 Xamarin.Android.Arch.Core.Runtime
 Xamarin.Android.Arch.Lifecycle.Common

@@ -5830,6 +5830,9 @@ namespace IndependienteStaFe.Droid
 			// aapt resource value: 0x7F010004
 			public const int euro = 2130771972;
 			
+			// aapt resource value: 0x7F010005
+			public const int fondoinicio = 2130771973;
+			
 			// aapt resource value: 0x7F090055
 			public const int ic_audiotrack_dark = 2131296341;
 			
@@ -5842,8 +5845,8 @@ namespace IndependienteStaFe.Droid
 			// aapt resource value: 0x7F090058
 			public const int ic_dialog_close_light = 2131296344;
 			
-			// aapt resource value: 0x7F010020
-			public const int ic_errorstatus = 2130772000;
+			// aapt resource value: 0x7F010023
+			public const int ic_errorstatus = 2130772003;
 			
 			// aapt resource value: 0x7F090059
 			public const int ic_group_collapse_00 = 2131296345;
@@ -6355,8 +6358,8 @@ namespace IndependienteStaFe.Droid
 			// aapt resource value: 0x7F09005F
 			public const int ic_mtrl_chip_close_circle = 2131296351;
 			
-			// aapt resource value: 0x7F010021
-			public const int ic_successstatus = 2130772001;
+			// aapt resource value: 0x7F010024
+			public const int ic_successstatus = 2130772004;
 			
 			// aapt resource value: 0x7F090100
 			public const int ic_vol_type_speaker_dark = 2131296512;
@@ -6376,14 +6379,17 @@ namespace IndependienteStaFe.Droid
 			// aapt resource value: 0x7F090105
 			public const int ic_vol_type_tv_light = 2131296517;
 			
-			// aapt resource value: 0x7F010005
-			public const int logosf = 2130771973;
-			
 			// aapt resource value: 0x7F010006
-			public const int logout = 2130771974;
+			public const int logonavbar = 2130771974;
 			
 			// aapt resource value: 0x7F010007
-			public const int membresia = 2130771975;
+			public const int logosf = 2130771975;
+			
+			// aapt resource value: 0x7F010008
+			public const int logout = 2130771976;
+			
+			// aapt resource value: 0x7F010009
+			public const int membresia = 2130771977;
 			
 			// aapt resource value: 0x7F090106
 			public const int mr_button_connected_dark = 2131296518;
@@ -6454,8 +6460,8 @@ namespace IndependienteStaFe.Droid
 			// aapt resource value: 0x7F090062
 			public const int navigation_empty_icon = 2131296354;
 			
-			// aapt resource value: 0x7F010008
-			public const int noticias = 2130771976;
+			// aapt resource value: 0x7F010010
+			public const int noticias = 2130771984;
 			
 			// aapt resource value: 0x7F090001
 			public const int notification_action_background = 2131296257;
@@ -6493,29 +6499,29 @@ namespace IndependienteStaFe.Droid
 			// aapt resource value: 0x7F09000C
 			public const int notify_panel_notification_icon_bg = 2131296268;
 			
-			// aapt resource value: 0x7F010009
-			public const int partidos = 2130771977;
-			
-			// aapt resource value: 0x7F010010
-			public const int perfiles = 2130771984;
-			
 			// aapt resource value: 0x7F010011
-			public const int productos = 2130771985;
+			public const int partidos = 2130771985;
 			
 			// aapt resource value: 0x7F010012
-			public const int puntos = 2130771986;
-			
-			// aapt resource value: 0x7F010018
-			public const int roundedbg = 2130771992;
-			
-			// aapt resource value: 0x7F010019
-			public const int roundedbgdark = 2130771993;
+			public const int perfiles = 2130771986;
 			
 			// aapt resource value: 0x7F010013
-			public const int splash_logo = 2130771987;
+			public const int productos = 2130771987;
 			
 			// aapt resource value: 0x7F010014
-			public const int tienda = 2130771988;
+			public const int puntos = 2130771988;
+			
+			// aapt resource value: 0x7F010021
+			public const int roundedbg = 2130772001;
+			
+			// aapt resource value: 0x7F010022
+			public const int roundedbgdark = 2130772002;
+			
+			// aapt resource value: 0x7F010015
+			public const int splash_logo = 2130771989;
+			
+			// aapt resource value: 0x7F010016
+			public const int tienda = 2130771990;
 			
 			// aapt resource value: 0x7F09006F
 			public const int tooltip_frame_dark = 2131296367;
@@ -6523,14 +6529,17 @@ namespace IndependienteStaFe.Droid
 			// aapt resource value: 0x7F090070
 			public const int tooltip_frame_light = 2131296368;
 			
-			// aapt resource value: 0x7F010015
-			public const int usuario = 2130771989;
-			
-			// aapt resource value: 0x7F010016
-			public const int videos = 2130771990;
-			
 			// aapt resource value: 0x7F010017
-			public const int xamarin_logo = 2130771991;
+			public const int userwhite = 2130771991;
+			
+			// aapt resource value: 0x7F010018
+			public const int usuario = 2130771992;
+			
+			// aapt resource value: 0x7F010019
+			public const int videos = 2130771993;
+			
+			// aapt resource value: 0x7F010020
+			public const int xamarin_logo = 2130772000;
 			
 			static Drawable()
 			{

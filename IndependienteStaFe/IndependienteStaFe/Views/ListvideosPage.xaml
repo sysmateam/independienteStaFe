@@ -5,57 +5,68 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="IndependienteStaFe.Views.ListvideosPage">
-    <ContentPage.ToolbarItems>
-
-
-
-    </ContentPage.ToolbarItems>
+ 
     <ContentPage.Content>
         <ScrollView Style="{StaticResource ScrollViewStyle}">
             <StackLayout Style="{StaticResource StackLayoutStyle}" VerticalOptions="CenterAndExpand">
-                <Grid Style="{StaticResource GridStyle}" BackgroundColor="DarkGray">
+                <Grid RowSpacing="0" Padding="2,2,2,2" BackgroundColor="Black">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="2"/>
-                        <RowDefinition Height="150"/>
-                        <RowDefinition Height="50"/>
-                        <RowDefinition Height="2"/>
-
+                        <RowDefinition Height="65" />
                     </Grid.RowDefinitions>
-                    <BoxView HeightRequest="1" Grid.Row="0" Grid.ColumnSpan="2" Color="DarkRed"></BoxView>
-                    <Image x:Name="imagen" Grid.Row="1" Grid.ColumnSpan="2"  HeightRequest="150" WidthRequest="200" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
-                    <Label TextColor="White" FontSize="Large" FontAttributes="Bold" x:Name="videod" Grid.Row="2" Grid.ColumnSpan="2"  Style="{StaticResource LabelDestacado}" HeightRequest="50" WidthRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
-                    <BoxView HeightRequest="1" Grid.Row="3" Grid.ColumnSpan="2" Color="DarkRed"></BoxView>
+                    <Button Text="HOME" TextColor="White" Grid.Row="0" Grid.Column="0" FontSize="Medium" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Start" BackgroundColor="Transparent" Clicked="Home_Clicked" />
+                    <Image Source="logonavbar.png" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Transparent" HeightRequest="40"  />
+                    <Image Source="userwhite.png" Grid.Row="0" Grid.Column="2" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="End" HeightRequest="40">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Button_Clicked" /> 
+                        </Image.GestureRecognizers>
+                    </Image>
                 </Grid>
-                <ListView x:Name="Lista" SeparatorColor="Gray" HasUnevenRows="True" Margin="2,2,2,2">
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <ViewCell>
-
-                                    <Grid BackgroundColor="White">
-                                        <Grid.RowDefinitions>
-
-                                            <RowDefinition Height="20"/>
-                                            <RowDefinition Height="20"/>
-                                            <RowDefinition Height="20"/>
-                                        </Grid.RowDefinitions>
-                                        <Grid.ColumnDefinitions>
-
-                                            <ColumnDefinition Width="3*"/>
-                                            <ColumnDefinition Width="7*"/>
-
-                                        </Grid.ColumnDefinitions>
-                                        <Image Source="{Binding Image}"  Grid.Row="0" Grid.Column="0" Grid.RowSpan="3"  Aspect="AspectFill" Margin="6,6,6,6" VerticalOptions="Fill" HorizontalOptions="Fill" />
-                                        <Label Text="{Binding Name}" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"   TextColor="DarkRed" />
-                                    </Grid>
-                                </ViewCell>
-
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
+                <AbsoluteLayout>
+                    <Image AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" Source="fondoinicio.png" Margin="0,-325,0,-325"/>
+                    <Grid Style="{StaticResource GridStyle}" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" BackgroundColor="Transparent" Padding="0,0,0,0" >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="150"/>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="20"/>
+                            </Grid.RowDefinitions>
+                        <Image x:Name="imagen" Grid.Row="0" Grid.ColumnSpan="2"  HeightRequest="150" WidthRequest="200" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+                        <Label TextColor="White" FontSize="Large" FontAttributes="Bold" x:Name="videon" Grid.Row="1" Grid.ColumnSpan="2"  Style="{StaticResource LabelDestacado}" HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  />
+                        <Label TextColor="White" FontSize="Small" FontAttributes="Bold" x:Name="videod" Grid.Row="2" Grid.ColumnSpan="2"  Style="{StaticResource LabelDestacado}" HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  />
+                    </Grid>
+                </AbsoluteLayout>
+                <Grid BackgroundColor="Black" Grid.Row="1" RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10"/>
+                    </Grid.RowDefinitions>
+                    <Label Text="en nombre de Dios y la Virgen de Coromoto" TextColor="Transparent" FontSize="Micro"/>
+                </Grid>
+                <ListView x:Name="Lista" SeparatorColor="Gray" ItemSelected="VideoClicked" HasUnevenRows="True" Margin="2,2,2,2">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid BackgroundColor="White">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="20"/>
+                                        <RowDefinition Height="20"/>
+                                        <RowDefinition Height="20"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="3*"/>
+                                        <ColumnDefinition Width="7*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Source="{Binding Image}"  Grid.Row="0" Grid.Column="0" Grid.RowSpan="3"  Aspect="AspectFill" Margin="6,6,6,6" VerticalOptions="Fill" HorizontalOptions="Fill" />
+                                    <Label Text="{Binding Name}" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"   TextColor="DarkRed" />
+                                    <Label Text="{Binding Date}" Grid.Row="1" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"   TextColor="DarkGray" />
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
                 </ListView>
-               
-                     
-               
-
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

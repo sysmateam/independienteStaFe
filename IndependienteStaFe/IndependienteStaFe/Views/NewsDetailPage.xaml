@@ -8,28 +8,43 @@
     <ContentPage.Content>
         <ScrollView Style="{StaticResource ScrollViewStyle}">
             <StackLayout Style="{StaticResource StackLayoutStyle}" VerticalOptions="CenterAndExpand">
-                <Grid Style="{StaticResource GridStyle}">
+                <Grid Style="{StaticResource GridStyle}" RowSpacing="0" BackgroundColor="LightGray">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="100"/>
-                        <RowDefinition Height="300"/>
-                        <RowDefinition Height="400"/>
-                        <RowDefinition Height="50"/>
-                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="180"/>
                     </Grid.RowDefinitions>
-                    
-                    <Label x:Name="name"  Grid.Row="0"
-                VerticalOptions="Center" 
-                HorizontalOptions="Center" TextColor="#EB0000" Margin="5,5,5,5" FontSize="Large" />
-                    <Image x:Name="image" Grid.Row="1"  WidthRequest="300" HeightRequest="300" Aspect="AspectFill"  HorizontalOptions="Center"/>
-                    <WebView x:Name="content" Grid.Row="2" VerticalOptions="Center"  
-                HorizontalOptions="Center" WidthRequest="200" />
-                   <Label x:Name="date" Grid.Row="3" FontSize="Small"
-                VerticalOptions="End" 
-                HorizontalOptions="End" />
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image x:Name="image" Grid.Row="0"  WidthRequest="300" HeightRequest="150" Aspect="AspectFill"  HorizontalOptions="Center"/>
                 </Grid>
-
+                <Grid Style="{StaticResource GridStyle}" RowSpacing="0" BackgroundColor="Gray">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="55"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="name"  Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White" FontSize="Large" FontAttributes="Bold" />
+                </Grid>
+                <Grid Style="{StaticResource GridStyle}" RowSpacing="0" BackgroundColor="DarkRed">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="25"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="date" Grid.Row="0" FontSize="Small" TextColor="White" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center" />
+                </Grid>
+                <Grid Style="{StaticResource GridStyle}" RowSpacing="0" BackgroundColor="White">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="content" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" TextColor="Black" FontSize="Medium" Margin="5,5,5,5"/>
+                </Grid>
             </StackLayout>
         </ScrollView>
-       
     </ContentPage.Content>
 </ContentPage>

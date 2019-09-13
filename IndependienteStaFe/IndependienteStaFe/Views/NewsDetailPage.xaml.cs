@@ -11,11 +11,11 @@ namespace IndependienteStaFe.Views
         {
             InitializeComponent();
             name.Text = newsDetail.data[0].Name;
-            // content.Text = newsDetail.data[0].Content;
-            content.Source = new HtmlWebViewSource
-            {
-                Html = @newsDetail.data[0].Content
-            };
+            content.Text = newsDetail.data[0].Content;
+            //content.Source = new HtmlWebViewSource
+            //{
+              //  Html = @newsDetail.data[0].Content
+            //};
             image.Source = newsDetail.data[0].Image;
             date.Text = newsDetail.data[0].Date;
         }

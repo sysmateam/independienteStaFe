@@ -41,6 +41,8 @@ namespace IndependienteStaFe.Views
             var profiles = Connectivity.ConnectionProfiles;
             News news = new News();
 
+           
+
             if (current == NetworkAccess.Internet)
             {
                 string limit = "3";
@@ -56,6 +58,10 @@ namespace IndependienteStaFe.Views
                 imagen1.Source = videos.data[1].Image;
                 imagen2.Source = videos.data[2].Image;
                 imagen3.Source = videos.data[3].Image;
+                Texto0.Text = videos.data[0].Name;
+                Texto1.Text = videos.data[1].Name;
+                Texto2.Text = videos.data[2].Name;
+                Texto3.Text = videos.data[3].Name;
                 Lista.ItemsSource = news.data;
 
 
@@ -76,6 +82,7 @@ namespace IndependienteStaFe.Views
         }
 
 
+
         public async void Button_Clicked(object sender, EventArgs e)
         {
             Dialogs.ShowLoading("Espere por favor...");
@@ -83,6 +90,17 @@ namespace IndependienteStaFe.Views
             Dialogs.HideLoading();
 
             LoginPage myHomePage = new LoginPage();
+            NavigationPage.SetHasNavigationBar(myHomePage, true);
+            await Navigation.PushModalAsync(myHomePage);
+        }
+
+        public async void Home_Clicked(object sender, EventArgs e)
+        {
+            Dialogs.ShowLoading("Espere por favor...");
+            await Task.Delay(2000);
+            Dialogs.HideLoading();
+
+            InicioPage myHomePage = new InicioPage();
             NavigationPage.SetHasNavigationBar(myHomePage, true);
             await Navigation.PushModalAsync(myHomePage);
         }
@@ -109,10 +127,50 @@ namespace IndependienteStaFe.Views
             await Navigation.PushModalAsync(myHomePage);
         }
 
+        private void VideoClicked(object sender, EventArgs e)
+        {
+            var videos = repo.getVideos();
+        
+            VideoPage myHomePage = new VideoPage(videos.data[0]);
+            NavigationPage.SetHasNavigationBar(myHomePage, false);
+            Navigation.PushModalAsync(myHomePage);
+
+        }
+
+        private void VideoClicked1(object sender, EventArgs e)
+        {
+            var videos = repo.getVideos();
+
+            VideoPage myHomePage = new VideoPage(videos.data[1]);
+            NavigationPage.SetHasNavigationBar(myHomePage, false);
+            Navigation.PushModalAsync(myHomePage);
+
+        }
+
+        private void VideoClicked2(object sender, EventArgs e)
+        {
+            var videos = repo.getVideos();
+
+            VideoPage myHomePage = new VideoPage(videos.data[2]);
+            NavigationPage.SetHasNavigationBar(myHomePage, false);
+            Navigation.PushModalAsync(myHomePage);
+
+        }
+
+        private void VideoClicked3(object sender, EventArgs e)
+        {
+            var videos = repo.getVideos();
+
+            VideoPage myHomePage = new VideoPage(videos.data[3]);
+            NavigationPage.SetHasNavigationBar(myHomePage, false);
+            Navigation.PushModalAsync(myHomePage);
+
+        }
+
         public async void Register_Clicked(object sender, EventArgs e)
         {
             Dialogs.ShowLoading("Espere por favor...");
-            await Task.Delay(2000);
+            await Task.Delay(6000);
             Dialogs.HideLoading();
 
             RegisterPage myHomePage = new RegisterPage();
@@ -142,6 +200,7 @@ namespace IndependienteStaFe.Views
             Navigation.PushModalAsync(myHomePage);
 
         }
+      
         protected override async void OnAppearing()
         {
             base.OnAppearing();

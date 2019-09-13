@@ -1,4 +1,7 @@
-﻿using Newtonsoft.Json;
+﻿using System;
+using Newtonsoft.Json;
+using System.Collections.Generic;
+using System.Text;
 
 namespace IndependienteStaFe.Models
 {
@@ -25,6 +28,10 @@ namespace IndependienteStaFe.Models
             public string Profile { get; set; }
             [JsonProperty("url")]
             public string Url { get; set; }
+            [JsonProperty("Date")]
+            public string Date { get; set; }
+            
         }
     }
 }
+

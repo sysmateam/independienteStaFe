@@ -6,14 +6,7 @@
             xmlns:views="clr-namespace:IndependienteStaFe.Views"
             mc:Ignorable="d"
              x:Class="IndependienteStaFe.Views.HomeTabbedPage">
-    <TabbedPage.ToolbarItems>
-        <ToolbarItem Text="LogOut"  
-                     Icon="logout.png"  
-                     Priority="0"  
-                     Order="Primary"  
-                     Clicked="Logout_Clicked"/>
-
-    </TabbedPage.ToolbarItems>
+    
 
     <TabbedPage.Children>
         <NavigationPage Title="Noticias" Icon="games">

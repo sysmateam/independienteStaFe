@@ -171,6 +171,28 @@ namespace IndependienteStaFe.Views
 
         }
 
+        public async void Button_Clicked(object sender, EventArgs e)
+        {
+            Dialogs.ShowLoading("Espere por favor...");
+            await Task.Delay(2000);
+            Dialogs.HideLoading();
+
+            LoginPage myHomePage = new LoginPage();
+            NavigationPage.SetHasNavigationBar(myHomePage, true);
+            await Navigation.PushModalAsync(myHomePage);
+        }
+
+        public async void Home_Clicked(object sender, EventArgs e)
+        {
+            Dialogs.ShowLoading("Espere por favor...");
+            await Task.Delay(2000);
+            Dialogs.HideLoading();
+
+            InicioPage myHomePage = new InicioPage ();
+            NavigationPage.SetHasNavigationBar(myHomePage, true);
+            await Navigation.PushModalAsync(myHomePage);
+        }
+
 
     }
 }
