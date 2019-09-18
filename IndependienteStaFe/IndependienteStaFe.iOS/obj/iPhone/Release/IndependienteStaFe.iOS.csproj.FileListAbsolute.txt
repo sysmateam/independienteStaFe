@@ -137,3 +137,11 @@ C:\Users\Oscar\Desktop\independienteStaFe\IndependienteStaFe\IndependienteStaFe.
 C:\Users\Oscar\Desktop\independienteStaFe\IndependienteStaFe\IndependienteStaFe.iOS\obj\iPhone\Release\XamlC.stamp
 C:\Users\Oscar\Desktop\independienteStaFe\IndependienteStaFe\IndependienteStaFe.iOS\obj\iPhone\Release\IndependienteStaFe.iOS.csproj.CopyComplete
 C:\Users\Oscar\Desktop\independienteStaFe\IndependienteStaFe\IndependienteStaFe.iOS\obj\iPhone\Release\IndependienteStaFe.iOS.exe
+C:\Users\Oscar\Desktop\Indep\IndependienteStaFe\IndependienteStaFe.iOS\obj\iPhone\Release\ibtool\_BundleResourceWithLogicalName.items
+C:\Users\Oscar\Desktop\Indep\IndependienteStaFe\IndependienteStaFe.iOS\obj\iPhone\Release\actool\_PartialAppManifest.items
+C:\Users\Oscar\Desktop\Indep\IndependienteStaFe\IndependienteStaFe.iOS\obj\iPhone\Release\actool\_BundleResourceWithLogicalName.items
+C:\Users\Oscar\Desktop\Indep\IndependienteStaFe\IndependienteStaFe.iOS\obj\iPhone\Release\coremlc\_PartialAppManifest.items
+C:\Users\Oscar\Desktop\Indep\IndependienteStaFe\IndependienteStaFe.iOS\obj\iPhone\Release\coremlc\_BundleResourceWithLogicalName.items
+C:\Users\Oscar\Desktop\Indep\IndependienteStaFe\IndependienteStaFe.iOS\obj\iPhone\Release\optimized\
+C:\Users\Oscar\Desktop\Indep\IndependienteStaFe\IndependienteStaFe.iOS\obj\iPhone\Release\IndependienteStaFe.iOS.csprojAssemblyReference.cache
+C:\Users\Oscar\Desktop\Indep\IndependienteStaFe\IndependienteStaFe.iOS\obj\iPhone\Release\IndependienteStaFe.iOS.csproj.CoreCompileInputs.cache

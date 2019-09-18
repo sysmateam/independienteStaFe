@@ -933,11 +933,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ybrahim Miquilena\\Desktop\\independienteStaFe\\IndependienteStaFe\\IndependienteStaFe\\IndependienteStaFe.csproj",
+      "projectUniqueName": "C:\\Users\\Ybrahim Miquilena\\Desktop\\Indep\\IndependienteStaFe\\IndependienteStaFe\\IndependienteStaFe.csproj",
       "projectName": "IndependienteStaFe",
-      "projectPath": "C:\\Users\\Ybrahim Miquilena\\Desktop\\independienteStaFe\\IndependienteStaFe\\IndependienteStaFe\\IndependienteStaFe.csproj",
+      "projectPath": "C:\\Users\\Ybrahim Miquilena\\Desktop\\Indep\\IndependienteStaFe\\IndependienteStaFe\\IndependienteStaFe.csproj",
       "packagesPath": "C:\\Users\\Ybrahim Miquilena\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ybrahim Miquilena\\Desktop\\independienteStaFe\\IndependienteStaFe\\IndependienteStaFe\\obj\\",
+      "outputPath": "C:\\Users\\Ybrahim Miquilena\\Desktop\\Indep\\IndependienteStaFe\\IndependienteStaFe\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",

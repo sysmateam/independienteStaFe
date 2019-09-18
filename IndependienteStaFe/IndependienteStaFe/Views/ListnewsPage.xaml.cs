@@ -171,6 +171,18 @@ namespace IndependienteStaFe.Views
 
         }
 
+        private void EvetClicked2(object sender,EventArgs e)
+        {
+            var param = repo.getNews("", "1").Result;
+            var news = repo.getNewsDetail(param.data[0].NewsId).Result;
+        
+
+            NewsDetailPage myHomePage = new NewsDetailPage(news);
+            NavigationPage.SetHasNavigationBar(myHomePage, false);
+            Navigation.PushModalAsync(myHomePage);
+
+        }
+
         public async void Button_Clicked(object sender, EventArgs e)
         {
             Dialogs.ShowLoading("Espere por favor...");

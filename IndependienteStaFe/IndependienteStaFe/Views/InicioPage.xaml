@@ -26,9 +26,8 @@
             </Image.GestureRecognizers>
           </Image>
         </Grid>
-        <AbsoluteLayout>
-          <Image AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" Source="fondoinicio.png" Margin="0,-325,0,-325"/>
-          <Grid Style="{StaticResource GridStyle}" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" BackgroundColor="Transparent" Padding="0,0,0,0" >
+        
+          <Grid  BackgroundColor="Black" Padding="0,0,0,0" >
 
             <Grid.RowDefinitions>
               <RowDefinition Height="45"/>
@@ -42,16 +41,20 @@
               <ColumnDefinition Width="5*"/>
               <ColumnDefinition Width="5*"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="vip" Grid.Row="0" Grid.Column="0" Text="☆SER VIP" Clicked="Membership_Clicked" HeightRequest="45" Style="{StaticResource BtnFlaIniciotStyle}" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium" FontFamily="Arial" FontAttributes="Bold" BackgroundColor="Black" CornerRadius="25" Margin="5,0,5,0"/>
-            <Button x:Name="registrate" Grid.Row="0" Grid.Column="1" Text="REGISTRO" Clicked="Register_Clicked" HeightRequest="45"  Style="{StaticResource BtnFlaIniciotStyle}" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium" FontFamily="Arial" FontAttributes="Bold" BackgroundColor="Black" CornerRadius="25" Margin="5,0,5,0"/>
-            <Image x:Name="imagen" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" WidthRequest="280" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Margin="-20,0,-20,0"/>
-            <Label x:Name="noticiad" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource LabelDestacado}"  HeightRequest="60" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" FontSize="Medium" FontFamily="Arial" FontAttributes="Bold" TextColor="White"/>
+            <Button x:Name="vip" Grid.Row="0" Grid.Column="0" Text="☆SER VIP" Clicked="Membership_Clicked" HeightRequest="45" Style="{StaticResource BtnFlaIniciotStyle}" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium" FontFamily="Arial" FontAttributes="Bold" BackgroundColor="Gray" CornerRadius="25" Margin="5,0,5,0"/>
+                    <Button x:Name="registrate" Grid.Row="0" Grid.Column="1" Text="REGISTRO" Clicked="Register_Clicked" HeightRequest="45"  Style="{StaticResource BtnFlaIniciotStyle}" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium" FontFamily="Arial" FontAttributes="Bold" BackgroundColor="Gray" CornerRadius="25" Margin="5,0,5,0"/>
+                    <Image x:Name="imagen" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" WidthRequest="280" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Margin="-20,0,-20,0">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="EvetClicked2"/>
+                        </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="noticiad" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource LabelDestacado}"  HeightRequest="60" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" FontSize="Medium" FontFamily="Arial" FontAttributes="Bold" TextColor="White"/>
             <BoxView Color="White" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Margin="15,0,15,0" HorizontalOptions="Center"/>
             <Label Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Text="Fotografia Prensa SANTA FE" FontFamily="Arial" FontAttributes="Bold" FontSize="Micro" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center"/>
             <Label Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Text="HONOR FUERZA ORGULLO Y TRADICION" FontFamily="Arial" FontAttributes="Italic" FontSize="Caption" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center"/>
 
           </Grid>
-        </AbsoluteLayout>
+        
         <Grid BackgroundColor="Black" Grid.Row="1" RowSpacing="0" Grid.Column="1">
           <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
@@ -178,7 +181,30 @@
           </Grid.RowDefinitions>
           <Label Text="en nombre de Dios y la Virgen de Coromoto" TextColor="Transparent" FontSize="Micro"/>
         </Grid>
-        <ListView x:Name="Lista" ItemSelected="EvetClicked" SeparatorColor="DarkRed" HasUnevenRows="True" Margin="2,2,2,-337" >
+                <Grid BackgroundColor="DarkRed" RowSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="6*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="20"/>
+                    </Grid.RowDefinitions>
+                    <Image x:Name="local" Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" VerticalOptions="Center" HorizontalOptions="Center" Aspect="Fill" />
+                    <Image x:Name="visitante" Grid.Row="0" Grid.Column="2" Grid.RowSpan="3" VerticalOptions="Center" HorizontalOptions="Center" Aspect="Fill" />
+                    <Label x:Name="localn" Grid.Row="3" Grid.Column="0" FontSize="Micro" FontAttributes="Bold" TextColor="White" VerticalOptions="Center" HorizontalOptions="Center" />
+                    <Label x:Name="visita" Grid.Row="3" Grid.Column="2" FontSize="Micro" FontAttributes="Bold" TextColor="White" VerticalOptions="Center" HorizontalOptions="Center" />
+                    <Label x:Name="gamenamex" Grid.Row="3" Grid.Column="1" FontSize="Micro" FontAttributes="None" TextColor="White" VerticalOptions="Center" HorizontalOptions="Center" />
+                    <Label x:Name="sitio" Grid.Row="2" Grid.Column="1" FontSize="Micro" FontAttributes="Italic" TextColor="White" VerticalOptions="Center" HorizontalOptions="Center" />
+                    <Label Text="Vs." Grid.Row="1" Grid.Column="1" FontSize="Micro" FontAttributes="Bold" TextColor="White" VerticalOptions="Center" HorizontalOptions="Center" />
+                    <Label x:Name="dategame" Grid.Row="0" Grid.Column="1" FontSize="Micro" FontAttributes="Italic" TextColor="White" VerticalOptions="Center" HorizontalOptions="Center" />
+                </Grid>        
+                    
+              
+        <ListView x:Name="Lista" ItemSelected="EvetClicked" SeparatorColor="DarkRed" HasUnevenRows="True" Margin="2,2,2,-280" >
           <ListView.ItemTemplate>
             <DataTemplate>
               <ViewCell>
@@ -208,6 +234,17 @@
 
           </ListView.ItemTemplate>
         </ListView>
+                <Grid RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="20"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Row="1" Padding="-4,0,-4,0" BackgroundColor="DarkRed" Text="LISTA NOTICIAS" FontAttributes="Bold" FontSize="Medium" TextColor="White" HorizontalOptions="FillAndExpand" CornerRadius="25" VerticalOptions="FillAndExpand" Clicked="Noticias_Clicked" />
+                </Grid>
         <Grid BackgroundColor="DarkRed" Grid.Row="1" RowSpacing="0">
           <Grid.RowDefinitions>
             <RowDefinition Height="3"/>
@@ -226,42 +263,57 @@
           </Grid.RowDefinitions>
           <Label Text="en nombre de Dios y la Virgen de Coromoto" TextColor="Transparent" FontSize="Micro"/>
         </Grid>
-        <Grid Style="{StaticResource GridStyle}" BackgroundColor="Black" RowSpacing="0">
+        <Grid Style="{StaticResource GridStyle}" BackgroundColor="White" RowSpacing="0">
           <Grid.RowDefinitions>
-            <RowDefinition Height="5*"/>
-            <RowDefinition Height="3*"/>
-          </Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="20"/>
+                        <RowDefinition Height="1"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="1"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="1"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="20"/>
+                    </Grid.RowDefinitions>
           <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="7*"/>
+            
           </Grid.ColumnDefinitions>
-          <Image x:Name="imagen0" Grid.Row="0" Grid.Column="0"  HeightRequest="50" WidthRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+          <Image x:Name="imagen0" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" HeightRequest="50" WidthRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
             <Image.GestureRecognizers>
               <TapGestureRecognizer Tapped="VideoClicked"/>
             </Image.GestureRecognizers>
           </Image>
-          <Image x:Name="imagen1" Grid.Row="0" Grid.Column="1"  HeightRequest="50" WidthRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                    <Image x:Name="imagen1" Grid.Row="3" Grid.Column="0" Grid.RowSpan="2" HeightRequest="50" WidthRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
             <Image.GestureRecognizers>
               <TapGestureRecognizer Tapped="VideoClicked1"/>
             </Image.GestureRecognizers>
           </Image>
-          <Image x:Name="imagen2" Grid.Row="0" Grid.Column="2"  HeightRequest="50" WidthRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                    <Image x:Name="imagen2" Grid.Row="6" Grid.Column="0" Grid.RowSpan="2" HeightRequest="50" WidthRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
             <Image.GestureRecognizers>
               <TapGestureRecognizer Tapped="VideoClicked2"/>
             </Image.GestureRecognizers>
           </Image>
-          <Image x:Name="imagen3" Grid.Row="0" Grid.Column="3"  HeightRequest="50" WidthRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                    <Image x:Name="imagen3" Grid.Row="9" Grid.Column="0" Grid.RowSpan="2" HeightRequest="50" WidthRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
             <Image.GestureRecognizers>
               <TapGestureRecognizer Tapped="VideoClicked3"/>
             </Image.GestureRecognizers>
           </Image>
-          <Label x:Name="Texto0" Grid.Row="1" Grid.Column="0"  HeightRequest="25" WidthRequest="50" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Micro" TextColor="White" FontAttributes="Bold" />
-          <Label x:Name="Texto1" Grid.Row="1" Grid.Column="1"  HeightRequest="25" WidthRequest="50" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Micro" TextColor="White" FontAttributes="Bold"/>
-          <Label x:Name="Texto2" Grid.Row="1" Grid.Column="2"  HeightRequest="25" WidthRequest="50" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Micro" TextColor="White" FontAttributes="Bold"/>
-          <Label x:Name="Texto3" Grid.Row="1" Grid.Column="3"  HeightRequest="25" WidthRequest="50" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Micro" TextColor="White" FontAttributes="Bold"/>
-        </Grid>
+          <Label x:Name="Texto0" Grid.Row="0" Grid.Column="1"   HorizontalOptions="Center" VerticalOptions="Center" FontSize="Small" TextColor="DarkRed" FontAttributes="Bold" />
+          <Label x:Name="Texto1" Grid.Row="3" Grid.Column="1"   HorizontalOptions="Center" VerticalOptions="Center" FontSize="Small" TextColor="DarkRed" FontAttributes="Bold"/>
+          <Label x:Name="Texto2" Grid.Row="6" Grid.Column="1"   HorizontalOptions="Center" VerticalOptions="Center" FontSize="Small" TextColor="DarkRed" FontAttributes="Bold"/>
+          <Label x:Name="Texto3" Grid.Row="9" Grid.Column="1"   HorizontalOptions="Center" VerticalOptions="Center" FontSize="Small" TextColor="DarkRed" FontAttributes="Bold"/>
+                    <Label x:Name="fecha1" Grid.Row="1" Grid.Column="1"   HorizontalOptions="Center" VerticalOptions="Center" FontSize="Micro" TextColor="Gray" FontAttributes="Italic" />
+                    <Label x:Name="fecha2" Grid.Row="4" Grid.Column="1"   HorizontalOptions="Center" VerticalOptions="Center" FontSize="Micro" TextColor="Gray" FontAttributes="Italic"/>
+                    <Label x:Name="fecha3" Grid.Row="7" Grid.Column="1"   HorizontalOptions="Center" VerticalOptions="Center" FontSize="Micro" TextColor="Gray" FontAttributes="Italic"/>
+                    <Label x:Name="fecha4" Grid.Row="10" Grid.Column="1"   HorizontalOptions="Center" VerticalOptions="Center" FontSize="Micro" TextColor="Gray" FontAttributes="Italic"/>
+                    <BoxView Color="DarkRed" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand" />
+                    <BoxView Color="DarkRed" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand" />
+                    <BoxView Color="DarkRed" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand" />
+                </Grid>
         <Grid BackgroundColor="DarkRed" Grid.Row="1" RowSpacing="0">
           <Grid.RowDefinitions>
             <RowDefinition Height="3"/>
@@ -270,15 +322,14 @@
         </Grid>
         <Grid Style="{StaticResource GridStyle}" Margin="0,0,0,-50">
           <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="5*"/>
-            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="*"/>
+            
           </Grid.ColumnDefinitions>
-          <Grid.RowDefinitions>
-            <RowDefinition Height="60"/>
-            <RowDefinition Height="40"/>
-          </Grid.RowDefinitions>
-          <Button x:Name="noticias" Grid.Row="1" Grid.Column="0" FontSize="Medium" Text="Noticias" Clicked="Noticias_Clicked" HeightRequest="50" Style="{StaticResource ButtonVideosTodosStyle}" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="DarkRed"/>
-          <Button Grid.Row="1" Grid.Column="1" Style="{StaticResource ButtonActStyle}" FontSize="Medium"  BackgroundColor="DarkRed" Text="Videos" TextColor="White" Command="{Binding GetUsuariosCommand}" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Videos_Clicked" />
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="40"/>
+                    </Grid.RowDefinitions>
+                    <Button Grid.Row="1" Grid.Column="0"  FontSize="Medium"  BackgroundColor="DarkRed" Text="VER TODOS LOS VIDEOS" TextColor="White" Command="{Binding GetUsuariosCommand}" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Videos_Clicked" />
         </Grid>
 
 

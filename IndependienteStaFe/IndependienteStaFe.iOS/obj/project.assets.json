@@ -1635,11 +1635,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ybrahim Miquilena\\Desktop\\independienteStaFe\\IndependienteStaFe\\IndependienteStaFe.iOS\\IndependienteStaFe.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\Ybrahim Miquilena\\Desktop\\Indep\\IndependienteStaFe\\IndependienteStaFe.iOS\\IndependienteStaFe.iOS.csproj",
       "projectName": "IndependienteStaFe.iOS",
-      "projectPath": "C:\\Users\\Ybrahim Miquilena\\Desktop\\independienteStaFe\\IndependienteStaFe\\IndependienteStaFe.iOS\\IndependienteStaFe.iOS.csproj",
+      "projectPath": "C:\\Users\\Ybrahim Miquilena\\Desktop\\Indep\\IndependienteStaFe\\IndependienteStaFe.iOS\\IndependienteStaFe.iOS.csproj",
       "packagesPath": "C:\\Users\\Ybrahim Miquilena\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ybrahim Miquilena\\Desktop\\independienteStaFe\\IndependienteStaFe\\IndependienteStaFe.iOS\\obj\\",
+      "outputPath": "C:\\Users\\Ybrahim Miquilena\\Desktop\\Indep\\IndependienteStaFe\\IndependienteStaFe.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1660,8 +1660,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\Ybrahim Miquilena\\Desktop\\independienteStaFe\\IndependienteStaFe\\IndependienteStaFe\\IndependienteStaFe.csproj": {
-              "projectPath": "C:\\Users\\Ybrahim Miquilena\\Desktop\\independienteStaFe\\IndependienteStaFe\\IndependienteStaFe\\IndependienteStaFe.csproj"
+            "C:\\Users\\Ybrahim Miquilena\\Desktop\\Indep\\IndependienteStaFe\\IndependienteStaFe\\IndependienteStaFe.csproj": {
+              "projectPath": "C:\\Users\\Ybrahim Miquilena\\Desktop\\Indep\\IndependienteStaFe\\IndependienteStaFe\\IndependienteStaFe.csproj"
             }
           }
         }

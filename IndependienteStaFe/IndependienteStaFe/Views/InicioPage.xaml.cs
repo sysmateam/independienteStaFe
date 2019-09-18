@@ -45,7 +45,7 @@ namespace IndependienteStaFe.Views
 
             if (current == NetworkAccess.Internet)
             {
-                string limit = "3";
+                string limit = "4";
                 if (App.Current.Properties.ContainsKey("token"))
                 {
                     token = App.Current.Properties["token"].ToString();
@@ -62,12 +62,19 @@ namespace IndependienteStaFe.Views
                 Texto1.Text = videos.data[1].Name;
                 Texto2.Text = videos.data[2].Name;
                 Texto3.Text = videos.data[3].Name;
-                Lista.ItemsSource = news.data;
-
-
-
-
-                partido = repo.getPartidos("3").Result;
+                Lista.ItemsSource = news.data;                
+                var game = repo.getPartidos("3").Result;
+                visitante.Source = game.data[0].VisitorShield;
+                local.Source = game.data[0].LocalShield;
+                localn.Text = game.data[0].LocalTeamName;
+                visita.Text = game.data[0].VisitorTeamName;
+                dategame.Text = game.data[0].DateGame;
+                sitio.Text = game.data[0].Stadium;
+                gamenamex.Text = game.data[0].GameName;
+                fecha1.Text = videos.data[0].Date;
+                fecha2.Text = videos.data[1].Date;
+                fecha3.Text = videos.data[2].Date;
+                fecha4.Text = videos.data[3].Date;
 
                 //countdown.Text = StartCountDownTimer();
 
@@ -200,7 +207,21 @@ namespace IndependienteStaFe.Views
             Navigation.PushModalAsync(myHomePage);
 
         }
-      
+
+        private void EvetClicked2(object sender, EventArgs e)
+        {
+            var param = repo.getNews("","1").Result;
+            var news = repo.getNewsDetail(param.data[0].NewsId).Result;
+
+       
+
+
+            NewsDetailPage myHomePage = new NewsDetailPage(news);
+            NavigationPage.SetHasNavigationBar(myHomePage, false);
+            Navigation.PushModalAsync(myHomePage);
+
+        }
+
         protected override async void OnAppearing()
         {
             base.OnAppearing();

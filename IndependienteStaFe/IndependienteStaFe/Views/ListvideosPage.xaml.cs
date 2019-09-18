@@ -63,6 +63,18 @@ namespace IndependienteStaFe.Views
             Navigation.PushModalAsync(myHomePage);
 
         }
+        private void VideoClicked2(object sender,EventArgs e)
+        {
+
+
+            var param = repo.getVideos();
+            var videos = repo.getVideoDetail(param.data[0].VideoId).Result;
+
+            VideoPage myHomePage = new VideoPage(videos.data[0]);
+            NavigationPage.SetHasNavigationBar(myHomePage, false);
+            Navigation.PushModalAsync(myHomePage);
+
+        }
 
     }
     

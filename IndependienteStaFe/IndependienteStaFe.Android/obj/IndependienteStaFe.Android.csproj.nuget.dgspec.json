@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ybrahim Miquilena\\Desktop\\independienteStaFe\\IndependienteStaFe\\IndependienteStaFe.Android\\IndependienteStaFe.Android.csproj": {}
+    "C:\\Users\\Ybrahim Miquilena\\Desktop\\Indep\\IndependienteStaFe\\IndependienteStaFe.Android\\IndependienteStaFe.Android.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ybrahim Miquilena\\Desktop\\independienteStaFe\\IndependienteStaFe\\IndependienteStaFe.Android\\IndependienteStaFe.Android.csproj": {
+    "C:\\Users\\Ybrahim Miquilena\\Desktop\\Indep\\IndependienteStaFe\\IndependienteStaFe.Android\\IndependienteStaFe.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ybrahim Miquilena\\Desktop\\independienteStaFe\\IndependienteStaFe\\IndependienteStaFe.Android\\IndependienteStaFe.Android.csproj",
+        "projectUniqueName": "C:\\Users\\Ybrahim Miquilena\\Desktop\\Indep\\IndependienteStaFe\\IndependienteStaFe.Android\\IndependienteStaFe.Android.csproj",
         "projectName": "IndependienteStaFe.Android",
-        "projectPath": "C:\\Users\\Ybrahim Miquilena\\Desktop\\independienteStaFe\\IndependienteStaFe\\IndependienteStaFe.Android\\IndependienteStaFe.Android.csproj",
+        "projectPath": "C:\\Users\\Ybrahim Miquilena\\Desktop\\Indep\\IndependienteStaFe\\IndependienteStaFe.Android\\IndependienteStaFe.Android.csproj",
         "packagesPath": "C:\\Users\\Ybrahim Miquilena\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ybrahim Miquilena\\Desktop\\independienteStaFe\\IndependienteStaFe\\IndependienteStaFe.Android\\obj\\",
+        "outputPath": "C:\\Users\\Ybrahim Miquilena\\Desktop\\Indep\\IndependienteStaFe\\IndependienteStaFe.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid90": {
             "projectReferences": {
-              "C:\\Users\\Ybrahim Miquilena\\Desktop\\independienteStaFe\\IndependienteStaFe\\IndependienteStaFe\\IndependienteStaFe.csproj": {
-                "projectPath": "C:\\Users\\Ybrahim Miquilena\\Desktop\\independienteStaFe\\IndependienteStaFe\\IndependienteStaFe\\IndependienteStaFe.csproj"
+              "C:\\Users\\Ybrahim Miquilena\\Desktop\\Indep\\IndependienteStaFe\\IndependienteStaFe\\IndependienteStaFe.csproj": {
+                "projectPath": "C:\\Users\\Ybrahim Miquilena\\Desktop\\Indep\\IndependienteStaFe\\IndependienteStaFe\\IndependienteStaFe.csproj"
               }
             }
           }
@@ -90,14 +90,14 @@
         }
       }
     },
-    "C:\\Users\\Ybrahim Miquilena\\Desktop\\independienteStaFe\\IndependienteStaFe\\IndependienteStaFe\\IndependienteStaFe.csproj": {
+    "C:\\Users\\Ybrahim Miquilena\\Desktop\\Indep\\IndependienteStaFe\\IndependienteStaFe\\IndependienteStaFe.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ybrahim Miquilena\\Desktop\\independienteStaFe\\IndependienteStaFe\\IndependienteStaFe\\IndependienteStaFe.csproj",
+        "projectUniqueName": "C:\\Users\\Ybrahim Miquilena\\Desktop\\Indep\\IndependienteStaFe\\IndependienteStaFe\\IndependienteStaFe.csproj",
         "projectName": "IndependienteStaFe",
-        "projectPath": "C:\\Users\\Ybrahim Miquilena\\Desktop\\independienteStaFe\\IndependienteStaFe\\IndependienteStaFe\\IndependienteStaFe.csproj",
+        "projectPath": "C:\\Users\\Ybrahim Miquilena\\Desktop\\Indep\\IndependienteStaFe\\IndependienteStaFe\\IndependienteStaFe.csproj",
         "packagesPath": "C:\\Users\\Ybrahim Miquilena\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ybrahim Miquilena\\Desktop\\independienteStaFe\\IndependienteStaFe\\IndependienteStaFe\\obj\\",
+        "outputPath": "C:\\Users\\Ybrahim Miquilena\\Desktop\\Indep\\IndependienteStaFe\\IndependienteStaFe\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

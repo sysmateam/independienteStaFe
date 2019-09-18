@@ -28,15 +28,15 @@
                         </Image.GestureRecognizers>
                     </Image>
                 </Grid>
-                <Grid BackgroundColor="DarkRed" Grid.Row="1" RowSpacing="0">
+                <Grid BackgroundColor="Black" Grid.Row="1" RowSpacing="0">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="3"/>
                     </Grid.RowDefinitions>
                     <Label Text="en nombre de Dios y la Virgen de Coromoto" TextColor="Transparent" FontSize="Micro"/>
                 </Grid>
-                <AbsoluteLayout>
-                    <Image AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" Source="fondoinicio.png" Margin="0,-330,0,-325"/>
-                    <Grid Style="{StaticResource GridStyle}" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" BackgroundColor="Transparent" Padding="0,0,0,0"  RowSpacing="0" >
+                
+                    
+                    <Grid  BackgroundColor="Black" Padding="0,0,0,0"  RowSpacing="0" >
                         <Grid.RowDefinitions>
 
                             <RowDefinition Height="150"/>
@@ -45,12 +45,17 @@
 
                         </Grid.RowDefinitions>
 
-                        <Image x:Name="imagen" Grid.Row="0" Grid.ColumnSpan="2"  HeightRequest="150" WidthRequest="200" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" />
-                        <Label x:Name="noticiad" Grid.Row="1" Grid.ColumnSpan="2"  Text="Noticia Destacada" Style="{StaticResource LabelDestacado}" HeightRequest="50" WidthRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" TextColor="White" FontAttributes="Bold" />
+                        <Image x:Name="imagen" Grid.Row="0" Grid.ColumnSpan="2"  HeightRequest="150" WidthRequest="200" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="EvetClicked2" />
+                        </Image.GestureRecognizers>
+                    </Image>
+
+                    <Label x:Name="noticiad" Grid.Row="1" Grid.ColumnSpan="2"  Text="Noticia Destacada" Style="{StaticResource LabelDestacado}" HeightRequest="50" WidthRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" TextColor="White" FontAttributes="Bold" />
 
                         <!--<views:ListNewHorizontal Grid.Row="4" Grid.ColumnSpan="2"  />-->
                     </Grid>
-                </AbsoluteLayout>
+                
                 <Grid BackgroundColor="Black" Grid.Row="1" RowSpacing="0">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="10"/>

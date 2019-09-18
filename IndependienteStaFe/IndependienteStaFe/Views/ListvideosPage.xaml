@@ -26,19 +26,22 @@
                         </Image.GestureRecognizers>
                     </Image>
                 </Grid>
-                <AbsoluteLayout>
-                    <Image AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" Source="fondoinicio.png" Margin="0,-325,0,-325"/>
-                    <Grid Style="{StaticResource GridStyle}" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" BackgroundColor="Transparent" Padding="0,0,0,0" >
+                
+                    <Grid  BackgroundColor="Black" Padding="0,0,0,0" >
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="150"/>
                                 <RowDefinition Height="50"/>
                                 <RowDefinition Height="20"/>
                             </Grid.RowDefinitions>
-                        <Image x:Name="imagen" Grid.Row="0" Grid.ColumnSpan="2"  HeightRequest="150" WidthRequest="200" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
-                        <Label TextColor="White" FontSize="Large" FontAttributes="Bold" x:Name="videon" Grid.Row="1" Grid.ColumnSpan="2"  Style="{StaticResource LabelDestacado}" HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  />
+                    <Image x:Name="imagen" Grid.Row="0" Grid.ColumnSpan="2"  HeightRequest="150" WidthRequest="200" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="VideoClicked2"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label TextColor="White" FontSize="Large" FontAttributes="Bold" x:Name="videon" Grid.Row="1" Grid.ColumnSpan="2"  Style="{StaticResource LabelDestacado}" HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  />
                         <Label TextColor="White" FontSize="Small" FontAttributes="Bold" x:Name="videod" Grid.Row="2" Grid.ColumnSpan="2"  Style="{StaticResource LabelDestacado}" HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  />
                     </Grid>
-                </AbsoluteLayout>
+                
                 <Grid BackgroundColor="Black" Grid.Row="1" RowSpacing="0">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="10"/>

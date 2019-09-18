@@ -25,52 +25,172 @@
                         </Image.GestureRecognizers>
                     </Image>
                 </Grid>
-                <AbsoluteLayout>
-                    <Image AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" Source="fondoinicio.png" Margin="0,-360,0,-325"/>
-                    <Grid Style="{StaticResource GridStyle}" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" BackgroundColor="Transparent" Padding="0,0,0,0" >
+                
+                    <Grid  BackgroundColor="Black" Padding="0,0,0,0" Margin="0,-40,0,0" >
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="30"/>
                             <RowDefinition Height="3"/>
-                            <RowDefinition Height="200"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
                             <RowDefinition Height="20"/>
                             <RowDefinition Height="3"/>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="3*"/>
-                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="6*"/>
                             <ColumnDefinition Width="3*"/>
                         </Grid.ColumnDefinitions>
-                        <Label x:Name="partido" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" TextColor="White"  Style="{StaticResource LabelProxPartidoTime}" HeightRequest="50" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Italic" FontSize="Large" />
-                        <BoxView HeightRequest="3" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Color="White"></BoxView>
-                        <Image x:Name="team1" Grid.Row="2" Grid.Column="0"    HeightRequest="200" WidthRequest="200" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
-                        <Label x:Name="vs" Grid.Row="2" Grid.Column="1" FontSize="Large" Text="Vs." TextColor="White"   Style="{StaticResource LabelProxPartidoTime}" HorizontalOptions="Center" VerticalOptions="Center" />
-                        <Label x:Name="Name1" Grid.Row="3" Grid.Column="0" FontSize="Medium" TextColor="White" FontAttributes="Bold"  Style="{StaticResource LabelProxPartidoTime}" HorizontalOptions="Center" VerticalOptions="Center" />
-                        <Label x:Name="Name2" Grid.Row="3" Grid.Column="2" FontSize="Medium" TextColor="White" FontAttributes="Bold"  Style="{StaticResource LabelProxPartidoTime}" HorizontalOptions="Center" VerticalOptions="Center" />
-                        <Image x:Name="team2" Grid.Row="2" Grid.Column="2" HeightRequest="200" WidthRequest="200" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
-                        <BoxView HeightRequest="3" Grid.Row="4" Grid.ColumnSpan="3" Color="White"></BoxView>
+                        <Label x:Name="partido" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" TextColor="White"  HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" FontSize="Medium" />
+                        <BoxView HeightRequest="3" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Color="Black"></BoxView>
+                        <Image x:Name="team1" Grid.Row="2" Grid.Column="0" Grid.RowSpan="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+                        <Label x:Name="vs" Grid.Row="2" Grid.Column="1" FontSize="Small" Text="Vs." TextColor="White"  FontAttributes="Bold"  HorizontalOptions="Center" VerticalOptions="Center" />
+                        <Label x:Name="Name1" Grid.Row="4" Grid.Column="0" FontSize="Small" TextColor="White" FontAttributes="Bold"   HorizontalOptions="Center" VerticalOptions="Center" />
+                        <Label x:Name="Name2" Grid.Row="4" Grid.Column="2" FontSize="Small" TextColor="White" FontAttributes="Bold"   HorizontalOptions="Center" VerticalOptions="Center" />
+                        <Image x:Name="team2" Grid.Row="2" Grid.Column="2" Grid.RowSpan="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+                        <Label x:Name="Name3" Grid.Row="3" Grid.Column="1" FontSize="Small" TextColor="White" FontAttributes="None"   HorizontalOptions="Center" VerticalOptions="Center" />
+                        <Label x:Name="Name4" Grid.Row="4" Grid.Column="1" FontSize="Micro" TextColor="White" FontAttributes="Italic" HorizontalOptions="Center" VerticalOptions="Center" />
+                        <BoxView HeightRequest="3" Grid.Row="5" Grid.ColumnSpan="3" Color="White"></BoxView>
                     </Grid>
-                </AbsoluteLayout>
-                <ListView x:Name="Lista" SeparatorColor="Gray" HasUnevenRows="True" Margin="2,2,2,2">
+                <Label Grid.Column="0" Grid.Row="0" Text=" PROXIMO PARTIDO" FontAttributes="Italic" FontSize="Large" HorizontalOptions="Center" TextColor="White"/>
+
+                <Grid BackgroundColor="DarkGray" Grid.Row="1" RowSpacing="0" Grid.Column="6">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label
+          Grid.Column="1"
+          Grid.Row="0"
+          Text="{Binding Days, StringFormat='{0:D2}'}"
+          Style="{StaticResource LabelStyle}"
+              TextColor="White"
+              FontSize="Medium"
+              VerticalOptions="Center"
+              HorizontalOptions="Center"
+              FontAttributes="Italic"
+                    />
+                    <Label
+          Grid.Column="2"
+          Grid.Row="0"
+          Text="{Binding Hours, StringFormat='{0:D2}'}"
+          Style="{StaticResource LabelStyle}"
+              TextColor="White"
+              FontSize="Medium"
+              VerticalOptions="Center"
+              HorizontalOptions="Center"
+              FontAttributes="Italic"
+                    />
+                    <Label
+          Grid.Column="3"
+          Grid.Row="0"
+          Text="{Binding Minutes, StringFormat='{0:D2}'}"
+          Style="{StaticResource LabelStyle}"
+              TextColor="White"
+              FontSize="Medium"
+              VerticalOptions="Center"
+              HorizontalOptions="Center"
+              FontAttributes="Italic"
+                    />
+                    <Label
+          Grid.Column="4"
+          Grid.Row="0"
+          Text="{Binding Seconds, StringFormat='{0:D2}'}"
+          Style="{StaticResource LabelStyle}"
+              TextColor="White"
+              FontSize="Medium"
+              VerticalOptions="Center"
+              HorizontalOptions="Center"
+              FontAttributes="Italic"
+                    />
+                </Grid>
+                <Grid BackgroundColor="White" Grid.Row="1" RowSpacing="0" Grid.Column="6">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label
+          Grid.Column="1"
+          Grid.Row="0"
+          Text="DÍAS"
+              FontAttributes="Italic"
+              FontSize="Small"
+              TextColor="Black"
+              HorizontalOptions="Center"
+              VerticalOptions="Center"
+          Style="{StaticResource LabelStyle}"
+                    />
+                    <Label
+          Grid.Column="2"
+          Grid.Row="0"
+          Text="HORAS"
+              FontAttributes="Italic"
+              FontSize="Small"
+              TextColor="Black"
+              HorizontalOptions="Center"
+              VerticalOptions="Center"
+          Style="{StaticResource LabelStyle}"
+                    />
+                    <Label
+          Grid.Column="3"
+          Grid.Row="0"
+          Text="MINUTOS"
+               FontAttributes="Italic"
+              FontSize="Small"
+              TextColor="Black"
+              HorizontalOptions="Center"
+              VerticalOptions="Center"
+          Style="{StaticResource LabelStyle}"
+                    />
+                    <Label
+          Grid.Column="4"
+          Grid.Row="0"
+          Text="SEGUNDOS"
+               FontAttributes="Italic"
+              FontSize="Small"
+              TextColor="Black"
+              HorizontalOptions="Center"
+              VerticalOptions="Center"
+          Style="{StaticResource LabelStyle}"
+                    />
+                </Grid>
+                <ListView x:Name="Lista" SeparatorColor="Gray" HasUnevenRows="True" Margin="2,2,2,-160">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
                                 <Grid BackgroundColor="White">
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="20"/>
-                                        <RowDefinition Height="115"/>
+                                        <RowDefinition Height="20"/>
+                                        <RowDefinition Height="20"/>
                                         <RowDefinition Height="20"/>
                                     </Grid.RowDefinitions>
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Width="6*"/>
+                                        <ColumnDefinition Width="2*"/>
                                     </Grid.ColumnDefinitions>
-                                    <Image Source="{Binding LocalShield}"  Grid.Row="1" Grid.Column="0" Aspect="AspectFill" VerticalOptions="Fill" HorizontalOptions="Fill" />
+                                    <Image Source="{Binding LocalShield}"  Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" VerticalOptions="Fill" HorizontalOptions="Fill" />
                                     <Label Text="{Binding DateGame}" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" HorizontalOptions="Center" VerticalOptions="Center"   TextColor="DarkRed" />
                                     <Label Text="Vs." Grid.Column="1" Grid.Row="1" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium" FontAttributes="Bold"/>
-                                    <Image Source="{Binding VisitorShield}"  Grid.Row="1" Grid.Column="2" Aspect="AspectFill" VerticalOptions="Fill" HorizontalOptions="Fill" />
-                                    <Label Text="{Binding LocalTeamName}" Grid.Row="2" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"   TextColor="DarkGray" />
-                                    <Label Text="{Binding VisitorTeamName}" Grid.Row="2" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center"   TextColor="DarkGray" />
+                                    <Image Source="{Binding VisitorShield}"  Grid.Row="0" Grid.Column="2" Grid.RowSpan="3"  VerticalOptions="Fill" HorizontalOptions="Fill" />
+                                    <Label Text="{Binding LocalTeamName}" Grid.Row="3" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"   TextColor="DarkGray" />
+                                    <Label Text="{Binding VisitorTeamName}" Grid.Row="3" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center"   TextColor="DarkGray" />
+                                    <Label Text="{Binding GameName}" Grid.Row="2" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"   TextColor="DarkGray" FontAttributes="Bold" />
+                                    <Label Text="{Binding Stadium}" Grid.Row="3" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"   TextColor="DarkGray" FontAttributes="Italic" />
                                 </Grid>
                             </ViewCell>
                         </DataTemplate>
